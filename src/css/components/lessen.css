@@ -11,7 +11,7 @@
 body
 {
     font-family: 'montserat';
-    background-image: url(/src/images/lessen.jpeg);
+    background-image: url(/src/images/backgrounds/lessen.jpeg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
