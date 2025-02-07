@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Button to open the chatbot modal -->
-    <button onclick="openModal()" class="open-button"><img src="image/comment-02-stroke-rounded.svg" alt=""></button>
+    <button onclick="openModal()" class="open-button"><img src="/src/images/comment-02-stroke-rounded.svg" alt=""></button>
 
     <!-- Background overlay (covers the page) -->
     <div id="overlay" class="overlay" onclick="closeModal()"></div>
@@ -18,7 +18,7 @@
     <div id="chatModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <img src="image/LOGO white.png" alt="Mistral AI" class="chatbot-image">
+            <img src="/src/images/LOGO white.png" alt="Mistral AI" class="chatbot-image">
             <h2>Chatbot</h2>
             <input type="text" id="userInput" placeholder="Ask something..." onkeydown="handleKeyPress(event)" class="user-input">
             <button onclick="sendClicked(document.getElementById('userInput').value)" class="send-button">Send</button>
