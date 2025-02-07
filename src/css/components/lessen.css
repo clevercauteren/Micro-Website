@@ -46,21 +46,21 @@ tr
     border-bottom: 1px solid #000000;
 }
 
-th, td
+th, td p
 {
     padding: 15px;
     text-align: left;
 }
-th .header
+th .header h2
 {
     font-weight: 800;
 }
 
-th .les
+th .les p
 {
     width: 70%;
 }
-th .uur
+th .uur p
 {
     width: 15%;
 }
