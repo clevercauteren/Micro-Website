@@ -4,6 +4,9 @@ div {
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1em 0 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 
@@ -12,8 +15,11 @@ nav {
     padding-right: 4rem;
 }
 
+
 h2 {
-    margin-left: 1rem;
+    margin-left: 2rem;
+    font-size: 2em;
+    letter-spacing: 0.09em;
 }
 
 button {
