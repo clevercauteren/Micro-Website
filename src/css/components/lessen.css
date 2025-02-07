@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'montserat';
+    background-image: url(/src/images/lessen.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.main /*opmaak van de main kader op de pagina*/
+{
+    width: 60%;
+    margin: auto;
+    margin-top: 15rem;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+}
+
+h1
+{
+    font-family: Arial, Helvetica;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+table /*opmaak van de tabel*/
+{
+    width: 100%;
+    border-collapse: collapse;
+}
