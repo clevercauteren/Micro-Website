@@ -1,0 +1,46 @@
+div {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1em 0 1em 0;
+}
+
+
+nav {
+    margin-left: auto;
+    padding-right: 4rem;
+}
+
+h2 {
+    margin-left: 1rem;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0 1rem 0 1rem;
+    font-size: 1em;
+    
+
+   
+}
+
+.blue{
+    background-color: #6f8ab7;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+
+
+
+  
+  
+  
+
