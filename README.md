@@ -1,7 +1,7 @@
 Micro website voor 5ADB
 
 Startpagina - Jason
-Overzicht van lessenpakket 5de en 6de jaar - Tommy
+Overzicht van lessenpakket 5de en 6de jaar - Alexander
 ContactFormulier - Clemeant
 ChatBot - Alexander
 Mogelijkheden na 6de - Tommy
