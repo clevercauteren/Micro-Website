@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistral AI Chatbot</title>
+    <link rel="stylesheet" href="/src/css/components/ai.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <!-- Button to open the chatbot modal -->
+    <button onclick="openModal()" class="open-button"><img src="image/comment-02-stroke-rounded.svg" alt=""></button>
+
+    <!-- Background overlay (covers the page) -->
+    <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+    <!-- The Modal -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="image/LOGO white.png" alt="Mistral AI" class="chatbot-image">
+            <h2>Chatbot</h2>
+            <input type="text" id="userInput" placeholder="Ask something..." onkeydown="handleKeyPress(event)" class="user-input">
+            <button onclick="sendClicked(document.getElementById('userInput').value)" class="send-button">Send</button>
+            <hr>
+            <p id="response" class="response"></p>
+        </div>
+    </div>
+    
+    <script src="/src/js/ai.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
