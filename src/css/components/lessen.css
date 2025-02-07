@@ -39,4 +39,28 @@ table /*opmaak van de tabel*/
 {
     width: 100%;
     border-collapse: collapse;
+    font-size: 1.3rem;
+}
+tr
+{
+    border-bottom: 1px solid #000000;
+}
+
+th, td
+{
+    padding: 15px;
+    text-align: left;
+}
+th .header
+{
+    font-weight: 800;
+}
+
+th .les
+{
+    width: 70%;
+}
+th .uur
+{
+    width: 15%;
 }
