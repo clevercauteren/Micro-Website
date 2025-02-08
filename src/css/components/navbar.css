@@ -9,18 +9,18 @@ div {
     z-index: 1000;
 }
 
-nav {
+.navbar nav {
     margin-left: auto;
     padding-right: 4rem;
 }
 
-h2 {
+.navbar h2 {
     margin-left: 2rem;
     font-size: 2em;
     letter-spacing: 0.09em;
 }
 
-button {
+.navbar button {
     cursor: pointer;
     background: none;
     border: none;
@@ -31,7 +31,7 @@ button {
    
 }
 
-.blue{
+.navbar .blue{
     background-color: #6f8ab7;
     border: none;
     border-radius: 0.25rem;
