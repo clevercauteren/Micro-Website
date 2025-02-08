@@ -8,14 +8,11 @@
 
 body {
   font-family: 'Roboto Flex', sans-serif;
-  background-image: url('/src/images/AdobeStock_1133554305.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 
 /* NavBar */
-div {
+.navbar {
   display: flex;
   align-items: center;
   background-color: #f8f9fa;
@@ -31,7 +28,7 @@ nav {
   padding-right: 4rem;
 }
 
-h2 {
+.titel {
   margin-left: 2rem;
   font-size: 2em;
   letter-spacing: 0.09em;
