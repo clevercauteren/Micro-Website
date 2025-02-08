@@ -1,16 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap');
-
-
-*
-{
-    margin: 0;
-    padding: 0;
-}
 
 body
 {
-    font-family: 'montserat';
     background-image: url(/src/images/backgrounds/lessen.jpeg);
     background-size: cover;
     background-attachment: fixed;
@@ -28,39 +18,51 @@ body
     border-radius: 20px;
 }
 
-h1
-{
-    font-family: Arial, Helvetica;
-    font-size: 2rem;
-    padding: 20px;
-}
 
-table /*opmaak van de tabel*/
+.lessenpakket /*opmaak van de tabel*/
 {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
-tr
+.main h1
+{
+    font-family: Arial, Helvetica;
+    font-size: 3rem;
+    padding: 20px;
+}
+.lessenpakket .head h2
+{
+    font-weight: 800;
+    font-size: 2rem;
+    padding: 20px;
+}
+.lessenpakket .header h3
+{
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 2px;
+}
+.lessenpakket tr
 {
     border-bottom: 1px solid #000000;
 }
 
-th, td p
+.lessenpakket tr td p
 {
     padding: 15px;
-    text-align: left;
+    text-align: center;
 }
-th .header h2
+.lessenpakket th .header h2
 {
     font-weight: 800;
 }
 
-th .les p
+.lessenpakket th .les p
 {
     width: 70%;
 }
-th .uur p
+.lessenpakket th .uur p
 {
     width: 15%;
 }
