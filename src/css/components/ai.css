@@ -6,8 +6,7 @@
 .modal {
     display: none; /* Initially hidden */
     position: fixed;
-    min-width: 400px;
-    z-index: 2; /* Higher z-index to be on top of the overlay */
+    z-index: 3; /* Higher z-index to be on top of the overlay */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -32,7 +31,7 @@
 .overlay {
     display: none; /* Initially hidden */
     position: fixed;
-    z-index: 1; /* Below the modal */
+    z-index: 2; /* Below the modal */
     left: 0;
     top: 0;
     width: 100%;
@@ -119,4 +118,20 @@
     cursor: pointer;
     height: 70px;
     width: 70px;
+}
+
+.flex
+{
+    width: 100%;
+    display: flex;
+}
+
+.flex .user-input
+{
+    float: left;
+}
+
+.flex .send-button
+{
+    float: right;
 }
