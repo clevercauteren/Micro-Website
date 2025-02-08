@@ -34,7 +34,7 @@ nav {
   letter-spacing: 0.09em;
 }
 
-button {
+.navbutton {
   cursor: pointer;
   background: none;
   border: none;
