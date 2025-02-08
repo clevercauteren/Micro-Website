@@ -7,16 +7,45 @@
     <meta name="auteur" content="Jorne Duym">
     <meta name="description" content="Over 5ABB">
     <link rel="stylesheet" href="/src/css/About.css">
+    <link rel="stylesheet" href="/src/css/components/ai.css">
     <link rel="stylesheet" href="/src/css/main.css">
     <title>About</title>
 </head>
 <body>
+    <!-- ai implementation -->
+    <div class="ai">
+        <!-- Button to open the chatbot modal -->
+        <button onclick="openModal()" class="open-button"><img src="/src/images/ai/comment-02-stroke-rounded.svg" alt=""></button>
+
+        <!-- Background overlay (covers the page) -->
+        <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+        <!-- The Modal -->
+        <div id="chatModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img src="/src/images/ai/LOGO white.png" alt="Mistral AI" class="chatbot-image">
+                <h2>Chatbot</h2>
+                <div class="flex">
+                    <input type="text" id="userInput" placeholder="Ask something..." onkeydown="handleKeyPress(event)" class="user-input">
+                    <button onclick="sendClicked(document.getElementById('userInput').value)" class="send-button">Send</button>
+                </div>
+                <hr>
+                <p id="response" class="response"></p>
+            </div>
+        </div>
+
+        <script src="/src/js/ai.js"></script> <!-- Link to external JavaScript file -->
+    </div>
+
+
+    <!-- navbar -->
     <div id="navbar" class="navbar">
         <h2 class="titel">5ADB</h2>
         <nav>
             <a href="/src/pages/lessen.html"><button>Lessenpakket</button></a>
             <a href=""><button>Foto's</button></a>
-            <a href=""><button>Over ADB</button></a>
+            <a href="/src/pages/About.html"><button>Over ADB</button></a>
             <a href=""><button>Na het 6de</button></a>
             <a href=""><button class="blue">Formulier</button></a>
         </nav>
@@ -25,6 +54,8 @@
     <main>
 
     </main>
+
+    <!-- footer -->
     <div class="footer">
         <footer>
             <p>&copy; 2025 Gti Bevern. All rights reserved.</p>
