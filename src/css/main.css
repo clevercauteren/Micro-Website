@@ -23,18 +23,18 @@ body {
   z-index: 1000;
 }
 
-nav {
+.navbar nav {
   margin-left: auto;
   padding-right: 4rem;
 }
 
-.titel {
+.navbar h2 {
   margin-left: 2rem;
   font-size: 2em;
   letter-spacing: 0.09em;
 }
 
-.navbutton {
+.navbar button {
   cursor: pointer;
   background: none;
   border: none;
@@ -45,7 +45,7 @@ nav {
  
 }
 
-.blue{
+.navbar .blue{
   background-color: #6f8ab7;
   border: none;
   border-radius: 0.25rem;
@@ -57,14 +57,14 @@ nav {
 
 
 /* footer */
-footer {
+.footer footer {
   text-align: center;
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1em 0 1em 0;
   
 }
-a {
+.footer a {
   color: #6f8ab7;
   text-decoration:wavy;
 }
