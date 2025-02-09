@@ -33,4 +33,11 @@ ul {
     margin-left: 40px;
 }
 
+.vinkje {
+    margin-left: 0px;
+    margin-top: 5px;
+}
+.vinkje li {
+    list-style-type: none;
+}
 
