@@ -159,7 +159,6 @@ body {
   top: 0;
   z-index: 1000;
   height: 6rem;
-  margin-bottom: 1em ;
 }
 
 .navbar nav {
@@ -168,7 +167,6 @@ body {
 }
 
 .navbar h2 {
-  margin-left: 2rem;
   font-size: 2em;
   letter-spacing: 0.09em;
 }
@@ -234,6 +232,7 @@ body {
   margin: 0 0.4rem 0 0.4rem;
   transition: 100ms;
 }
+
 /* footer */
 .footer footer {
   text-align: center;
