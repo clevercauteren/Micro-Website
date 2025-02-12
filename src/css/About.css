@@ -1,6 +1,8 @@
 
 body {
     background-image: url('/src/images/backgrounds/About.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .about h1 {
