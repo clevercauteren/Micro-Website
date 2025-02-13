@@ -1,0 +1,12 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+h2, p {
+    grid-column: span 4;
+}
+
+div {
+    background-color: aqua;;
+}
