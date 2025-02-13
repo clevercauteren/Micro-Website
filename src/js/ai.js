@@ -56,7 +56,7 @@ function openModal() {
     document.getElementById("overlay").style.display = "block"; // Show the overlay when modal is open
 
     // Automatically send the prompt when the modal opens
-    let promptMessage = "stel mij jezelf voor!";
+    let promptMessage = "stel mij jezelf voor in één korte zin!";
     document.getElementById("userInput").value = promptMessage; // Set the input field to the prompt
     askMistral(promptMessage); // Send the prompt as a message to the AI
 }
