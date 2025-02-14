@@ -4,7 +4,7 @@ Micro website voor 5ADB
 
 Startpagina - Jason
 
-Overzicht van lessenpakket 5de en 6de jaar - Alexander
+Overzicht van lessenpakket 5de en 6de jaar - Alexander/Tommy
 
 ContactFormulier - Clemeant
 
