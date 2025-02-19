@@ -1,18 +1,24 @@
 
 body {
-    background-image: url('/src/images/backgrounds/About.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #333
 }
 
 .about h1 {
-    text-align: center;
+    font-size: 40pt;
+}
+
+.about h2 {
+    font-size: 30pt;
+}
+
+.about h3 {
+    font-size: 20pt;
 }
 .about aside {
     width: 300px;
     background-color: #f4f4f4;
     padding: 20px;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     position: absolute;
     right: 0;
     top: 25%;
@@ -31,24 +37,20 @@ body {
 }
 
 .about section {
-    margin: auto;
     margin-bottom: 20px;
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 15px;
     padding: 20px;
-    backdrop-filter: blur(5px);
+    color: white;
 }
 
 .about ul {
     margin-left: 40px;
 }
 
-.vinkje {
+.about .vinkje {
     margin-left: 0px;
     margin-top: 5px;
 }
-.vinkje li {
+.about .vinkje li {
     list-style-type: none;
 }
 
