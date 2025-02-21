@@ -8,30 +8,6 @@ header img{
 .gradient {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), black);
 }
-.button-read-more {
-    display: flex;
-    align-items: center;
-    border: 1px solid white;
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-    width: 160px;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-}
-.button-read-more-text {
-    padding: 10px 15px;
-    background-color: black;
-}
-.button-read-more-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 15px;
-    border-left: 1px solid white;
-    background-color: black;
-}
 .intro {
     background-color: black;
     display: flex;
@@ -71,6 +47,12 @@ header img{
 .column-2 {
     width: 50%;
     background-color: #000000;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.column-2 img {
+    width: 679px;
+    height: 380px;
 }
 .photo-section {
     text-align: center;
