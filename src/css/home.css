@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 header img{
-    max-height: 260px;
+    max-height: 500px;
     width: 100%;
+    object-fit: cover;
 }
 
 
@@ -20,7 +21,45 @@ header img{
     padding: 20px;
     box-sizing: border-box;
 }
+.button-read-more {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    width: 145px;
+}
 
+.button-read-more-text {
+    padding: 10px 15px;
+    background-color: black;
+    transition: 300ms;
+}
+.button-read-more-text:hover {
+    background-color: white;
+    color: black;
+}
+.button-read-more-icon {
+    display: flex;
+    align-items: center;;
+    justify-content: center;
+    padding: 10px 15px;
+    border-left: 1px solid white;
+    background-color: black;
+}
+
+.button-read-more-icon svg {
+    width: 12px;
+    height: 12px;
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
 .column-1 {
     width: 50%;
     background-color: #000000;
