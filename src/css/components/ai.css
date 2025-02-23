@@ -116,6 +116,7 @@ body
 
 
 .ai .open-button{
+    z-index: 4;
     height: 60px;
     width: 60px;
     border-radius: 50%;
