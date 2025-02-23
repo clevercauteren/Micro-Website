@@ -7,7 +7,7 @@ header img{
 
 
 .gradient {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), black);
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255));
 }
 .intro {
     background-color: black;
@@ -65,16 +65,16 @@ header img{
     background-color: #000000;
     color: white;
     margin-left: 250px;
-    margin-right: 250px;
+    margin-right: 150px;
     text-align: left;
 }
-.column-1 h2 {
+.column-1 .scroll-field .scroll-container .content h2 {
     font-family: "Raleway";
     font-weight: 180;
     letter-spacing: 2px;
     word-spacing: 3px;
 }
-.column-1 p {
+.column-1 .scroll-field .scroll-container .content p {
     font-family: "Raleway";
     font-weight: 50;
     line-height: 1.9;
@@ -92,6 +92,7 @@ header img{
 .column-2 img {
     width: 679px;
     height: 380px;
+    border-radius: 5px;
 }
 .photo-section {
     text-align: center;

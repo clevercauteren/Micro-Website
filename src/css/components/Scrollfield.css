@@ -8,7 +8,7 @@ body {
     height: 100vh;
 }
 
-.scroll-container {
+.scroll-field .scroll-container {
     width: 350px;
     height: 400px;
     overflow-y: auto;
@@ -21,25 +21,20 @@ body {
 }
 
 /* Reset content to normal direction */
-.scroll-container .content {
+.scroll-field .scroll-container .content {
     direction: ltr;
 }
 
 /* Webkit-based browsers (Chrome, Safari) */
-.scroll-container::-webkit-scrollbar {
+.scroll-field .scroll-container::-webkit-scrollbar {
     width: 3px; /* Thin line */
 }
 
-.scroll-container::-webkit-scrollbar-track {
+.scroll-field .scroll-container::-webkit-scrollbar-track {
     background: black;
 }
 
-.scroll-container::-webkit-scrollbar-thumb {
+.scroll-field .scroll-container::-webkit-scrollbar-thumb {
     background: gray;
     border-radius: 10px;
-}
-
-/* Placeholder content for scrolling */
-.content {
-    height: 800px;
 }

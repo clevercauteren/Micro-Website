@@ -12,48 +12,90 @@
 </head>
 <body>
     <div id="navbar" class="navbar">
-        <a href="home.html"><button class="standard-button"><h2 class="titel">5ADB</h2></button></a>
+        <a href=""><h2 class="titel">5ADB</h2></a>
         <nav>
-            <a href="/src/pages/lessen.html"><button class="standard-button">Lessenpakket</button></a>
-            <a href=""><button class="standard-button">Foto's</button></a>
-            <a href="/src/pages/About.html"><button class="standard-button">Over ADB</button></a>
-            <a href=""><button class="standard-button">Na het 6de</button></a>
-            <a href=""><button class="blue">Formulier</button></a>
+            <a href="/src/pages/lessen.html">Lessenpakket</a>
+            <a href="">Foto's</a>
+            <a href="/src/pages/About.html">Over ADB</a>
+            <a href="">Na het 6de</a>
+            <a href="" class="blue"><button class="blue">Formulier</button></a>
         </nav>
+        <script src="/src/js/navbar.js"></script>
     </div>
+
+    <!-- ai implementation -->
+     
+    <div class="ai">
+        <!-- Button to open the chatbot modal -->
+        <button onclick="openModal()" class="open-button"><img src="/src/images/ai/comment-02-stroke-rounded.svg" alt=""></button>
+
+        <!-- Background overlay (covers the page) -->
+        <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+        <!-- The Modal -->
+        <div id="chatModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img src="/src/images/ai/LOGO white.png" alt="Mistral AI" class="chatbot-image">
+                <h2 class="title">Chatbot</h2>
+                <div class="flex">
+                    <input type="text" id="userInput" placeholder="Ask something..." onkeydown="handleKeyPress(event)" class="user-input">
+                    <button onclick="sendClicked(document.getElementById('userInput').value)" class="send-button">Send</button>
+                </div>
+                <hr>
+                <p id="response" class="response"></p>
+            </div>
+        </div>
+
+        <script src="/src/js/ai.js"></script> <!-- Link to external JavaScript file -->
+    </div>
+
+    <!-- pagina -->
+
     <header>
-        <img src="/images/AdobeStock_1083675766.jpeg" alt="">
+        <div class="achtergrond-scroll">
+      
+            <div class="parallax"></div>
+      
+            <script src="/src/js/achtergrond-scroll.js"></script>
+        </div>
     </header>
-    <div class="gradient">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
     <main>
         <section class="intro">
+            
             <div class="column column-1">
-                <h2>Welkom bij 5ADB</h2>
-                <br><br><br><br><br>
-                <p>ADB richt zich op twee belangrijke domeinen binnen de IT: softwareontwikkeling en databeheer. Dit betekent dat je niet alleen leert programmeren, maar ook inzicht krijgt in hoe data wordt opgeslagen, verwerkt en beveiligd.
-                    Binnen deze opleiding werk je met verschillende programmeertalen, frameworks en technologieën die in de IT-sector veel gebruikt worden. Je leert hoe je moderne applicaties bouwt, van webapplicaties tot mobiele apps, en hoe je databases efficiënt ontwerpt en beheert.</p>
-                    <br>
-                    <a href="About.html" class="button-read-more">
-                        <div class="button-read-more-text">Meer lezen</div>
-                        <div class="button-read-more-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M9 18l6-6-6-6" />
-                            </svg>
+                <div class="scroll-field">
+                    <div class="scroll-container">
+                        <div class="content">
+                            <h2>Welkom bij 5ADB</h2>
+                            <br><br>
+                            <p>ADB richt zich op twee belangrijke domeinen binnen de IT: softwareontwikkeling en databeheer. Dit betekent dat je niet alleen leert programmeren, maar ook inzicht krijgt in hoe data wordt opgeslagen, verwerkt en beveiligd.
+                                Binnen deze opleiding werk je met verschillende programmeertalen, frameworks en technologieën die in de IT-sector veel gebruikt worden. Je leert hoe je moderne applicaties bouwt, van webapplicaties tot mobiele apps, en hoe je databases efficiënt ontwerpt en beheert.</p>
+                            <br>
+                            <a href="About.html" class="button-read-more">
+                                <div class="button-read-more-text">Meer lezen</div>
+                                <div class="button-read-more-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </div>
+                            </a>
                         </div>
-                    </a>         
+                    </div>
+                </div>
             </div>
             <div class="column column-2">
                 <img src="/src/images/fotos/Fotocoding1_1_11zon.jpeg" alt="">
             </div>
         </section>
-        <br>
+        <div class="gradient">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
         <section class="photo-section">
             <h3>Vakken</h3>
             <p>In 5ADB hebben we 4 richtingspecifieke vakken</p>
