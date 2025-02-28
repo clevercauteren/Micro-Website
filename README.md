@@ -10,6 +10,8 @@ ContactFormulier - Clemeant
 
 ChatBot - Alexander
 
+Foto's Pagina - Robbe
+
 Mogelijkheden na 6de - Tommy
 
 Samenbrengen van website - Jorne
