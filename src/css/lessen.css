@@ -1,70 +1,146 @@
+/* Algemene instellingen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-body
-{
-    background-image: url(/src/images/backgrounds/lessen.jpeg);
-    background-size: cover;
-    background-attachment: fixed;
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  /*  background-image: url(html\ zehma.jpg);
     background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover; */
+}
+
+/* Hoofdheader */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1d1d;
+    height: 60px;
+    color: white;
+    gap: 30px;
+}
+
+.banner a {
+    color: #f1f1f1;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner a:hover {
+    color: #1dbf73;
+    text-decoration: underline;
+}
+
+/* Hoofdsectie van de pagina */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.353);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titel {
     text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-.lessen .main /*opmaak van de main kader op de pagina*/
-{
-    width: 60%;
-    margin: auto;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
+.tussentitel {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
 }
 
-
-.lessen .lessenpakket /*opmaak van de tabel*/
-{
+/* Tabellen */
+table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1rem;
-}
-.lessen .main h1
-{
-    font-family: Arial, Helvetica;
-    font-size: 3rem;
-    padding: 20px;
-}
-.lessen .head h2
-{
-    font-weight: 800;
-    font-size: 2rem;
-    padding: 20px;
-}
-.lessen .header h3
-{
-    font-weight: 800;
-    font-size: 1.5rem;
-    padding: 2px;
-}
-.lessen tr
-{
-    border-bottom: 1px solid #000000;
+    margin-bottom: 30px;
 }
 
-.lessen tr td p
-{
-    padding: 15px;
+table, th, td {
+    border: 1px solid #dddddd6e;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: #f2f2f26d;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f973;
+}
+
+tr:hover {
+    background-color: #f1f1f15f;
+}
+
+/* Kolommen */
+.tabeleen, .tabeltwee {
+    width: 48%;
+    margin: 10px;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.tabeltwee {
+    float: right;
+}
+
+/* Footer */
+footer {
+    background-color: #1d1d1d;
+    color: white;
     text-align: center;
-}
-.lessen th .header h2
-{
-    font-weight: 800;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-.lessen th .les p
-{
-    width: 70%;
+footer a {
+    color: #f1f1f1;
+    text-decoration: none;
 }
-.lessen th .uur p
-{
-    width: 15%;
+
+footer a:hover {
+    color: #1dbf73;
+}
+
+/* Responsiviteit */
+@media screen and (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .tabeleen, .tabeltwee {
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
 }
