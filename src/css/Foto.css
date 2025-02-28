@@ -1,0 +1,17 @@
+.Fotos {
+  margin: 2% 0 2% 0;
+  border: 1px solid black;
+  text-align: center;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+
+.Fotos section {
+  border: 1px solid blue;
+  width: 100%;
+}
+
+.Fotos section img {
+  border: 1px solid green;
+  width: 90%;
+}
