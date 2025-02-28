@@ -46,6 +46,7 @@ body {
 }
 
 .navbar a {
+    color: white;
     text-decoration: none;
     margin: 0 1rem 0 1rem;
     transition: 400ms;
