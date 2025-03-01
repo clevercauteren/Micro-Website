@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
+    <!-- Meta data -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="auteur" content="5ADB" />
@@ -11,6 +12,7 @@
     <title>5ADB</title>
   </head>
   <body>
+    <!-- Navigation -->
     <div id="navbar" class="navbar">
       <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
       <nav>
@@ -23,6 +25,7 @@
       <script src="/src/js/navbar.js"></script>
     </div>
     <main>
+      <!-- Foto's -->
       <div class="Fotos">
         <div class="FotosContent">
           <section>
@@ -152,6 +155,15 @@
         </div>
       </div>
     </main>
+    <!-- Foto fullschreen onclick -->
+    <div id="lightboxModal" class="modal">
+      <span class="close">&times;</span>
+      <a class="prev">&#10094;</a>
+      <img class="modal-content" id="modalImage" alt="Grote foto" />
+      <a class="next">&#10095;</a>
+    </div>
+    <br /><br /><br />
+    <!-- Footer -->
     <div class="footer">
       <footer>
         <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
@@ -166,5 +178,6 @@
         </p>
       </footer>
     </div>
+    <script src="/src/js/Foto.js"></script>
   </body>
 </html>
