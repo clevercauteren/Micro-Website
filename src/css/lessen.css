@@ -96,6 +96,10 @@ tr:hover {
   background-color: #f1f1f15f;
 }
 
+td a {
+  display: block;
+}
+
 /* Kolommen */
 .tabeleen,
 .tabeltwee {
