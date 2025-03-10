@@ -8,8 +8,7 @@
 
 body {
   font-family: "Roboto Flex", sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #1a1a1a;
   /*  background-image: url(html\ zehma.jpg);
     background-repeat: no-repeat;
     background-position: fixed;
@@ -45,11 +44,13 @@ main {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.353);
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  color: #333;
 }
 
-.titel {
+main .titel {
   text-align: center;
   font-size: 32px;
   margin-bottom: 30px;
