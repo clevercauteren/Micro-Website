@@ -1,49 +1,51 @@
+document.getElementById("CurrentYear").innerText = new Date().getFullYear();
+
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll(".FotosContent img");
-  const modal = document.getElementById("lightboxModal");
-  const modalImage = document.getElementById("modalImage");
-  const closeBtn = document.querySelector(".close");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
+  const FSF = document.getElementById("lightboxFullscreenFoto");
+  const FSFImage = document.getElementById("FullscreenFotoImage");
+  const closeBtn = document.querySelector(".FullscreenFoto-close");
+  const prevBtn = document.querySelector(".FullscreenFoto-prev");
+  const nextBtn = document.querySelector(".FullscreenFoto-next");
 
   let currentIndex = 0;
 
-  function openModal(index) {
+  function openFSF(index) {
     currentIndex = index;
-    modalImage.src = images[currentIndex].src;
-    modal.style.display = "flex";
+    FSFImage.src = images[currentIndex].src;
+    FSF.style.display = "flex";
   }
 
-  function closeModal() {
-    modal.style.display = "none";
+  function closeFSF() {
+    FSF.style.display = "none";
   }
 
   function showPrevImage() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
-    modalImage.src = images[currentIndex].src;
+    FSFImage.src = images[currentIndex].src;
   }
 
   function showNextImage() {
     currentIndex = (currentIndex + 1) % images.length;
-    modalImage.src = images[currentIndex].src;
+    FSFImage.src = images[currentIndex].src;
   }
 
   images.forEach((img, index) => {
-    img.addEventListener("click", () => openModal(index));
+    img.addEventListener("click", () => openFSF(index));
   });
 
-  closeBtn.addEventListener("click", closeModal);
+  closeBtn.addEventListener("click", closeFSF);
   prevBtn.addEventListener("click", showPrevImage);
   nextBtn.addEventListener("click", showNextImage);
 
   window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      closeModal();
+    if (event.target === FSF) {
+      closeFSF();
     }
   });
 
   window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeModal();
+    if (event.key === "Escape") closeFSF();
     if (event.key === "ArrowLeft") showPrevImage();
     if (event.key === "ArrowRight") showNextImage();
   });
