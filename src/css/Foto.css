@@ -47,8 +47,8 @@
   height: 95%;
 }
 
-/* Foto fullschreen onclick */
-.modal {
+/* Foto fullscreen onclick */
+.FullscreenFoto {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -61,14 +61,14 @@
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.modal-content {
+.FullscreenFoto-content {
   margin: auto;
   display: block;
   max-width: 90%;
   max-height: 80%;
 }
 
-.close {
+.FullscreenFoto-close {
   position: absolute;
   top: 20px;
   right: 35px;
@@ -78,8 +78,8 @@
   cursor: pointer;
 }
 
-.prev,
-.next {
+.FullscreenFoto-prev,
+.FullscreenFoto-next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -93,15 +93,15 @@
   transition: 0.3s;
 }
 
-.prev:hover,
-.next:hover {
+.FullscreenFoto-prev:hover,
+.FullscreenFoto-next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.prev {
+.FullscreenFoto-prev {
   left: 10px;
 }
 
-.next {
+.FullscreenFoto-next {
   right: 10px;
 }
