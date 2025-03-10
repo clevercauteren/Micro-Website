@@ -28,11 +28,12 @@ body {
   min-width: 40%;
   margin: auto;
   box-shadow: 0px 4px 8px rgb(0, 0, 0);
-  font-family: "Roboto";
+  font-family: 'Roboto';
 }
 
-.ai .modal .response {
-  font-family: "Roboto";
+.ai .modal .response
+{
+  font-family: 'Roboto';
   /* font-weight: 600; */
   font-size: 23px;
   color: white;
@@ -66,30 +67,30 @@ body {
   cursor: pointer;
 }
 
-.ai .chatbot-image {
+.ai .chatbot-image{
   width: auto;
   height: 50px;
   margin-right: 20px;
 }
 
-.ai .user-input {
+.ai .user-input{
   width: 73%;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 16px;
   text-align: center;
 }
 
-.ai .send-button {
+.ai .send-button{
   width: 20%;
   padding: 10px;
   margin-top: 10px;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 5px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 16px;
   text-align: center;
   background-color: #000000;
@@ -97,14 +98,17 @@ body {
   transition: 400ms;
 }
 
-.ai .send-button:hover {
+.ai .send-button:hover
+{
   width: 22%;
   border: 2px solid rgb(62, 62, 62);
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   font-size: 19px;
+
 }
-.ai .send-button:active {
+.ai .send-button:active
+{
   width: 22%;
   border: 3px solid rgb(62, 62, 62);
   background-color: #ffffff;
@@ -113,7 +117,8 @@ body {
   transition: 100ms;
 }
 
-.ai .open-button {
+
+.ai .open-button{
   z-index: 4;
   height: 60px;
   width: 60px;
@@ -129,33 +134,43 @@ body {
   transition: 400ms;
 }
 
-.ai .open-button:hover {
+.ai .open-button:hover{
   cursor: pointer;
   height: 70px;
   width: 70px;
   border-radius: 10%;
 }
 
-.ai .flex {
+.ai .flex
+{
   width: 100%;
   display: flex;
 }
 
-.ai .flex .user-input {
+.ai .flex .user-input
+{
   float: left;
 }
 
-.ai .flex .send-button {
+.ai .flex .send-button
+{
   float: right;
   margin-right: 0%;
   margin-left: 2%;
 }
 
-.ai .modal .modal-content .title {
-  font-family: "Times New Roman", Times, serif;
+.ai .modal .modal-content .title
+{
+  font-family: 'Times New Roman', Times, serif;
   font-size: 50px;
   color: rgb(255, 255, 255);
   margin-bottom: 20px;
+}
+.ai .modal .modal-content{
+  width: 100%;
+}
+.ai .modal .modal-content hr{
+  margin: 8px 0px;
 }
 
 /* NavBar */
