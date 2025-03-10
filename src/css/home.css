@@ -197,3 +197,13 @@ header img {
 .FullscreenFoto-next {
   right: 10px;
 }
+
+.BlackBarNav {
+  z-index: -99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  width: 100vw;
+  background-color: black;
+}
