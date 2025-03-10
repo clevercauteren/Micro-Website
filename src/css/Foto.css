@@ -4,6 +4,10 @@
   }
 }
 
+body {
+  background-color: #414141;
+}
+
 .Fotos {
   margin: 1%;
   text-align: center;
@@ -45,6 +49,7 @@
   border-radius: 10px;
   width: 95%;
   height: 95%;
+  object-fit: cover;
 }
 
 /* Foto fullscreen onclick */
