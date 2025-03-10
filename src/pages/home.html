@@ -151,21 +151,38 @@
         </div>
       </section>
       <section></section>
+
+      <!-- Foto fullschreen onclick -->
+      <div id="lightboxFullscreenFoto" class="FullscreenFoto">
+        <span class="FullscreenFoto-close">&times;</span>
+        <a class="FullscreenFoto-prev">&#10094;</a>
+        <img
+          class="FullscreenFoto-content"
+          id="FullscreenFotoImage"
+          alt="Grote foto"
+        />
+        <a class="FullscreenFoto-next">&#10095;</a>
+      </div>
     </main>
     <br />
     <br />
     <div class="footer">
       <footer>
-        <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
+        <p>
+          &copy; <span id="CurrentYear">2025</span> Gti Beveren. All rights
+          reserved.
+        </p>
         <p>5ADB - B groep</p>
         <p>
           <a
             class="GTI"
             href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut"
+            target="_blank"
             >GTI Beveren</a
           >
         </p>
       </footer>
     </div>
+    <script src="/src/js/home.js"></script>
   </body>
 </html>
