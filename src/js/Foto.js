@@ -1,3 +1,5 @@
+document.getElementById("CurrentYear").innerText = new Date().getFullYear();
+
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll(".FotosContent img");
   const modal = document.getElementById("lightboxModal");
