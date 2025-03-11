@@ -1,19 +1,30 @@
 
 body {
-    background-color: #333
+    background-color: #333;
+    min-height: 100vh;
+}
+html
+{
+    min-height: 100vh;
 }
 
-.about h1 {
-    font-size: 40pt;
+.about {
+    padding: 20px;
+    color: white;
+    font-family: 'montserrat';
+    font-size: 1.2rem;
 }
+
+.about header {
+    font-size: 2rem;
+    color: white;
+}
+
 
 .about h2 {
-    font-size: 30pt;
-}
-
-.about h3 {
     font-size: 20pt;
 }
+
 .about aside {
     width: 300px;
     background-color: #f4f4f4;
@@ -31,11 +42,6 @@ body {
     margin-bottom: 5px;
 }
 
-.about main {
-    flex: 1;
-    padding: 20px;
-}
-
 .about section {
     margin-bottom: 20px;
     padding: 20px;
@@ -45,12 +51,3 @@ body {
 .about ul {
     margin-left: 40px;
 }
-
-.about .vinkje {
-    margin-left: 0px;
-    margin-top: 5px;
-}
-.about .vinkje li {
-    list-style-type: none;
-}
-
