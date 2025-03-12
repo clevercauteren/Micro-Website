@@ -1,7 +1,9 @@
-
 body {
     background-color: #333;
     min-height: 100vh;
+    background-image: url('/src/images/backgrounds/About.jpeg');
+    backdrop-filter: blur(5px);
+    background-size: cover;
 }
 html
 {
@@ -13,6 +15,7 @@ html
     color: white;
     font-family: 'montserrat';
     font-size: 1.2rem;
+    margin-top: 0;
 }
 
 .about header {
@@ -50,4 +53,29 @@ html
 
 .about ul {
     margin-left: 40px;
+}
+
+.about a
+{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    padding-bottom: 0;
+    margin-top: auto;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    justify-content: space-between;
 }
