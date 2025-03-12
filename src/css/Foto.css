@@ -24,7 +24,7 @@ body {
 }
 
 .FotosContent section {
-  background-color: lightgray;
+  background-color: grey;
   border-radius: 10px;
   padding: 1%;
   width: 95%;
@@ -35,7 +35,7 @@ body {
 }
 
 .FotosContent section:hover {
-  box-shadow: grey 0.5px 0.5px 3px 1.5px;
+  box-shadow: lightgrey 0.5px 0.5px 5px 1.5px;
   transition: all 0.2s;
 }
 
