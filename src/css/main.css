@@ -289,7 +289,7 @@ body {
 .achtergrond-scroll .parallax {
   position: relative;
   background-color: black;
-  height: 80vh;
+  height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -243,3 +243,7 @@ header img {
   text-align: center;
   border: 0;
 }
+
+.button-read-more {
+  margin: 20px 0;
+}
