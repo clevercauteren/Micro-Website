@@ -15,7 +15,7 @@ header img {
   z-index: 99;
   position: absolute;
   left: 50%;
-  top: 30%;
+  top: 15%;
   color: white;
   background-color: transparent;
   transform: translate(-50%, -50%);
@@ -25,6 +25,11 @@ header img {
 
 .Title h1 {
   letter-spacing: 0.4rem;
+}
+
+.Title h6 {
+  font-size: 60%;
+  font-weight: 400;
 }
 
 .Title p {
