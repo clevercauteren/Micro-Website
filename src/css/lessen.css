@@ -1,14 +1,14 @@
 /* Algemene instellingen */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Roboto Flex', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: "Roboto Flex", sans-serif;
+  background-color: #414141;
   /*  background-image: url(html\ zehma.jpg);
     background-repeat: no-repeat;
     background-position: fixed;
@@ -17,132 +17,147 @@ body {
 
 /* Hoofdheader */
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1d1d1d;
-    height: 60px;
-    color: white;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1d1d;
+  height: 60px;
+  color: white;
+  gap: 30px;
 }
 
 .banner a {
-    color: #f1f1f1;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
+  color: #f1f1f1;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .banner a:hover {
-    color: #1dbf73;
-    text-decoration: underline;
+  color: #1dbf73;
+  text-decoration: underline;
 }
 
 /* Hoofdsectie van de pagina */
 main {
-    width: 100%;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.353);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  color: #333;
 }
 
-.titel {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #333;
+main .titel {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
 }
 
 .tussentitel {
-    text-align: center;
-    background-color: #f2f2f2;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin: 20px 0;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 20px 0;
 }
 
 /* Tabellen */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
 }
 
-table, th, td {
-    border: 1px solid #dddddd6e;
+table,
+th,
+td {
+  border: 1px solid #dddddd6e;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    font-size: 16px;
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
 }
 
 th {
-    background-color: #f2f2f26d;
+  background-color: #f2f2f26d;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f973;
+  background-color: #f9f9f973;
 }
 
 tr:hover {
-    background-color: #f1f1f15f;
+  background-color: #f1f1f15f;
+}
+
+td a {
+  display: block;
+}
+
+h2 {
+  margin-top: 3%;
 }
 
 /* Kolommen */
-.tabeleen, .tabeltwee {
-    width: 48%;
-    margin: 10px;
-    float: left;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-    padding: 20px;
+.tabeleen,
+.tabeltwee {
+  width: 48%;
+  margin: 10px;
+  float: left;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
 }
 
 .tabeltwee {
-    float: right;
+  float: right;
 }
 
 /* Footer */
 footer {
-    background-color: #1d1d1d;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #1d1d1d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 footer a {
-    color: #f1f1f1;
-    text-decoration: none;
+  color: #f1f1f1;
+  text-decoration: none;
 }
 
 footer a:hover {
-    color: #1dbf73;
+  color: #1dbf73;
 }
 
 /* Responsiviteit */
 @media screen and (max-width: 768px) {
-    .banner {
-        flex-direction: column;
-        height: auto;
-        padding: 15px 0;
-    }
+  .banner {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
 
-    .tabeleen, .tabeltwee {
-        width: 100%;
-        float: none;
-        margin: 10px 0;
-    }
+  .tabeleen,
+  .tabeltwee {
+    width: 100%;
+    float: none;
+    margin: 10px 0;
+  }
 
-    main {
-        padding: 15px;
-    }
+  main {
+    padding: 15px;
+  }
 }
 .teeekst{
     color: black;

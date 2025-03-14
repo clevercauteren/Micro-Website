@@ -1,39 +1,242 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
+    <!-- Meta data -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="auteur" content="5ADB" />
     <meta name="auteur" content="Robbe Ghyssaert" />
     <meta name="description" content="Foto 5ABB" />
     <link rel="stylesheet" href="/src/css/main.css" />
-    <title>5ADB</title>
+    <link rel="stylesheet" href="/src/css/Foto.css" />
+    <title>5ADB Fotos</title>
   </head>
   <body>
+    <!-- ai implementation -->
+
+    <div class="ai">
+      <!-- Button to open the chatbot modal -->
+      <button onclick="openModal()" class="open-button">
+        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="" />
+      </button>
+
+      <!-- Background overlay (covers the page) -->
+      <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+      <!-- The Modal -->
+      <div id="chatModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img
+            src="/src/images/ai/LOGO white.png"
+            alt="Mistral AI"
+            class="chatbot-image"
+          />
+          <h2 class="title">Chatbot</h2>
+          <div class="flex">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Ask something..."
+              onkeydown="handleKeyPress(event)"
+              class="user-input"
+            />
+            <button
+              onclick="sendClicked(document.getElementById('userInput').value)"
+              class="send-button"
+            >
+              Send
+            </button>
+          </div>
+          <hr />
+          <p id="response" class="response"></p>
+        </div>
+      </div>
+
+      <script src="/src/js/ai.js"></script>
+      <!-- Link to external JavaScript file -->
+    </div>
+
+    <!-- Navigation -->
     <div id="navbar" class="navbar">
       <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
       <nav>
-        <a href="/src/pages/lessen.html">Lessenpakket</a>
+        <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
         <a href="/src/pages/Foto.html">Foto's</a>
         <a href="/src/pages/About.html">Over ADB</a>
-        <a href="">Na het 6de</a>
-        <a href="" class="blue"><button class="blue">Formulier</button></a>
+        <a href="" class=""><button class="blue">Formulier</button></a>
       </nav>
       <script src="/src/js/navbar.js"></script>
     </div>
-    <main></main>
+    <main>
+      <!-- Foto's -->
+      <div class="Fotos">
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_6769 2.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_6771.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_6984.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_6986.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_6989.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_6990.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_6993.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_6994.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_7002.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_7004.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_7045.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_7053.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_7054.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+        <div class="FotosContent">
+          <section>
+            <img
+              src="/src/images/Fotos fotosite/IMG_7055.jpg"
+              alt="Foto"
+              loading="lazy"
+            />
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Foto fullschreen onclick -->
+    <div id="lightboxFullscreenFoto" class="FullscreenFoto">
+      <span class="FullscreenFoto-close">&times;</span>
+      <a class="FullscreenFoto-prev">&#10094;</a>
+      <img
+        class="FullscreenFoto-content"
+        id="FullscreenFotoImage"
+        alt="Grote foto"
+      />
+      <a class="FullscreenFoto-next">&#10095;</a>
+    </div>
+    <br /><br /><br />
+
+    <!-- Footer -->
     <div class="footer">
       <footer>
-        <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
-        <p>5ADB - B groep</p>
+        <p>
+          &copy; <span id="CurrentYear">2025</span> Gti Beveren. All rights
+          reserved.
+        </p>
+        <p>
+          5ADB -
+          <abbr
+            title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
+            >B groep</abbr
+          >
+        </p>
         <p>
           <a
             class="GTI"
             href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut"
+            target="_blank"
             >GTI Beveren</a
           >
         </p>
       </footer>
     </div>
+    <script src="/src/js/Foto.js"></script>
   </body>
 </html>

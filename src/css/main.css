@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap");
 
 * {
   margin: 0;
@@ -8,9 +8,8 @@
 }
 
 body {
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: "Roboto Flex", sans-serif;
 }
-
 
 /* AI */
 .ai .modal {
@@ -167,9 +166,15 @@ body {
   color: rgb(255, 255, 255);
   margin-bottom: 20px;
 }
+.ai .modal .modal-content{
+  width: 100%;
+}
+.ai .modal .modal-content hr{
+  margin: 8px 0px;
+}
 
 /* NavBar */
-.navbar{
+.navbar {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -183,9 +188,7 @@ body {
   height: 6rem;
   transition: 400ms;
 }
-.navbar:hover
-{
-  
+.navbar:hover {
   display: flex;
   align-items: center;
   background-color: #f8f9fa;
@@ -213,12 +216,17 @@ body {
   margin: 0 1rem 0 1rem;
   transition: 400ms;
 }
+.navbar:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .navbar a:hover {
   text-decoration: underline;
   transition: 100ms;
 }
 
-.navbar .blue{
+.navbar .blue {
   background-color: #6f8ab7;
   border: none;
   border-radius: 0.25rem;
@@ -248,7 +256,6 @@ body {
   transition: 100ms;
 }
 
-
 /* Scrollfield */
 
 .scroll-field .scroll-container {
@@ -265,36 +272,37 @@ body {
 
 /* Reset content to normal direction */
 
-.scroll-field .scroll-container .content
-{
+.scroll-field .scroll-container .content {
   direction: ltr;
 }
 
-.scroll-field .scroll-container::-webkit-scrollbar
-{
+.scroll-field .scroll-container::-webkit-scrollbar {
   width: 3px;
 }
 
-.scroll-field .scroll-container::-webkit-scrollbar-track
-{
+.scroll-field .scroll-container::-webkit-scrollbar-track {
   background: black;
 }
 
-.scroll-field .scroll-container::-webkit-scrollbar-thumb
-{
+.scroll-field .scroll-container::-webkit-scrollbar-thumb {
   background: gray;
   border-radius: 10px;
 }
 
 /* achtergrond scroll */
+.achtergrond-scroll iframe {
+  height: 120vh;
+  width: 100vw;
+}
 
 .achtergrond-scroll .parallax {
   position: relative;
-  background-image: url(/src/images/backgrounds/lessen.jpeg); /* Zet hier de afbeelding die je wilt als achtergrond */
+  background-color: black;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 5%;
 }
 
 .achtergrond-scroll .content {
@@ -304,14 +312,14 @@ body {
 }
 
 /* footer */
+
 .footer footer {
   text-align: center;
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1em 0 1em 0;
-  
 }
 .footer a {
   color: #6f8ab7;
-  text-decoration:wavy;
+  text-decoration: wavy;
 }
