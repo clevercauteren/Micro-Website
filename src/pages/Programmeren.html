@@ -38,7 +38,6 @@
     </div>
 
     <!-- ai implementation -->
-
     <div class="ai">
       <!-- Button to open the chatbot modal -->
       <button onclick="openModal()" class="open-button">
@@ -67,6 +66,7 @@
               class="user-input"
             />
             <button
+              id="send-button"
               onclick="sendClicked(document.getElementById('userInput').value)"
               class="send-button"
             >
@@ -74,7 +74,9 @@
             </button>
           </div>
           <hr />
-          <p id="response" class="response"></p>
+          <div class="aiScroll">
+            <p id="response" class="response"></p>
+          </div>
         </div>
       </div>
 
@@ -102,27 +104,28 @@
         <div>
           <div class="column column-1">
             <div class="scroll-field">
-              <div class="scroll-container" style="width: 75%;>
-              <div class="content" style="text-align: left">
-                <h2>Programmeren en databeheer 5de jaar</h2>
-                <br /><br />
-                <p>
-                  <strong
-                    >Programmeren en Databeheer – Coderen en gegevens
-                    beheren</strong
-                  ><br />
-                  In Programmeren en Databeheer leer je de programmeertaal C#.
-                  Hiermee kun je zelf programma’s maken en leer je computers
-                  opdrachten te geven. Daarnaast werk je met Google Forms, een
-                  tool waarmee je gegevens kunt verzamelen, organiseren en
-                  beheren. Je leert hoe je informatie vastlegt en verwerkt om
-                  alles efficiënt en overzichtelijk te houden. Dit vak helpt je
-                  niet alleen om technische vaardigheden te ontwikkelen, maar
-                  ook om probleemoplossend te denken. Je leert hoe je problemen
-                  aanpakt en creatieve oplossingen bedenkt, zowel in
-                  programmeren als bij het werken met gegevens.
-                </p>
-                <br />
+              <div class="scroll-container" style="width: 75%;">
+                <div class="content" style="text-align: left">
+                  <h2>Programmeren en databeheer 5de jaar</h2>
+                  <br /><br />
+                  <p>
+                    <strong
+                      >Programmeren en Databeheer – Coderen en gegevens
+                      beheren</strong
+                    ><br />
+                    In Programmeren en Databeheer leer je de programmeertaal C#.
+                    Hiermee kun je zelf programma’s maken en leer je computers
+                    opdrachten te geven. Daarnaast werk je met Google Forms, een
+                    tool waarmee je gegevens kunt verzamelen, organiseren en
+                    beheren. Je leert hoe je informatie vastlegt en verwerkt om
+                    alles efficiënt en overzichtelijk te houden. Dit vak helpt je
+                    niet alleen om technische vaardigheden te ontwikkelen, maar
+                    ook om probleemoplossend te denken. Je leert hoe je problemen
+                    aanpakt en creatieve oplossingen bedenkt, zowel in
+                    programmeren als bij het werken met gegevens.
+                  </p>
+                  <br />
+                </div>
               </div>
             </div>
           </div>
