@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+
+.achtergrond-scroll .parallax {
+  position: relative;
+  background-image: url(/src/images/backgrounds/lessen.jpeg); /* Zet hier de afbeelding die je wilt als achtergrond */
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.achtergrond-scroll .content {
+  height: 2500px; /* Maak de inhoud lang genoeg om te kunnen scrollen */
+  padding: 20px;
+  text-align: center;
+}

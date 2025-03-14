@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap");
 
 * {
   margin: 0;
@@ -8,9 +8,8 @@
 }
 
 body {
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: "Roboto Flex", sans-serif;
 }
-
 
 /* AI */
 .ai .modal {
@@ -120,6 +119,7 @@ body {
 
 
 .ai .open-button{
+  z-index: 4;
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -166,9 +166,29 @@ body {
   color: rgb(255, 255, 255);
   margin-bottom: 20px;
 }
+.ai .modal .modal-content{
+  width: 100%;
+}
+.ai .modal .modal-content hr{
+  margin: 8px 0px;
+}
 
 /* NavBar */
 .navbar {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  color: white;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+  padding: 1em 0 auto 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 6rem;
+  transition: 400ms;
+}
+.navbar:hover {
   display: flex;
   align-items: center;
   background-color: #f8f9fa;
@@ -190,39 +210,23 @@ body {
   letter-spacing: 0.09em;
 }
 
-.navbar .standard-button {
-  background-color: #f8f9fa;
-  cursor: pointer;
+.navbar a {
+  color: white;
   text-decoration: none;
-  background: none;
-  border: none;
-  padding: 1rem 0.5rem 1rem 0.5rem;
   margin: 0 1rem 0 1rem;
-  font-size: 1em;
-  border-radius: 0rem;
-  transition: 200ms;
+  transition: 400ms;
 }
-.navbar .standard-button:hover {
-  background-color: #dfdfdf;
-  cursor: pointer;
-  text-decoration: underline;
-  font-size: 1.2rem;
-  padding: 0.9rem 0.5rem 0.9rem 0.5rem;
-  margin: 0 0.9rem 0 0.9rem;
-  border-radius: 0.5rem;
-  transition: 100ms;
-}
-.navbar .standard-button:active {
-  background-color: #dfdfdf;
-  cursor: pointer;
+.navbar:visited {
+  color: white;
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 0.9rem 0.5rem 0.9rem 0.5rem;
-  margin: 0 0.9rem 0 0.9rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
   transition: 100ms;
 }
 
-.navbar .blue{
+.navbar .blue {
   background-color: #6f8ab7;
   border: none;
   border-radius: 0.25rem;
@@ -252,15 +256,70 @@ body {
   transition: 100ms;
 }
 
+/* Scrollfield */
+
+.scroll-field .scroll-container {
+  width: 350px;
+  height: 400px;
+  overflow-y: auto;
+  padding-left: 20px;
+  direction: rtl; /* Moves scrollbar to the left */
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) black;
+  scrollbar-arrow-color: rgba(245, 222, 179, 0);
+  border-left: 1px solid white;
+}
+
+/* Reset content to normal direction */
+
+.scroll-field .scroll-container .content {
+  direction: ltr;
+}
+
+.scroll-field .scroll-container::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scroll-field .scroll-container::-webkit-scrollbar-track {
+  background: black;
+}
+
+.scroll-field .scroll-container::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+/* achtergrond scroll */
+.achtergrond-scroll iframe {
+  height: 120vh;
+  width: 100vw;
+}
+
+.achtergrond-scroll .parallax {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5%;
+}
+
+.achtergrond-scroll .content {
+  height: 2500px; /* Maak de inhoud lang genoeg om te kunnen scrollen */
+  padding: 20px;
+  text-align: center;
+}
+
 /* footer */
+
 .footer footer {
   text-align: center;
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1em 0 1em 0;
-  
 }
 .footer a {
   color: #6f8ab7;
-  text-decoration:wavy;
+  text-decoration: wavy;
 }

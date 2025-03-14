@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.scroll-field .scroll-container {
+    width: 350px;
+    height: 400px;
+    overflow-y: auto;
+    padding-left: 20px;
+    direction: rtl; /* Moves scrollbar to the left */
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255, 255, 255) black;
+    scrollbar-arrow-color: rgba(245, 222, 179, 0);
+    border-left: 1px solid white;
+}
+
+/* Reset content to normal direction */
+.scroll-field .scroll-container .content {
+    direction: ltr;
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+.scroll-field .scroll-container::-webkit-scrollbar {
+    width: 3px; /* Thin line */
+}
+
+.scroll-field .scroll-container::-webkit-scrollbar-track {
+    background: black;
+}
+
+.scroll-field .scroll-container::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
