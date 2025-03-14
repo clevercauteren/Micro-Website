@@ -11,6 +11,31 @@ header img {
   object-fit: cover;
 }
 
+.Title {
+  z-index: 99;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  color: white;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 200%;
+}
+
+.Title h1 {
+  letter-spacing: 0.4rem;
+}
+
+.Title h6 {
+  font-size: 60%;
+  font-weight: 400;
+}
+
+.Title p {
+  letter-spacing: 0.1rem;
+}
+
 .gradient {
   background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255));
 }
@@ -209,4 +234,16 @@ header img {
   height: 50vh;
   width: 100vw;
   background-color: black;
+}
+
+.OpSchoolGraken {
+  padding: 20px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: 0;
+}
+
+.button-read-more {
+  margin: 20px 0;
 }
