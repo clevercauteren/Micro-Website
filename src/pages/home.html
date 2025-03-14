@@ -36,7 +36,6 @@
     </div>
 
     <!-- ai implementation -->
-
     <div class="ai">
       <!-- Button to open the chatbot modal -->
       <button onclick="openModal()" class="open-button">
@@ -65,6 +64,7 @@
               class="user-input"
             />
             <button
+              id="send-button"
               onclick="sendClicked(document.getElementById('userInput').value)"
               class="send-button"
             >
@@ -72,7 +72,9 @@
             </button>
           </div>
           <hr />
-          <p id="response" class="response"></p>
+          <div class="aiScroll">
+            <p id="response" class="response"></p>
+          </div>
         </div>
       </div>
 
