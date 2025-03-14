@@ -23,7 +23,7 @@ body {
     }
 }
 
-h2{
+.pagina .box h2{
     text-align: center;
     padding-left: 50px;
     padding-bottom: 45px;
@@ -87,7 +87,31 @@ header {
     margin-bottom: 20px;
 }
 
-input, select, button {
+.pagina main .box form input{
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.758);
+    border: none;
+    box-sizing: border-box;
+}
+.pagina main .box form select{
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.758);
+    border: none;
+    box-sizing: border-box;
+}
+.pagina main .box form button {
     height: 40px;
     width: 100%;
     font-size: 18px;
@@ -237,6 +261,17 @@ datalist option:hover {
     background-color: #f0f0f0;
 }
 
+.blue {
+  background-color: #37339dab;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: solid white 1px;
+}
+.blue:hover {
+  background-color: #201e55ab;
+}
+
 @media (max-width: 768px) {
     .navigatiebalk {
         height: 80px;
@@ -257,7 +292,7 @@ datalist option:hover {
     input, select {
         font-size: 16px;
     }
-    button{
+    .box button{
         font-size: 16px;
         border:solid white 1px;
     }
@@ -303,7 +338,7 @@ datalist option:hover {
     .dropdown, #search {
         width: 100%;
     }
-    button{
+    .box button{
         font-size: 14px;
         border: solid white 1px;
     }
