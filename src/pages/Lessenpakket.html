@@ -24,6 +24,37 @@
       </nav>
       <script src="/src/js/navbar.js"></script>
     </div>
+    <div class="ai">
+        <!-- Button to open the chatbot modal -->
+        <button onclick="openModal()" class="open-button"><img src="/src/images/ai/comment-02-stroke-rounded.svg" alt=""></button>
+
+        <!-- Background overlay (covers the page) -->
+        <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+        <!-- The Modal -->
+        <div id="chatModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img src="/src/images/ai/LOGO white.png" alt="Mistral AI" class="chatbot-image">
+                <h2 class="title">Chatbot</h2>
+                <div class="flex">
+                    <input type="text" id="userInput" placeholder="Ask something..." onkeydown="handleKeyPress(event)" class="user-input">
+                    <button onclick="sendClicked(document.getElementById('userInput').value)" class="send-button">Send</button>
+                </div>
+                <hr>
+                <p id="response" class="response"></p>
+            </div>
+        </div>
+
+        <script src="/src/js/ai.js"></script> <!-- Link to external JavaScript file -->
+    </div>
+    <div class="achtergrond-scroll">
+
+        <div class="parallax"></div>
+    
+        <script src="/src/js/achtergrond-scroll.js"></script>
+      </div>
+
     <main>
       <h2>Wat is Applicatie en Databeheer</h2>
       <!--Wat is Applicatie en databeheer-->
