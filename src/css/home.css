@@ -12,7 +12,7 @@ header img {
 }
 
 .Title {
-  z-index: 99;
+  z-index: 50;
   position: absolute;
   left: 50%;
   top: 15%;
