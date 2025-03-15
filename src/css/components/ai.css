@@ -13,7 +13,7 @@
 .ai .modal {
     display: none; /* Initially hidden */
     position: fixed;
-    z-index: 3; /* Higher z-index to be on top of the overlay */
+    z-index: 60; /* Higher z-index to be on top of the overlay */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -48,7 +48,7 @@
   .ai .overlay {
     display: none; /* Initially hidden */
     position: fixed;
-    z-index: 2; /* Below the modal */
+    z-index: 55; /* Below the modal */
     left: 0;
     top: 0;
     width: 100%;
@@ -119,7 +119,7 @@
   }
   
   .ai .open-button {
-    z-index: 4;
+    z-index: 70;
     height: 60px;
     width: 60px;
     border-radius: 50%;
