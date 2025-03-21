@@ -207,17 +207,17 @@
           <p id="QuoteAuteur">Van Robbe Ghyssaert</p>
         </div>
         <script>
-          fetch("https://dummyjson.com/quotes?limit=1&skip=")
+          fetch(
+            "https://dummyjson.com/quotes?limit=1&skip=" +
+              Math.floor(Math.random() * Math.random() * 100)
+          )
             .then((res) => res.json())
             .then((data) => {
               const QuoteText = data.quotes[0].quote;
               const QuoteAuteur = data.quotes[0].author;
               document.getElementById("QouteText").innerHTML =
-                '"' + QuoteText + '"';
+                "&#x275D " + QuoteText + " &#x275E";
               document.getElementById("QuoteAuteur").innerHTML = QuoteAuteur;
-
-              console.log("Quote:", QuoteText);
-              console.log("Auteur:", QuoteAuteur);
             });
         </script>
       </div>
@@ -245,7 +245,7 @@
           <div class="word"><p>Word</p></div>
           <div class="excel"><p>Excel</p></div>
         </div>
-      </section>
+      </section> -->
     </main>
     <div class="footer">
       <footer>
