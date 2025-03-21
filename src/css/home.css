@@ -343,3 +343,26 @@ header img {
   justify-content: center;
   border: solid black 1px;
 }
+
+.Quote {
+  background-color: white;
+  color: black;
+  padding-bottom: 200px;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Quote div {
+  font-size: larger;
+  width: 60%;
+  min-width: 400px;
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.Quote div p {
+  text-align: right;
+}

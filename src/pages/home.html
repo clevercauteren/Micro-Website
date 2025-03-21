@@ -30,7 +30,9 @@
         <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
         <a href="/src/pages/Foto.html">Foto's</a>
         <a href="/src/pages/About.html">Over ADB</a>
-        <a href="/src/pages/formulier.html"><button class="blue">Formulier</button></a>
+        <a href="/src/pages/formulier.html"
+          ><button class="blue">Formulier</button></a
+        >
       </nav>
       <script src="/src/js/navbar.js"></script>
     </div>
@@ -198,6 +200,27 @@
           </div>
         </div>
       </section>
+      <section></section>
+      <div class="Quote">
+        <div>
+          <h2 id="QouteText">"Quote"</h2>
+          <p id="QuoteAuteur">Van Robbe Ghyssaert</p>
+        </div>
+        <script>
+          fetch("https://dummyjson.com/quotes?limit=1&skip=")
+            .then((res) => res.json())
+            .then((data) => {
+              const QuoteText = data.quotes[0].quote;
+              const QuoteAuteur = data.quotes[0].author;
+              document.getElementById("QouteText").innerHTML =
+                '"' + QuoteText + '"';
+              document.getElementById("QuoteAuteur").innerHTML = QuoteAuteur;
+
+              console.log("Quote:", QuoteText);
+              console.log("Auteur:", QuoteAuteur);
+            });
+        </script>
+      </div>
       <!-- <section></section>
       <div class="OpSchoolGraken">
         <h2>Hoe graak je op GTI Beveren</h2>
