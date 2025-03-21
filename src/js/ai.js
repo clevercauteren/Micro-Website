@@ -28,6 +28,9 @@ async function askMistral(userMessage) {
     userMessageElement.textContent = userMessage;
     chatHistory.appendChild(userMessageElement);
 
+    // Scroll to the bottom after user message is added
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+
     // Add loading animation for AI response
     const loadingElement = document.createElement("div");
     loadingElement.className = "chat-bubble ai-response loading-animation";
@@ -37,6 +40,9 @@ async function askMistral(userMessage) {
     loadingElement.appendChild(spinner);
 
     chatHistory.appendChild(loadingElement);
+
+    // Scroll to the bottom after loading animation is added
+    chatHistory.scrollTop = chatHistory.scrollHeight;
 
     // Collect the full chat history
     const chatMessages = Array.from(chatHistory.children)
@@ -57,6 +63,7 @@ async function askMistral(userMessage) {
             body: JSON.stringify({
                 model: "mistral-medium",
                 messages: [
+                    { role: "system", content: "Antwoord altijd in het Nederlands." }, // Ensure Dutch responses
                     { role: "system", content: "Chat-History:\n" + chatMessages },
                     { role: "user", content: userMessage }
                 ],
@@ -80,6 +87,8 @@ async function askMistral(userMessage) {
         }
 
         chatHistory.appendChild(aiResponseElement);
+
+        // No scrolling here for AI response
     } catch (error) {
         console.error("API Error:", error);
 
@@ -96,9 +105,6 @@ async function askMistral(userMessage) {
     inputBox.readOnly = false;
     sendButton.innerText = "Send";
     sendButton.disabled = false;
-
-    // Scroll to the bottom of the chat history
-    chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
 // Modify sendClicked to remove sound
