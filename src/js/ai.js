@@ -1,75 +1,138 @@
+// Function to parse Markdown-like syntax
+function parseMarkdown(text) {
+    // Replace *text* with <strong>text</strong> for bold
+    return text.replace(/\*(.*?)\*/g, "<strong>$1</strong>");
+}
+
 async function askMistral(userMessage) {
-    let responseBox = document.getElementById("response");
-    let inputBox = document.getElementById("userInput");
-    let sendButton = document.getElementById("send-button");
+    const chatHistory = document.getElementById("chatHistory");
+    const inputBox = document.getElementById("userInput");
+    const sendButton = document.getElementById("send-button");
 
     if (userMessage.trim() === "") {
-        responseBox.innerText = "Please enter a message first!";
+        const errorMessage = document.createElement("div");
+        errorMessage.className = "chat-bubble ai-response";
+        errorMessage.textContent = "Please enter a message first!";
+        chatHistory.appendChild(errorMessage);
         return;
     }
 
-    // ⏳ Zet input op readonly en update de knop
+    // ⏳ Disable input and update the button
     inputBox.readOnly = true;
     sendButton.innerText = "Generating...";
     sendButton.disabled = true;
 
+    // Append user message to chat history
+    const userMessageElement = document.createElement("div");
+    userMessageElement.className = "chat-bubble user-message";
+    userMessageElement.textContent = userMessage;
+    chatHistory.appendChild(userMessageElement);
+
+    // Add loading animation for AI response
+    const loadingElement = document.createElement("div");
+    loadingElement.className = "chat-bubble ai-response loading-animation";
+
+    const spinner = document.createElement("div");
+    spinner.className = "spinner"; // Ensure the spinner class is added
+    loadingElement.appendChild(spinner);
+
+    chatHistory.appendChild(loadingElement);
+
+    // Collect the full chat history
+    const chatMessages = Array.from(chatHistory.children)
+        .map((message) => {
+            const isUserMessage = message.classList.contains("user-message");
+            const role = isUserMessage ? "User" : "AI";
+            return `${role}: ${message.textContent.trim()}`;
+        })
+        .join("\n");
+
     try {
-        let response = await fetch("https://api.mistral.ai/v1/chat/completions", {
+        const response = await fetch("https://api.mistral.ai/v1/chat/completions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer HSLCZmOYODm8hW0fAfz2TdIYSpdMZYdw" // 🔴 Vervang door een veilige methode!
+                "Authorization": "Bearer HSLCZmOYODm8hW0fAfz2TdIYSpdMZYdw" // 🔴 Replace with a secure method!
             },
             body: JSON.stringify({
                 model: "mistral-medium",
-                messages: [{ role: "user", content: userMessage }],
+                messages: [
+                    { role: "system", content: "Chat-History:\n" + chatMessages },
+                    { role: "user", content: userMessage }
+                ],
             })
         });
 
-        let data = await response.json();
+        const data = await response.json();
         console.log(data); // Debugging
 
+        // Remove loading animation
+        chatHistory.removeChild(loadingElement);
+
+        const aiResponseElement = document.createElement("div");
+        aiResponseElement.className = "chat-bubble ai-response";
+
         if (data.choices) {
-            responseBox.innerText = data.choices[0].message.content;
+            // Parse the AI's response for Markdown-like syntax
+            aiResponseElement.innerHTML = parseMarkdown(data.choices[0].message.content);
         } else {
-            responseBox.innerText = "Error: Invalid response from API.";
+            aiResponseElement.textContent = "Error: Invalid response from API.";
         }
+
+        chatHistory.appendChild(aiResponseElement);
     } catch (error) {
         console.error("API Error:", error);
-        responseBox.innerText = "API request failed. Check console.";
+
+        // Remove loading animation
+        chatHistory.removeChild(loadingElement);
+
+        const errorResponseElement = document.createElement("div");
+        errorResponseElement.className = "chat-bubble ai-response";
+        errorResponseElement.textContent = "API request failed. Check console.";
+        chatHistory.appendChild(errorResponseElement);
     }
 
-    // ✅ Reset de UI na de response
+    // ✅ Reset the UI after the response
     inputBox.readOnly = false;
     sendButton.innerText = "Send";
     sendButton.disabled = false;
+
+    // Scroll to the bottom of the chat history
+    chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
-// 🚀 Stuur bericht als op de knop wordt geklikt
+// Modify sendClicked to remove sound
 function sendClicked(userInput) {
-    let userMessage = document.getElementById("userInput").value;
-    askMistral(userMessage);
+    if (!userInput.trim()) return;
+
+    askMistral(userInput);
+
+    // Clear input field
+    document.getElementById("userInput").value = "";
 }
 
-// 🚀 Stuur bericht als Enter wordt ingedrukt
 function handleKeyPress(event) {
-    if (event.key === "Enter") { // Gebruik de moderne key-check
-        event.preventDefault(); // Voorkom dat het formulier submit
+    if (event.key === "Enter") {
+        event.preventDefault();
         sendClicked(document.getElementById("userInput").value);
     }
 }
 
-// 🎤 Open de chat en stuur automatisch een prompt
+let hasPrompted = false; // Flag to track if the prompt has been sent
+
+// 🎤 Open the chat
 function openModal() {
     document.getElementById("chatModal").style.display = "flex";
     document.getElementById("overlay").style.display = "block";
 
-    let promptMessage = "Stel jezelf kort voor en vertel mij meer over de richting Applicatie- en Data-beheer in GTI Beveren.";
-    // document.getElementById("userInput").value = promptMessage;
-    askMistral(promptMessage);
+    if (!hasPrompted) {
+        let promptMessage = "Stel jezelf kort voor en vertel mij meer over de richting Applicatie- en Data-beheer in GTI Beveren.";
+        askMistral(promptMessage);
+        hasPrompted = true; // Set the flag to true after the first prompt
+    }
 }
 
-// ❌ Sluit de chat
+// ❌ Close the chat
 function closeModal() {
     document.getElementById("chatModal").style.display = "none";
     document.getElementById("overlay").style.display = "none";
