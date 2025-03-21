@@ -247,3 +247,49 @@ header img {
 .button-read-more {
   margin: 20px 0;
 }
+.programmas-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 400px;
+  height: 400px;
+  border: solid red 1px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.code {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid black 1px;
+}
+
+.paars {
+  background-color: purple;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid black 1px;
+}
+
+.word {
+  background-color: blue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid black 1px;
+}
+
+.excel {
+  background-color: green;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid black 1px;
+}
