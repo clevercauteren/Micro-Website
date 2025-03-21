@@ -33,7 +33,7 @@ footer {
   margin: 2%;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Maak de foto's groter */
   gap: 20px;
   justify-content: center;
 }
@@ -88,8 +88,8 @@ footer {
 .FotosContent section img {
   border-radius: 10px;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%; /* Zorg ervoor dat de hoogte gelijk is aan de container */
+  object-fit: cover; /* Zorg ervoor dat de afbeelding de container vult */
   transition: transform 0.4s ease-in-out, filter 0.3s;
 }
 
