@@ -36,7 +36,6 @@
     </div>
 
     <!-- ai implementation -->
-
     <div class="ai">
       <!-- Button to open the chatbot modal -->
       <button onclick="openModal()" class="open-button">
@@ -65,6 +64,7 @@
               class="user-input"
             />
             <button
+              id="send-button"
               onclick="sendClicked(document.getElementById('userInput').value)"
               class="send-button"
             >
@@ -72,7 +72,9 @@
             </button>
           </div>
           <hr />
-          <p id="response" class="response"></p>
+          <div class="aiScroll">
+            <p id="response" class="response"></p>
+          </div>
         </div>
       </div>
 
@@ -212,7 +214,15 @@
           loading="lazy"
         />
         <a class="FullscreenFoto-next">&#10095;</a>
-      </div> -->
+      </div>
+      <section class="programmas">
+        <div class="programmas-container">
+          <div class="code"><p>Vs studio code</p></div>
+          <div class="paars"><p>Vs studio 2022</p></div>
+          <div class="word"><p>Word</p></div>
+          <div class="excel"><p>Excel</p></div>
+        </div>
+      </section>
     </main>
     <div class="footer">
       <footer>
