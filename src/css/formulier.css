@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap');
+body {
+    font-family: "Michroma";
+    background: linear-gradient(to bottom, #001F3F, #0056b3, #008cdd, #000000);
+    background-size: 100% 400%;
+    animation: gradientFade 50s ease infinite;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientFade {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.pagina .box h2{
+    text-align: center;
+    padding-left: 50px;
+    padding-bottom: 45px;
+    font-size: 18px;
+    font-family: "Red Hat Display";
+    color: white;
+}
+h3{
+    text-align: center;
+    color:white;
+    font-family: "Orbitron";
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+label{
+    text-align: left;
+    padding: 50px;
+    font-size: 18px;
+    font-family: "Michroma";
+    color: white;
+}
+.navigatiebalk {
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 120px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    left:0;
+    height: 75px;
+    text-align: center;
+    color:white;
+    align-content: center;
+    font-size: 20px;
+}
+
+
+.box {
+    background-color: rgba(0, 0, 0, 0.356);
+    width: 90%;
+    max-width: 1200px;
+    margin: 150px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pagina main .box form input{
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.758);
+    border: none;
+    box-sizing: border-box;
+}
+.pagina main .box form select{
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.758);
+    border: none;
+    box-sizing: border-box;
+}
+.pagina main .box form button {
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.758);
+    border: none;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #37339dab;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border:solid white 1px;
+}
+
+button:hover {
+    background-color: #201e55ab;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+#search {
+    width: 100%;
+    margin-left: -9px;
+    padding: 8px;
+    border: 10px solid #ffffff;
+    border-radius: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.881);
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.choices__item {
+    color: black !important;
+}
+
+.choices__input {
+    color: black !important;
+}
+
+.choices__list--multiple .choices__item {
+    background-color: transparent;
+}
+
+.choices__list--single .choices__item {
+    background-color: transparent;
+}
+
+.choices__dropdown .choices__item {
+    color: black !important;
+    
+}
+
+.choices__inner {
+    width: 100% !important;
+    background-color: rgba(234, 249, 255, 0.758);
+    border-radius: 10px;
+}
+
+#plaats, #straat {
+    width: 100%;
+    padding: 8px;
+    margin-left: 0;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.758);
+}
+
+#plaats {
+    margin-bottom: 10px;
+}
+
+#plaatsError,
+#straatError {
+    color: rgb(255, 64, 0);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Phudu";
+}
+#Verzendbutton:disabled {
+    cursor: not-allowed;
+    
+}
+
+
+datalist {
+    width: 100%;
+}
+
+datalist option {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+datalist option:hover {
+    background-color: #f0f0f0;
+}
+
+.suggestions {
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    margin-top: 5px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.suggestions div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0;
+}
+
+.blue {
+  background-color: #37339dab;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: solid white 1px;
+}
+.blue:hover {
+  background-color: #201e55ab;
+}
+
+@media (max-width: 768px) {
+    .navigatiebalk {
+        height: 80px;
+        line-height: 60px;
+        font-size: 18px;
+    }
+
+    .box {
+        width: 95%;
+        margin: 120px auto;
+        background-size: 400px;
+    }
+
+    header {
+        font-size: 30px;
+    }
+
+    input, select {
+        font-size: 16px;
+    }
+    .box button{
+        font-size: 16px;
+        border:solid white 1px;
+    }
+
+    .dropdown, #search {
+        width: 100%;
+    }
+
+    .choices__inner {
+        width: 100% !important;
+    }
+
+    #plaats, #straat {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navigatiebalk {
+        height: 60px;
+        line-height: 50px;
+        font-size: 16px;
+    }
+
+    header {
+        font-size: 24px;
+    }
+
+    .box {
+        width: 95%;
+        margin: 100px auto;
+        background-size: 300px;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    .dropdown, #search {
+        width: 100%;
+    }
+    .box button{
+        font-size: 14px;
+        border: solid white 1px;
+    }
+}
+

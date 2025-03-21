@@ -16,7 +16,6 @@
   </head>
   <body>
     <!-- ai implementation -->
-
     <div class="ai">
       <!-- Button to open the chatbot modal -->
       <button onclick="openModal()" class="open-button">
@@ -45,6 +44,7 @@
               class="user-input"
             />
             <button
+              id="send-button"
               onclick="sendClicked(document.getElementById('userInput').value)"
               class="send-button"
             >
@@ -52,7 +52,9 @@
             </button>
           </div>
           <hr />
-          <p id="response" class="response"></p>
+          <div class="aiScroll">
+            <p id="response" class="response"></p>
+          </div>
         </div>
       </div>
 
@@ -67,7 +69,7 @@
         <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
         <a href="/src/pages/Foto.html">Foto's</a>
         <a href="/src/pages/About.html">Over ADB</a>
-        <a href="" class=""><button class="blue">Formulier</button></a>
+        <a href="/src/pages/formulier.html"><button class="blue">Formulier</button></a>
       </nav>
       <script src="/src/js/navbar.js"></script>
     </div>
