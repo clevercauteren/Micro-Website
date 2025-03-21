@@ -3,9 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="auteur" content="5ADB" />
-    <meta name="auteur" content="Jorne Duym" />
-    <meta name="description" content="5ABB" />
+    <meta
+      name="description"
+      content="Start webpagina over applicatie- en databeheer in GTI Beveren."
+    />
+    <meta name="author" content="Groep B" />
+    <meta
+      name="keywords"
+      content="5ADB, GTI Beveren, Applicatie- en Databeheer, Informatica, ICT, Onderwijs, School, Home"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="icon"
+      href="/src/images/favicon_Beveren.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/src/css/home.css" />
     <link rel="stylesheet" href="/src/css/main.css" />
     <title>5ADB Home</title>
@@ -17,7 +30,7 @@
         <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
         <a href="/src/pages/Foto.html">Foto's</a>
         <a href="/src/pages/About.html">Over ADB</a>
-        <a href="" class=""><button class="blue">Formulier</button></a>
+        <a href="/src/pages/formulier.html"><button class="blue">Formulier</button></a>
       </nav>
       <script src="/src/js/navbar.js"></script>
     </div>
@@ -79,6 +92,11 @@
             frameborder="0"
             style="overflow: hidden"
           ></iframe>
+          <div class="Title">
+            <h1>ADB</h1>
+            <h6>Applicatie en databeheer</h6>
+            <p>Het Fundament voor een Digitale Toekomst</p>
+          </div>
         </div>
 
         <script src="/src/js/achtergrond-scroll.js"></script>
@@ -104,17 +122,17 @@
                   beheert.
                 </p>
                 <br />
-                <a href="About.html" class="button-read-more">
-                  <div class="button-read-more-text">Meer lezen</div>
-                  <div class="button-read-more-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M9 18l6-6-6-6" />
-                    </svg>
-                  </div>
-                </a>
               </div>
             </div>
           </div>
+          <a href="About.html" class="button-read-more">
+            <div class="button-read-more-text">Meer lezen</div>
+            <div class="button-read-more-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </div>
+          </a>
         </div>
         <div class="column column-2">
           <img
@@ -124,6 +142,8 @@
           />
         </div>
       </section>
+      <br />
+      <br />
       <div class="gradient">
         <br />
         <br />
@@ -133,39 +153,56 @@
         <br />
       </div>
       <section class="photo-section">
+        <br />
+
         <h3>Vakken</h3>
-        <p>In 5ADB hebben we 4 richtingspecifieke vakken</p>
+        <p>In 5ADB hebben we 5 richtingspecifieke vakken</p>
         <div class="photo-container">
-          <div class="photo-item">
+          <div class="photo-item" onclick="GoTO('Programmeren')">
             <img src="/images/Test_Verticaal.png" alt="Foto 1" loading="lazy" />
             <p>Programmeren</p>
           </div>
-          <div class="photo-item">
-            <img src="/images/Test_Verticaal.png" alt="Foto 2" loading="lazy" />
+          <div class="photo-item" onclick="GoTO('Applicatiebeheer')">
+            <img
+              src="/src/images/fotos/COmputernetwerken.jpeg"
+              alt="Foto 2"
+              loading="lazy"
+            />
             <p>Applicatiebeheer</p>
           </div>
-          <div class="photo-item">
+          <div class="photo-item" onclick="GoTO('Computersystemen')">
             <img
-              src="/src/images/Fotos fotosite/IMG_7001.jpg"
+              src="/src/images/fotos/Computersystemen.jpeg"
               alt="Foto 3"
               loading="lazy"
             />
             <p>Computersystemen</p>
           </div>
-          <div class="photo-item">
+          <div class="photo-item" onclick="GoTO('Webdesign')">
             <img
-              src="/src/images/Fotos fotosite/IMG_7054.jpg"
+              src="/src/images/fotos/Webdesign.jpeg"
               alt="Foto 4"
               loading="lazy"
             />
             <p>Webdesign</p>
           </div>
+          <div class="photo-item" onclick="GoTO('Computernetwerken')">
+            <img
+              src="/src/images/fotos/Applicatiebeheer.jpeg"
+              alt="Foto 5"
+              loading="lazy"
+            />
+            <p>Computernetwerken</p>
+          </div>
         </div>
       </section>
-      <section></section>
+      <!-- <section></section>
+      <div class="OpSchoolGraken">
+        <h2>Hoe graak je op GTI Beveren</h2>
+      </div> -->
 
       <!-- Foto fullschreen onclick -->
-      <div id="lightboxFullscreenFoto" class="FullscreenFoto">
+      <!-- <div id="lightboxFullscreenFoto" class="FullscreenFoto">
         <span class="FullscreenFoto-close">&times;</span>
         <a class="FullscreenFoto-prev">&#10094;</a>
         <img
@@ -175,7 +212,7 @@
           loading="lazy"
         />
         <a class="FullscreenFoto-next">&#10095;</a>
-      </div>
+      </div> -->
     </main>
     <div class="footer">
       <footer>

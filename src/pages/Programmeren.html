@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Start webpagina over applicatie- en databeheer in GTI Beveren."
+    />
+    <meta name="author" content="Groep B" />
+    <meta
+      name="keywords"
+      content="5ADB, GTI Beveren, Applicatie- en Databeheer, Informatica, ICT, Onderwijs, School, Home"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="icon"
+      href="/src/images/favicon_Beveren.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/src/css/home.css" />
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <title>5ADB Home</title>
+  </head>
+  <body>
+    <div id="navbar" class="navbar">
+      <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
+      <nav>
+        <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
+        <a href="/src/pages/Foto.html">Foto's</a>
+        <a href="/src/pages/About.html">Over ADB</a>
+        <a href="/src/pages/formulier.html"
+          ><button class="blue">Formulier</button></a
+        >
+      </nav>
+      <script src="/src/js/navbar.js"></script>
+    </div>
+
+    <!-- ai implementation -->
+
+    <div class="ai">
+      <!-- Button to open the chatbot modal -->
+      <button onclick="openModal()" class="open-button">
+        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="" />
+      </button>
+
+      <!-- Background overlay (covers the page) -->
+      <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+      <!-- The Modal -->
+      <div id="chatModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img
+            src="/src/images/ai/LOGO white.png"
+            alt="Mistral AI"
+            class="chatbot-image"
+          />
+          <h2 class="title">Chatbot</h2>
+          <div class="flex">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Ask something..."
+              onkeydown="handleKeyPress(event)"
+              class="user-input"
+            />
+            <button
+              onclick="sendClicked(document.getElementById('userInput').value)"
+              class="send-button"
+            >
+              Send
+            </button>
+          </div>
+          <hr />
+          <p id="response" class="response"></p>
+        </div>
+      </div>
+
+      <script src="/src/js/ai.js"></script>
+      <!-- Link to external JavaScript file -->
+    </div>
+
+    <!-- pagina -->
+
+    <header>
+      <div class="BlackBarNav"></div>
+      <div class="achtergrond-scroll">
+        <div class="parallax">
+          <!-- Achtergrond Film -->
+          <iframe
+            src="/src/images/backgrounds/BackgroundMainPage/Index.html"
+            frameborder="0"
+            style="overflow: hidden"
+          ></iframe>
+          <div class="Title">
+            <h1>Programmeren</h1>
+            <p>Het Fundament voor een Digitale Toekomst</p>
+          </div>
+        </div>
+        <div>
+          <div class="column column-1">
+            <div class="scroll-field">
+              <div class="scroll-container" style="width: 75%;>
+              <div class="content" style="text-align: left">
+                <h2>Programmeren en databeheer 5de jaar</h2>
+                <br /><br />
+                <p>
+                  <strong
+                    >Programmeren en Databeheer – Coderen en gegevens
+                    beheren</strong
+                  ><br />
+                  In Programmeren en Databeheer leer je de programmeertaal C#.
+                  Hiermee kun je zelf programma’s maken en leer je computers
+                  opdrachten te geven. Daarnaast werk je met Google Forms, een
+                  tool waarmee je gegevens kunt verzamelen, organiseren en
+                  beheren. Je leert hoe je informatie vastlegt en verwerkt om
+                  alles efficiënt en overzichtelijk te houden. Dit vak helpt je
+                  niet alleen om technische vaardigheden te ontwikkelen, maar
+                  ook om probleemoplossend te denken. Je leert hoe je problemen
+                  aanpakt en creatieve oplossingen bedenkt, zowel in
+                  programmeren als bij het werken met gegevens.
+                </p>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="/src/js/achtergrond-scroll.js"></script>
+      </div>
+    </header>
+    <main></main>
+    <div class="footer">
+      <footer>
+        <p>
+          &copy; <span id="CurrentYear">2025</span> Gti Beveren. All rights
+          reserved.
+        </p>
+        <p>
+          5ADB -
+          <abbr
+            title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
+            >B groep</abbr
+          >
+        </p>
+        <p>
+          <a
+            class="GTI"
+            href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut"
+            target="_blank"
+            >GTI Beveren</a
+          >
+        </p>
+      </footer>
+    </div>
+    <script src="/src/js/home.js"></script>
+  </body>
+</html>

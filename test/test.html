@@ -1,20 +1,64 @@
 <!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drie Kolommen Lay-out</title>
-    <link rel="stylesheet" href="test.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="column column-1 w3-white w3-hover-yellow">Eerste Kolom</div>
-      <div class="column column-2 w3-container w3-center w3-card">
-        Tweede Kolom
-      </div>
-      <div class="column column-3 w3-hover-green w3-collor-white">
-        Derde Kolom
-      </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Explanation</title>
+    <style>
+        .explanation {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'word'.">word</span> to see the explanation.</p>
+    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'example'.">example</span> to see the explanation.</p>
+    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'click'.">click</span> to see the explanation.</p>
+    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'another'.">another</span> to see the explanation.</p>
+    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'more'.">more</span> to see the explanation.</p>
+    
+    <div id="overlay" class="overlay"></div>
+    <div id="explanation" class="explanation">
+        <h3 id="word-title"></h3>
+        <p id="word-explanation"></p>
     </div>
-  </body>
+
+    <script>
+        document.querySelectorAll('.word').forEach(word => {
+            word.addEventListener('click', function() {
+                const wordText = this.innerText;
+                const explanationText = this.getAttribute('data-explanation');
+                const explanationDiv = document.getElementById('explanation');
+                const overlay = document.getElementById('overlay');
+                
+                document.getElementById('word-title').innerText = wordText;
+                document.getElementById('word-explanation').innerText = explanationText;
+                explanationDiv.style.display = 'block';
+                overlay.style.display = 'block';
+            });
+        });
+
+        document.getElementById('overlay').addEventListener('click', function() {
+            this.style.display = 'none';
+            document.getElementById('explanation').style.display = 'none';
+        });
+    </script>
+</body>
 </html>
