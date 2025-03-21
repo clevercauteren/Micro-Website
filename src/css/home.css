@@ -265,6 +265,12 @@ header img {
   border: 1px solid black;
   padding: 30px;
   border-radius: 15px;
+  transition: all 1s;
+}
+
+.Quote div:hover {
+  transform: scale(1.1);
+  transition: all 1s;
 }
 
 .Quote div p {
