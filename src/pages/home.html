@@ -30,7 +30,9 @@
         <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
         <a href="/src/pages/Foto.html">Foto's</a>
         <a href="/src/pages/About.html">Over ADB</a>
-        <a href="/src/pages/formulier.html"><button class="blue">Formulier</button></a>
+        <a href="/src/pages/formulier.html"
+          ><button class="blue">Formulier</button></a
+        >
       </nav>
       <script src="/src/js/navbar.js"></script>
     </div>
@@ -198,6 +200,31 @@
           </div>
         </div>
       </section>
+      <section></section>
+      <div class="Quote">
+        <div>
+          <h2 id="QouteText">"Quote"</h2>
+          <p id="QuoteAuteur">Van Robbe Ghyssaert</p>
+        </div>
+        <button onclick="CreateQuote()">Give new quote</button>
+        <script>
+          CreateQuote();
+          function CreateQuote() {
+            fetch(
+              "https://dummyjson.com/quotes?limit=1&skip=" +
+                Math.floor(Math.random() * Math.random() * 100)
+            )
+              .then((res) => res.json())
+              .then((data) => {
+                const QuoteText = data.quotes[0].quote;
+                const QuoteAuteur = data.quotes[0].author;
+                document.getElementById("QouteText").innerHTML =
+                  "&#x275D " + QuoteText + " &#x275E";
+                document.getElementById("QuoteAuteur").innerHTML = QuoteAuteur;
+              });
+          }
+        </script>
+      </div>
       <!-- <section></section>
       <div class="OpSchoolGraken">
         <h2>Hoe graak je op GTI Beveren</h2>
@@ -214,7 +241,15 @@
           loading="lazy"
         />
         <a class="FullscreenFoto-next">&#10095;</a>
-      </div> -->
+      </div>
+      <section class="programmas">
+        <div class="programmas-container">
+          <div class="code"><p>Vs studio code</p></div>
+          <div class="paars"><p>Vs studio 2022</p></div>
+          <div class="word"><p>Word</p></div>
+          <div class="excel"><p>Excel</p></div>
+        </div>
+      </section> -->
     </main>
     <div class="footer">
       <footer>
@@ -225,7 +260,7 @@
         <p>
           5ADB -
           <abbr
-            title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
+            title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
             >B groep</abbr
           >
         </p>
