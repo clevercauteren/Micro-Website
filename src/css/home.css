@@ -365,6 +365,20 @@ header img {
   transition: all 1s;
 }
 
+.Quote div {
+  margin-bottom: 20px;
+}
+
+.Quote button {
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.Quote button:hover {
+  cursor: pointer;
+}
+
 .Quote div:hover {
   transform: scale(1.1);
   transition: all 1s;
