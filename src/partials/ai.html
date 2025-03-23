@@ -9,6 +9,12 @@
   </head>
   <body>
     <div class="ai">
+      <!-- Tooltip for AI assistant -->
+      <div id="aiTooltip" class="tooltip">
+        <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
+        <button class="tooltip-close" onclick="hideTooltip()">×</button>
+      </div>
+
       <!-- Button to open the chatbot modal -->
       <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
         <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />

@@ -61,8 +61,9 @@ async function askMistral(userMessage) {
                 "Authorization": "Bearer HSLCZmOYODm8hW0fAfz2TdIYSpdMZYdw" // 🔴 Replace with a secure method!
             },
             body: JSON.stringify({
-                model: "mistral-medium",
+                model: "mistral-large-2411",
                 messages: [
+                    { role: "system", content: "de vragen die worden gesteld zijn altijd door leerlingen/toekomstige leerlingen van de school GTIbeveren (Gemeentelijk Technisch Instituut Beveren), de richting waarvoor jijj gebruikt word is ADB (Applicatie- en Data- Beheer). de richting specifieke vakken bevatten: Applicatie beheer (Leren werken met bepaald applicaties), Programmeren en Databeheer (Leren programeren in C# en later in het jaar databases maken en aanspreken), Webdesign(Websites leren maken op basis van HTML, CSS en hier en daar een heel klein beetje Js) en computer systemen (de werking van computers leren op hardware niveau en ook op software niveau met bijhoerende praktijk opdrachten). Deze informatie mag alleen gegeven worden als er achter gevraagd word." }, // Ensure the context
                     { role: "system", content: "Antwoord altijd in het Nederlands." }, // Ensure Dutch responses
                     { role: "system", content: "Chat-History:\n" + chatMessages },
                     { role: "user", content: userMessage }
@@ -126,10 +127,48 @@ function handleKeyPress(event) {
 
 let hasPrompted = false; // Flag to track if the prompt has been sent
 
+// Show the tooltip
+function showTooltip() {
+    console.log("Tooltip function called"); // Debugging
+    const tooltip = document.getElementById("aiTooltip");
+    const tooltipShown = localStorage.getItem("tooltipShown");
+
+    // Show the tooltip only if it hasn't been dismissed and the chatbot is not open
+    if (tooltipShown) {
+        setTimeout(() => {
+            const chatModal = document.getElementById("chatModal");
+            if (chatModal.style.display !== "flex") {
+                console.log("Showing tooltip for the first time"); // Debugging
+                tooltip.style.display = "flex";
+
+                // Start repeating the tooltip every 10 seconds
+                setInterval(() => {
+                    if (chatModal.style.display !== "flex") {
+                        console.log("Repeating tooltip every 10 seconds"); // Debugging
+                        tooltip.style.display = "flex";
+                    }
+                }, 60000); // Repeat every 10 seconds
+            }
+        }, 2000); // Initial delay of 2 seconds
+    }
+}
+
+// Hide the tooltip and mark it as dismissed
+function hideTooltip() {
+    const tooltip = document.getElementById("aiTooltip");
+    tooltip.style.display = "none";
+
+    // Store in localStorage to ensure it doesn't show again
+    localStorage.setItem("tooltipShown", "true");
+}
+
 // 🎤 Open the chat
 function openModal() {
     document.getElementById("chatModal").style.display = "flex";
     document.getElementById("overlay").style.display = "block";
+
+    // Hide the tooltip if the chat is opened
+    hideTooltip();
 
     if (!hasPrompted) {
         let promptMessage = "Stel jezelf kort voor en vertel mij meer over de richting Applicatie- en Data-beheer in GTI Beveren.";
@@ -143,3 +182,6 @@ function closeModal() {
     document.getElementById("chatModal").style.display = "none";
     document.getElementById("overlay").style.display = "none";
 }
+
+// Call the tooltip function when the page loads
+window.onload = showTooltip;

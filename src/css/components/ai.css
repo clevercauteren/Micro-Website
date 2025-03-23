@@ -331,3 +331,44 @@
       transform: translateY(-5px);
     }
   }
+
+/* Tooltip container */
+.tooltip {
+    position: absolute;
+    top: 80%; /* Adjust to position near the open button */
+    right: 80px; /* Adjust to position near the open button */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    z-index: 100;
+    font-family: "Roboto", sans-serif;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Tooltip text */
+.tooltip-text {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* Tooltip close button */
+.tooltip-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Fade-in animation for the tooltip */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
