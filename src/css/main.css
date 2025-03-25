@@ -577,7 +577,6 @@ HEAD .ai .modal .aiScroll {
 }
 
 .navbar .blue {
-  background-color: #6f8ab7;
   border: none;
   border-radius: 0.25rem;
   color: white;
@@ -587,7 +586,6 @@ HEAD .ai .modal .aiScroll {
   transition: 400ms;
 }
 .navbar .blue:hover {
-  background-color: #567ab8;
   cursor: pointer;
   text-decoration: underline;
   font-size: 1.2rem;
@@ -597,7 +595,6 @@ HEAD .ai .modal .aiScroll {
   transition: 100ms;
 }
 .navbar .blue:active {
-  background-color: #567ab8;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
