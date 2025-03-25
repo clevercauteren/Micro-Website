@@ -42,10 +42,17 @@
     </div>
 
     <!-- ai implementation -->
+    
     <div class="ai">
+      <!-- Tooltip for AI assistant -->
+      <div id="aiTooltip" class="tooltip">
+        <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
+        <button class="tooltip-close" onclick="hideTooltip()">×</button>
+      </div>
+
       <!-- Button to open the chatbot modal -->
-      <button onclick="openModal()" class="open-button">
-        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="" />
+      <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
+        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
       </button>
 
       <!-- Background overlay (covers the page) -->
@@ -61,6 +68,10 @@
             class="chatbot-image"
           />
           <h2 class="title">Chatbot</h2>
+          <div class="aiScroll">
+            <div id="chatHistory" class="chat-history"></div>
+          </div>
+          <hr />
           <div class="flex">
             <input
               type="text"
@@ -77,17 +88,13 @@
               Send
             </button>
           </div>
-          <hr />
-          <div class="aiScroll">
-            <p id="response" class="response"></p>
-          </div>
         </div>
       </div>
 
       <script src="/src/js/ai.js"></script>
       <!-- Link to external JavaScript file -->
     </div>
-
+    
     <!-- pagina -->
 
     <header>
