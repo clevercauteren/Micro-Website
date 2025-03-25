@@ -640,19 +640,31 @@ HEAD .ai .modal .aiScroll {
 }
 
 /* achtergrond scroll */
+.achtergrond-scroll {
+  position: relative;
+}
+
 .achtergrond-scroll iframe {
+  position: relative;
+  top: 0;
   height: 60vh;
   width: 100vw;
+}
+
+.Title {
+  margin-top: 30px !important;
+}
+
+.fixHeader {
+  position: absolute;
+  margin-bottom: 30px;
+  top: 0;
 }
 
 .achtergrond-scroll .parallax {
   position: relative;
   background-color: black;
   height: 60vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 5%;
 }
 
 .achtergrond-scroll .content {
