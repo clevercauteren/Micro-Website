@@ -55,17 +55,15 @@ body {
 }
 
 .navbar .blue {
-  background-color: #6f8ab7;
   border: none;
   border-radius: 0.25rem;
   color: white;
   padding: 0.5rem;
   cursor: pointer;
   margin: 0 0.5rem 0 0.5rem;
-  transition: 400ms;
+  transition: 100ms;
 }
 .navbar .blue:hover {
-  background-color: #567ab8;
   cursor: pointer;
   text-decoration: underline;
   font-size: 1.2rem;
@@ -75,7 +73,6 @@ body {
   transition: 100ms;
 }
 .navbar .blue:active {
-  background-color: #567ab8;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
