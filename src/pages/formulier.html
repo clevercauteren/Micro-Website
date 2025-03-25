@@ -77,61 +77,48 @@
                     Welkom in onze nieuwe richting hier op school! Wij vragen u dit formulier in te vullen over waarom je deze richting zou willen volgen.
                     Gelieve al onze vragen juist te beantwoorden!
                 </h2>
-                <form action="/src/php/verwerk_formulier.php" method="post">
-                    
-                    <h3>Persoonlijke gegevens</h3>
-                    
-                    <input type="text" name="voornaam" placeholder="Voornaam" id="voornaam" required>
-                    
-                    <input type="text" name="naam" id="naam" placeholder="Naam" required>
-                    
-                    <input type="email" id="email" name="email" placeholder="E-mail" required>
-                    
-                    <input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer" required>
-                    <h3>Adresgegevens</h3>
-                    <!-- Plaats met invoerveld en suggesties -->
-                    
-                    <input type="text" id="plaats" name="plaats" list="plaatsenlijst" placeholder="Typ een plaats..." required>
-                    <datalist id="plaatsenlijst"></datalist>
-                    <div id="plaatsError"></div> <!-- Foutmelding voor plaats -->
-                    
-                
-                    <!-- Straat met invoerveld en suggesties -->
-                    
-                    <input type="text" id="straat" name="straat" list="stratenlijst" placeholder="Typ een straat..." required>
-                    <datalist id="stratenlijst"></datalist>
-                    <div id="straatError"></div> <!-- Foutmelding voor straat -->
-                    
-                    
-                    <input type="number" name="huisnr" placeholder="Huisnummer" required id="huisnr">
-                    <h3>Schoolinformatie</h3>
-                    
-                    <input type="text" name="school" placeholder="Naar welke school ging je hiervoor?" required id="school">
-                    
-                    <input type="text" name="richting" id="richting" placeholder="Welke richting deed je daar?" required>
-                    
-                    <select id="menu" name="reden" class="dropdown-richting" required>
-                        <option value="">Maak hier een selectie</option>
-                        <option value="applicaties_ontwikkelen">Ik wil applicaties ontwikkelen</option>
-                        <option value="systeembeheer">Ik ben geïnteresseerd in systeembeheer</option>
-                        <option value="data_analyse">Ik wil werken met data-analyse</option>
-                        <option value="cloud_computing">Ik wil werken met cloud computing</option>
-                        <option value="technische_ondersteuning">Ik wil technische ondersteuning bieden</option>
-                        <option value="webontwikkeling">Ik wil websites en webapplicaties ontwikkelen</option>
-                        <option value="databeveiliging">Ik ben geïnteresseerd in databeveiliging</option>
-                        <option value="netwerkbeheer">Ik wil netwerken beheren en optimaliseren</option>
-                        <option value="software_ontwikkeling">Ik wil software ontwikkelen voor bedrijven</option>
-                        <option value="automatisering">Ik wil processen automatiseren met software</option>
-                        <option value="it_infrastructuur">Ik ben geïnteresseerd in IT-infrastructuur en netwerken</option>
-                        <option value="database_beheer">Ik wil databases beheren en optimaliseren</option>
-                        <option value="business_intelligence">Ik wil werken met business intelligence en rapportages</option>
-                        <option value="digital_transformation">Ik wil bedrijven helpen met digitale transformatie</option>
-    
-                    </select>
-                
-                    <br><br>
-                    <button type="submit" id="Verzendbutton">Verzenden</button>
-                </form>
+                <form action="/src/php/phpmailer.php" method="post">
+                  <h3>Persoonlijke gegevens</h3>
+              
+                  <input type="text" name="voornaam" placeholder="Voornaam (verplicht)" id="voornaam" required>
+                  <input type="text" name="naam" id="naam" placeholder="Naam (verplicht)" required>
+                  <input type="email" id="email" name="email" placeholder="E-mail (verplicht)" required>
+                  <input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer">
+                  
+                  <h3>Adresgegevens</h3>
+                  <input type="text" id="plaats" name="plaats" list="plaatsenlijst" placeholder="Plaats">
+                  <datalist id="plaatsenlijst"></datalist>
+                  
+                  <input type="text" id="straat" name="straat" list="stratenlijst" placeholder="Straat">
+                  <datalist id="stratenlijst"></datalist>
+                  
+                  <input type="number" name="huisnr" placeholder="Huisnummer" id="huisnr">
+              
+                  <h3>Schoolinformatie</h3>
+                  <input type="text" name="school" placeholder="Naar welke school ging je hiervoor?" id="school">
+                  <input type="text" name="richting" id="richting" placeholder="Welke richting deed je daar?">
+              
+                  <select id="menu" name="reden" class="dropdown-richting" required>
+                      <option value="">Maak hier een selectie (verplicht)</option>
+                      <option value="applicaties_ontwikkelen">Ik wil applicaties ontwikkelen</option>
+                      <option value="systeembeheer">Ik ben geïnteresseerd in systeembeheer</option>
+                      <option value="data_analyse">Ik wil werken met data-analyse</option>
+                      <option value="cloud_computing">Ik wil werken met cloud computing</option>
+                      <option value="technische_ondersteuning">Ik wil technische ondersteuning bieden</option>
+                      <option value="webontwikkeling">Ik wil websites en webapplicaties ontwikkelen</option>
+                      <option value="databeveiliging">Ik ben geïnteresseerd in databeveiliging</option>
+                      <option value="netwerkbeheer">Ik wil netwerken beheren en optimaliseren</option>
+                      <option value="software_ontwikkeling">Ik wil software ontwikkelen voor bedrijven</option>
+                      <option value="automatisering">Ik wil processen automatiseren met software</option>
+                      <option value="it_infrastructuur">Ik ben geïnteresseerd in IT-infrastructuur en netwerken</option>
+                      <option value="database_beheer">Ik wil databases beheren en optimaliseren</option>
+                      <option value="business_intelligence">Ik wil werken met business intelligence en rapportages</option>
+                      <option value="digital_transformation">Ik wil bedrijven helpen met digitale transformatie</option>
+                  </select>
+              
+                  <br><br>
+                  <button type="submit" id="Verzendbutton">Verzenden</button>
+              </form>
                 
             </div>
         </main>
