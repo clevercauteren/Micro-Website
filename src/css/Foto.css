@@ -96,6 +96,7 @@ footer {
 /* Beeld zoom effect */
 .FotosContent section:hover img {
   transform: scale(1.12);
+  cursor: pointer;
   filter: brightness(0.9);
 }
 
