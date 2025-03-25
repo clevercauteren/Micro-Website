@@ -170,6 +170,7 @@ header img {
 .photo-item:hover {
   transition: all 0.2s;
   box-shadow: lightgrey 0.5px 0.5px 1.5px 1px;
+  cursor: pointer;
 }
 
 .photo-item img {
