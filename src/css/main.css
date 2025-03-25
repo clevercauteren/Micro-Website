@@ -485,7 +485,7 @@ HEAD .ai .modal .aiScroll {
 
 /* Tooltip container */
 .tooltip {
-  position: absolute;
+  position: fixed;
   top: 80%; /* Adjust to position near the open button */
   right: 80px; /* Adjust to position near the open button */
   background-color: #333;
@@ -668,7 +668,7 @@ HEAD .ai .modal .aiScroll {
 }
 
 .achtergrond-scroll .content {
-  height: 2500px; /* Maak de inhoud lang genoeg om te kunnen scrollen */
+  height: max-content; /* Maak de inhoud lang genoeg om te kunnen scrollen */
   padding: 20px;
   text-align: center;
 }
