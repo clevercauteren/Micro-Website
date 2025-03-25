@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tweede{
+    border: solid red 2px;
+    height: 1000px;
+}
+.container{
+    border: rgb(71, 12, 12) solid 2px;
+    width: 1300px;
+    background-color: rgb(255, 255, 255);
+}
+.ler{
+    display: flex;
+    justify-content: center;
+}
+p{
+    color: rgb(0, 0, 0);
+}
+h2{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
