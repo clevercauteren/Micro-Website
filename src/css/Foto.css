@@ -52,7 +52,7 @@ footer {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease-in-out;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -65,7 +65,7 @@ footer {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 10%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -75,7 +75,7 @@ footer {
 }
 
 .FotosContent section:hover {
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5);
   transform: scale(1.08);
 }
 
@@ -91,7 +91,7 @@ footer {
 /* Beeld zoom effect */
 .FotosContent section:hover img {
   transform: scale(1.12);
-  filter: brightness(1.2);
+  filter: brightness(0.9);
 }
 
 /* Tooltip-styling */
@@ -101,8 +101,8 @@ footer {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 255, 255, 0.7);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000000;
   padding: 5px 10px;
   border-radius: 10px;
   font-size: 14px;
@@ -137,7 +137,7 @@ footer {
   max-width: 90%;
   max-height: 80%;
   border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.9);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
   animation: fadeIn 0.4s ease-in-out;
 }
 
@@ -160,7 +160,7 @@ footer {
 }
 
 .FullscreenFoto-close:hover {
-  color: cyan;
+  color: rgb(252, 252, 252);
 }
 
 /* Navigatieknoppen */
@@ -181,7 +181,7 @@ footer {
 
 .FullscreenFoto-prev:hover,
 .FullscreenFoto-next:hover {
-  background-color: rgba(0, 255, 255, 0.6);
+  background-color: rgba(162, 163, 163, 0.6);
   border-radius: 50%;
 }
 
