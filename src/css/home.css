@@ -309,6 +309,10 @@ header img {
   margin-right: 0;
 }
 
+.photo-item:hover {
+  cursor: pointer;
+}
+
 .code {
   background-color: lightblue;
   display: flex;
