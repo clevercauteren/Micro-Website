@@ -16,6 +16,14 @@
     display: flex;
     justify-content: center;
 }
+.meerinfo{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border: solid 2px black;
+    display: flex;
+    float: right;
+}
 p{
     color: rgb(0, 0, 0);
 }
