@@ -1,38 +1,188 @@
+
+/* Algemene opmaak */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
-.tweede {
-  height: 1000px;
+
+body {
+    background: linear-gradient(to bottom, #001F3F, #0056b3, #008cdd, #000000);
+    background-size: 100% 400%;
+    animation: gradientFade 50s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
+
+main{
+    display: flex;
+}
+@keyframes gradientFade {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
 .container {
-  margin: 100px;
-  padding: 10px;
-  border-radius: 10px;
-  border: rgb(71, 12, 12) solid 2px;
-  width: 1300px;
-  background-color: rgb(255, 255, 255);
+    width: 70%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin-top: 70px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.ler {
-  display: flex;
-  justify-content: center;
-}
-.meerinfo {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  border: solid 2px black;
-  display: flex;
-  float: right;
-}
-p {
-  color: rgb(0, 0, 0);
-}
+
 h2 {
-  color: rgb(0, 0, 0);
-  text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
 }
+
 h2:hover {
-  color: blue;
+    color: yellow;
 }
+
+p {
+    font-size: 18px;
+    color: white;
+}
+
+.meerinfo {
+    width: 120px;
+    height: 40px;
+    background-color: #008cdd;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.meerinfo:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    width: 100%;
+    background: none;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+.bijdrage-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bijdrage-container h3 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.bijdrage-container p {
+    font-size: 18px;
+    color: white;
+    margin: 5px 0;
+}
+
+/* Responsieve opmaak */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .meerinfo {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+.info-secties {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zet alles in het midden */
+    margin-top: 20px;
+    width: 100%;
+}
+
+.sectie {
+    background-color: #f4f7fc; /* Lichtgrijze achtergrond */
+    padding: 15px;
+    margin: 10px;
+    width: 60%; /* Past de breedte aan */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.sectie h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.sectie a {
+    display: block;
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.sectie a:hover {
+    text-decoration: underline;
+}
+
+.info-btn {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.info-btn:hover {
+    background-color: #002244;
+
