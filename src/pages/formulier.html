@@ -79,44 +79,76 @@
                 </h2>
                 <form action="/src/php/phpmailer.php" method="post">
                   <h3>Persoonlijke gegevens</h3>
-              
-                  <input type="text" name="voornaam" placeholder="Voornaam (verplicht)" id="voornaam" required>
-                  <input type="text" name="naam" id="naam" placeholder="Naam (verplicht)" required>
-                  <input type="email" id="email" name="email" placeholder="E-mail (verplicht)" required>
-                  <input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer">
+                  <table>
+                      <tr>
+                          <td><label for="voornaam">Voornaam:</label></td>
+                          <td><input type="text" name="voornaam" id="voornaam" placeholder="Voornaam (verplicht)" required></td>
+                          <td><label for="naam">Naam:</label></td>
+                          <td><input type="text" name="naam" id="naam" placeholder="Naam (verplicht)" required></td>
+                      </tr>
+                      <tr>
+                          <td><label for="email">E-mail:</label></td>
+                          <td><input type="email" name="email" id="email" placeholder="E-mail (verplicht)" required></td>
+                          <td><label for="telefoonnummer">Telefoonnummer:</label></td>
+                          <td><input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer"></td>
+                      </tr>
+                  </table>
                   
                   <h3>Adresgegevens</h3>
-                  <input type="text" id="plaats" name="plaats" list="plaatsenlijst" placeholder="Plaats">
-                  <datalist id="plaatsenlijst"></datalist>
+                  <table>
+                      <tr>
+                          <td><label for="straat">Straat:</label></td>
+                          <td><input type="text" id="straat" name="straat" list="stratenlijst" placeholder="Straat">
+                              <datalist id="stratenlijst"></datalist>
+                          </td>
+                          <td><label for="huisnr">Huisnummer:</label></td>
+                          <td><input type="number" name="huisnr" id="huisnr" placeholder="Huisnummer"></td>
+                      </tr>
+                      <tr>
+                          <td><label for="plaats">Plaats:</label></td>
+                          <td><input type="text" id="plaats" name="plaats" list="plaatsenlijst" placeholder="Plaats">
+                              <datalist id="plaatsenlijst"></datalist>
+                          </td>
+                      </tr>
+                  </table>
                   
-                  <input type="text" id="straat" name="straat" list="stratenlijst" placeholder="Straat">
-                  <datalist id="stratenlijst"></datalist>
-                  
-                  <input type="number" name="huisnr" placeholder="Huisnummer" id="huisnr">
-              
                   <h3>Schoolinformatie</h3>
-                  <input type="text" name="school" placeholder="Naar welke school ging je hiervoor?" id="school">
-                  <input type="text" name="richting" id="richting" placeholder="Welke richting deed je daar?">
-              
-                  <select id="menu" name="reden" class="dropdown-richting" required>
-                      <option value="">Maak hier een selectie (verplicht)</option>
-                      <option value="applicaties_ontwikkelen">Ik wil applicaties ontwikkelen</option>
-                      <option value="systeembeheer">Ik ben geïnteresseerd in systeembeheer</option>
-                      <option value="data_analyse">Ik wil werken met data-analyse</option>
-                      <option value="cloud_computing">Ik wil werken met cloud computing</option>
-                      <option value="technische_ondersteuning">Ik wil technische ondersteuning bieden</option>
-                      <option value="webontwikkeling">Ik wil websites en webapplicaties ontwikkelen</option>
-                      <option value="databeveiliging">Ik ben geïnteresseerd in databeveiliging</option>
-                      <option value="netwerkbeheer">Ik wil netwerken beheren en optimaliseren</option>
-                      <option value="software_ontwikkeling">Ik wil software ontwikkelen voor bedrijven</option>
-                      <option value="automatisering">Ik wil processen automatiseren met software</option>
-                      <option value="it_infrastructuur">Ik ben geïnteresseerd in IT-infrastructuur en netwerken</option>
-                      <option value="database_beheer">Ik wil databases beheren en optimaliseren</option>
-                      <option value="business_intelligence">Ik wil werken met business intelligence en rapportages</option>
-                      <option value="digital_transformation">Ik wil bedrijven helpen met digitale transformatie</option>
-                  </select>
-              
-                  <br><br>
+                  <table>
+                      <tr>
+                          <td><label for="school">Vorige school:</label></td>
+                          <td><input type="text" name="school" id="school" placeholder="Naar welke school ging je hiervoor?"></td>
+                          <td><label for="richting">Richting:</label></td>
+                          <td><input type="text" name="richting" id="richting" placeholder="Welke richting deed je daar?"></td>
+                      </tr>
+                  </table>
+                  
+                  <h3>Studierichting</h3>
+                  <table>
+                      <tr>
+                          <td><label for="menu">Reden van interesse:</label></td>
+                          <td>
+                              <select id="menu" name="reden" class="dropdown-richting" required>
+                                  <option value="">Maak hier een selectie (verplicht)</option>
+                                  <option value="applicaties_ontwikkelen">Ik wil applicaties ontwikkelen</option>
+                                  <option value="systeembeheer">Ik ben geïnteresseerd in systeembeheer</option>
+                                  <option value="data_analyse">Ik wil werken met data-analyse</option>
+                                  <option value="cloud_computing">Ik wil werken met cloud computing</option>
+                                  <option value="technische_ondersteuning">Ik wil technische ondersteuning bieden</option>
+                                  <option value="webontwikkeling">Ik wil websites en webapplicaties ontwikkelen</option>
+                                  <option value="databeveiliging">Ik ben geïnteresseerd in databeveiliging</option>
+                                  <option value="netwerkbeheer">Ik wil netwerken beheren en optimaliseren</option>
+                                  <option value="software_ontwikkeling">Ik wil software ontwikkelen voor bedrijven</option>
+                                  <option value="automatisering">Ik wil processen automatiseren met software</option>
+                                  <option value="it_infrastructuur">Ik ben geïnteresseerd in IT-infrastructuur en netwerken</option>
+                                  <option value="database_beheer">Ik wil databases beheren en optimaliseren</option>
+                                  <option value="business_intelligence">Ik wil werken met business intelligence en rapportages</option>
+                                  <option value="digital_transformation">Ik wil bedrijven helpen met digitale transformatie</option>
+                              </select>
+                          </td>
+                      </tr>
+                  </table>
+                  
+                  <br>
                   <button type="submit" id="Verzendbutton">Verzenden</button>
               </form>
                 
