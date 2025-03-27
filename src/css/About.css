@@ -48,6 +48,10 @@ body {
   color: white;
 }
 
+.about header h1 {
+  text-align: left;
+}
+
 .about h2 {
   font-size: 20pt;
 }
@@ -101,6 +105,10 @@ body {
 .about .item:hover {
   box-shadow: 0 0 50px 5px rgba(84, 84, 84, 0.668);
   transform: scale(1.01);
+}
+
+.about .Photo-Item img {
+  width: 100%;
 }
 
 .footer {
