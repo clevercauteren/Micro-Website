@@ -3,13 +3,14 @@ body {
     min-height: 100vh;
     backdrop-filter: blur(5px);
     background-size: cover;
-    background: linear-gradient(to bottom, #001F3F, #0056b3, #008cdd, #000000);
+    background: linear-gradient(to bottom, rgb(31, 31, 31), rgb(86, 86, 86), rgb(140, 140, 140), #000000);
     background-size: 100% 400%;
     animation: gradientFade 50s ease infinite;
     margin: 0;
     padding: 0;
 }
 
+@keyframes gradientFade {
     0% {
         background-position: 0% 0%;
     }
@@ -19,11 +20,9 @@ body {
     100% {
         background-position: 0% 0%;
     }
+    
 }
 
-html {
-    min-height: 100vh;
-}
 
 .about {
     padding: 20px;
@@ -77,31 +76,35 @@ html {
     font-weight: bold;
 }
 
+.about .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.about .item
+{
+    background: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 .footer {
-    position: relative;
     width: 100%;
     text-align: center;
-    padding: 10px 0;
-    padding-bottom: 0;
-    margin-top: auto;
+    padding-top: 10px 0;
+    margin-top: 20px; /* Add spacing above the footer */
 }
 
-html, body {
-    display: flex;
-    flex-direction: column;
-}
 
-body {
-    justify-content: space-between;
-}
 
-/* ✅ Media query voor schermen kleiner dan 600px */
+/* ✅ Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
     .parallax {
-        background-position:left !important;
+        background-position: left !important;
     }
     .about {
-        
         margin: 20px 10px;
         padding: 15px;
         font-size: 1rem;
@@ -132,7 +135,7 @@ body {
 
     .footer {
         font-size: 0.9rem;
-        padding: 5px;
+        padding-top: 5px;
     }
 }
 @media screen and (max-width: 768px){
@@ -171,7 +174,7 @@ body {
 
     .footer {
         font-size: 0.9rem;
-        padding: 5px;
+        padding-top: 5px;
     }
 }
 @media screen and (max-width: 1440px){
@@ -210,6 +213,6 @@ body {
 
     .footer {
         font-size: 0.9rem;
-        padding: 5px;
+        padding-top: 5px;
     }
 }
