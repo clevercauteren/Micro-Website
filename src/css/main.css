@@ -686,13 +686,13 @@ HEAD .ai .modal .aiScroll {
 
 /* footer */
 
-.footer footer {
+footer {
   text-align: center;
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1em 0 1em 0;
 }
-.footer a {
+footer a {
   color: #6f8ab7;
   text-decoration: wavy;
 }
