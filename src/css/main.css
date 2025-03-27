@@ -12,128 +12,449 @@ body {
 }
 
 /* AI */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap');
-
-
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Basic style for the modal */
+/* Basic style for the modal */
 .ai .modal {
-    display: none; /* Initially hidden */
-    position: fixed;
-    z-index: 60; /* Higher z-index to be on top of the overlay */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
-    background-image: linear-gradient(to bottom, black, gray);
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: auto;
-    min-width: 40%;
-    margin: auto;
-    box-shadow: 0px 4px 8px rgb(0, 0, 0);
-    font-family: "Roboto";
-  }
-  
-  .ai .modal .aiScroll .response {
-    font-family: "Roboto";
-    /* font-weight: 600; */
-    font-size: 23px;
-    color: white;
-    margin-bottom: 20px;
-    text-align: justify;
-  }
+  display: none; /* Initially hidden */
+  position: fixed;
+  z-index: 60; /* Higher z-index to be on top of the overlay */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  background-image: linear-gradient(to bottom, black, gray);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: auto;
+  min-width: 40%;
+  margin: auto;
+  box-shadow: 0px 4px 8px rgb(0, 0, 0);
+  font-family: "Roboto";
+}
 
-  .ai .modal .aiScroll
-  {
-    max-height: 500px;
-    overflow-y: auto;
-    padding: 20px;
+.ai .modal .aiScroll .response {
+  font-family: "Roboto";
+  /* font-weight: 600; */
+  font-size: 23px;
+  color: white;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+HEAD .ai .modal .aiScroll {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.ai .overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  z-index: 55; /* Below the modal */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Gray background */
+}
+
+.ai .close {
+  color: #8c8c8c;
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+  transition: 300ms;
+}
+
+.ai .close:hover,
+.ai .close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ai .chatbot-image {
+  width: auto;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.ai .user-input {
+  width: 73%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-size: 16px;
+  text-align: center;
+}
+
+.ai .send-button {
+  width: 20%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-size: 16px;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  transition: 400ms;
+}
+
+.ai .send-button:hover {
+  width: 22%;
+  border: 2px solid rgb(62, 62, 62);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+}
+.ai .send-button:active {
+  width: 22%;
+  border: 3px solid rgb(62, 62, 62);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+  transition: 100ms;
+}
+
+.ai .open-button {
+  z-index: 70.02;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, black, gray);
+  background-color: #000000;
+  background-repeat: none;
+  background-size: cover;
+  border: none;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  transition: 400ms;
+}
+
+.ai .open-button:hover {
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  border-radius: 10%;
+}
+
+.ai .flex {
+  width: 100%;
+  display: flex;
+}
+
+.ai .flex .user-input {
+  float: left;
+}
+
+.ai .flex .send-button {
+  float: right;
+  margin-right: 0%;
+  margin-left: 2%;
+}
+
+.ai .modal .modal-content .title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+.ai .modal .modal-content {
+  width: 100%;
+}
+.ai .modal .modal-content hr {
+  margin: 8px 0px;
+}
+
+.ai .modal .aiScroll {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.ai .overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  z-index: 55; /* Below the modal */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Gray background */
+}
+
+.ai .close {
+  color: #8c8c8c;
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+  transition: 300ms;
+}
+
+.ai .close:hover,
+.ai .close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ai .chatbot-image {
+  width: auto;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.ai .user-input {
+  width: 73%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-size: 16px;
+  text-align: center;
+}
+
+.ai .send-button {
+  width: 20%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-size: 16px;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  transition: 400ms;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 300ms;
+}
+
+.ai .send-button:hover {
+  width: 22%;
+  border: 2px solid rgb(62, 62, 62);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.8);
+}
+.ai .send-button:active {
+  width: 22%;
+  border: 3px solid rgb(62, 62, 62);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+  transition: 100ms;
+}
+
+.ai .open-button {
+  z-index: 70;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #000000;
+  background-repeat: none;
+  background-size: cover;
+  border: none;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.8), 0 0 20px rgba(0, 0, 255, 0.6);
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 300ms;
+}
+
+.ai .open-button:hover {
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  border-radius: 10%;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 255, 1), 0 0 30px rgba(0, 0, 255, 0.8);
+}
+
+.ai .flex {
+  display: flex;
+  margin-top: 10px;
+}
+
+.ai .flex .user-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.ai .flex .send-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai .flex .send-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.8);
+}
+
+.ai .modal .modal-content .title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  text-shadow: #ffffff 0px 0px 10px;
+}
+.ai .modal .modal-content {
+  width: 100%;
+}
+.ai .modal .modal-content hr {
+  margin: 8px 0px;
+}
+
+.ai .chat-history {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.ai .chat-history .chat-bubble {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.ai .chat-history .user-message {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 98, 255),
+    rgb(166, 0, 255)
+  );
+  background-size: 500% 500%; /* Background animation */
+  animation: fade 10s ease infinite;
+  color: black;
+  align-self: flex-end; /* Align to the right */
+  text-align: right;
+  box-shadow: 0 0 20px rgba(0, 0, 255, 1);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fade {
+  0% {
+    background-position: 0% 0%;
   }
-  
-  .ai .overlay {
-    display: none; /* Initially hidden */
-    position: fixed;
-    z-index: 55; /* Below the modal */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Gray background */
+  50% {
+    background-position: 100% 0%;
   }
-  
-  .ai .close {
-    color: #8c8c8c;
-    font-size: 28px;
-    font-weight: bold;
-    float: right;
-    transition: 300ms;
+  100% {
+    background-position: 0% 0%;
   }
-  
-  .ai .close:hover,
-  .ai .close:focus {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    cursor: pointer;
+}
+
+.ai .chat-history .ai-response {
+  background-color: #ffffff; /* White for AI responses */
+  color: black;
+  align-self: flex-start; /* Align to the left */
+  text-align: left;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .ai .chatbot-image {
-    width: auto;
-    height: 50px;
-    margin-right: 20px;
+  to {
+    opacity: 1;
   }
-  
-  .ai .user-input {
-    width: 73%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: "Roboto";
-    font-size: 16px;
-    text-align: center;
-  }
-  
-  .ai .send-button {
-    width: 20%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    font-family: "Roboto";
-    font-size: 16px;
-    text-align: center;
-    background-color: #000000;
-    color: white;
-    transition: 400ms;
-  }
-  
-  .ai .send-button:hover {
-    width: 22%;
-    border: 2px solid rgb(62, 62, 62);
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    font-size: 19px;
-  }
-  .ai .send-button:active {
-    width: 22%;
-    border: 3px solid rgb(62, 62, 62);
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    font-size: 19px;
-    transition: 100ms;
+}
+
+.ai .chat-history .user-message,
+.ai .chat-history .ai-response {
+  position: relative;
+}
+
+.ai .chat-history .user-message::after,
+.ai .chat-history .ai-response::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+}
+
+.ai .chat-history .user-message::after {
+  right: -10px;
+  border-left-color: #0000ff;
+}
+
+.ai .chat-history .ai-response::after {
+  left: -10px;
+  border-right-color: #ffffff;
+}
+
+.ai .chat-history .loading-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0; /* Add padding around the icon */
+  align-self: flex-start; /* Align to the left for AI */
+}
+
+.ai .chat-history .loading-animation .spinner {
+  width: 30px;
+  height: 30px;
+  background-image: url("/src/images/ai/three-dots-svgrepo-com.svg"); /* Ensure this path is correct */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: bounce 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
   
   .ai .open-button {
@@ -151,42 +472,70 @@ body {
     bottom: 10px;
     transition: 400ms;
   }
-  
-  .ai .open-button:hover {
-    cursor: pointer;
-    height: 70px;
-    width: 70px;
-    border-radius: 10%;
-  }
-  
-  .ai .flex {
-    width: 100%;
-    display: flex;
-  }
-  
-  .ai .flex .user-input {
-    float: left;
-  }
-  
-  .ai .flex .send-button {
-    float: right;
-    margin-right: 0%;
-    margin-left: 2%;
-  }
-  
-  .ai .modal .modal-content .title {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-    margin-bottom: 20px;
-  }
-  .ai .modal .modal-content {
-    width: 100%;
-  }
-  .ai .modal .modal-content hr {
-    margin: 8px 0px;
-  }
+}
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.8), 0 0 20px rgba(0, 0, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 1), 0 0 40px rgba(0, 0, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.8), 0 0 20px rgba(0, 0, 255, 0.6);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Tooltip container */
+.tooltip {
+  position: fixed;
+  top: 80%; /* Adjust to position near the open button */
+  right: 80px; /* Adjust to position near the open button */
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* Initially hidden */
+  z-index: 100;
+  font-family: "Roboto", sans-serif;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Tooltip text */
+.tooltip-text {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+/* Tooltip close button */
+.tooltip-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Fade-in animation for the tooltip */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* NavBar */
 .navbar {
   text-decoration: none;
@@ -198,7 +547,7 @@ body {
   padding: 1em 0 auto 0;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 50;
   height: 6rem;
   transition: 400ms;
 }
@@ -241,7 +590,6 @@ body {
 }
 
 .navbar .blue {
-  background-color: #6f8ab7;
   border: none;
   border-radius: 0.25rem;
   color: white;
@@ -251,7 +599,6 @@ body {
   transition: 400ms;
 }
 .navbar .blue:hover {
-  background-color: #567ab8;
   cursor: pointer;
   text-decoration: underline;
   font-size: 1.2rem;
@@ -261,7 +608,6 @@ body {
   transition: 100ms;
 }
 .navbar .blue:active {
-  background-color: #567ab8;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
@@ -304,23 +650,35 @@ body {
 }
 
 /* achtergrond scroll */
+.achtergrond-scroll {
+  position: relative;
+}
+
 .achtergrond-scroll iframe {
+  position: relative;
+  top: 0;
   height: 60vh;
   width: 100vw;
+}
+
+.Title {
+  margin-top: 30px !important;
+}
+
+.fixHeader {
+  position: absolute;
+  margin-bottom: 30px;
+  top: 0;
 }
 
 .achtergrond-scroll .parallax {
   position: relative;
   background-color: black;
   height: 60vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 5%;
 }
 
 .achtergrond-scroll .content {
-  height: 2500px; /* Maak de inhoud lang genoeg om te kunnen scrollen */
+  height: max-content; /* Maak de inhoud lang genoeg om te kunnen scrollen */
   padding: 20px;
   text-align: center;
 }

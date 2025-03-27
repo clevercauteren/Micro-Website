@@ -30,22 +30,28 @@
   <body>
     <div id="navbar" class="navbar">
       <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
-      <nav>
-        <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
-        <a href="/src/pages/Foto.html">Foto's</a>
-        <a href="/src/pages/About.html">Over ADB</a>
-        <a href="/src/pages/formulier.html"
-          ><button class="blue">Formulier</button></a
-        >
-      </nav>
+         <nav>
+          <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
+          <a href="/src/pages/Foto.html">Foto's</a>
+          <a href="/src/pages/About.html">Over ADB</a>
+          <a href="/src/pages/Watna.html">Wat na 5ADB</a>
+          <a href="/src/pages/formulier.html">Formulier</a>
+        </nav>
       <script src="/src/js/navbar.js"></script>
     </div>
 
     <!-- ai implementation -->
+    
     <div class="ai">
+      <!-- Tooltip for AI assistant -->
+      <div id="aiTooltip" class="tooltip">
+        <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
+        <button class="tooltip-close" onclick="hideTooltip()">×</button>
+      </div>
+
       <!-- Button to open the chatbot modal -->
-      <button onclick="openModal()" class="open-button">
-        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="" />
+      <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
+        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
       </button>
 
       <!-- Background overlay (covers the page) -->
@@ -61,6 +67,10 @@
             class="chatbot-image"
           />
           <h2 class="title">Chatbot</h2>
+          <div class="aiScroll">
+            <div id="chatHistory" class="chat-history"></div>
+          </div>
+          <hr />
           <div class="flex">
             <input
               type="text"
@@ -76,10 +86,6 @@
             >
               Send
             </button>
-          </div>
-          <hr />
-          <div class="aiScroll">
-            <p id="response" class="response"></p>
           </div>
         </div>
       </div>

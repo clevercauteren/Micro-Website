@@ -244,16 +244,6 @@ header img {
   right: 10px;
 }
 
-.BlackBarNav {
-  z-index: -99;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 50vh;
-  width: 100vw;
-  background-color: black;
-}
-
 .OpSchoolGraken {
   padding: 20px;
   background-color: white;
@@ -308,6 +298,10 @@ header img {
   border: solid red 1px;
   margin-left: auto;
   margin-right: 0;
+}
+
+.photo-item:hover {
+  cursor: pointer;
 }
 
 .code {
