@@ -2,28 +2,11 @@ body {
   background-color: black;
   min-height: 100vh;
   background-size: cover;
-  background: linear-gradient(
-    to bottom,
-    rgb(31, 31, 31),
-    rgb(86, 86, 86),
-    rgb(140, 140, 140),
-    #000000
-  );
+
   background-size: 100% 400%;
   animation: gradientFade 50s ease infinite;
   margin: 0;
   padding: 0;
-}
-@keyframes gradientFade {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
 }
 
 .about {
