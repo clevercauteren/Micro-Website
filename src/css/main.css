@@ -456,9 +456,22 @@ HEAD .ai .modal .aiScroll {
   0% {
     transform: rotate(0deg);
   }
-  100% {
-    transform: rotate(-360deg);
-  }
+}
+
+.ai .open-button {
+  z-index: 10;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, black, gray);
+  background-color: #000000;
+  background-repeat: none;
+  background-size: cover;
+  border: none;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  transition: 400ms;
 }
 
 @keyframes pulse {
@@ -672,13 +685,13 @@ HEAD .ai .modal .aiScroll {
 
 /* footer */
 
-.footer footer {
+footer {
   text-align: center;
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1em 0 1em 0;
 }
-.footer a {
+footer a {
   color: #6f8ab7;
   text-decoration: wavy;
 }

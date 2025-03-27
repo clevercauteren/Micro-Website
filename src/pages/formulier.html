@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meer informatie over ADB</title>
+    <title>5ADB Formulier</title>
     <link rel="stylesheet" href="/src/css/formulier.css">
     <link rel="stylesheet" href="/src/css/main.css">
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
@@ -11,70 +11,72 @@
 </head>
 <body>
     <div id="navbar" class="navbar">
-        <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
-        <nav>
-          <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
-          <a href="/src/pages/Foto.html">Foto's</a>
-          <a href="/src/pages/About.html">Over ADB</a>
-          <a href="/src/pages/Watna.html">Wat na 5ADB</a>
-          <a href="/src/pages/formulier.html">Formulier</a>
-        </nav>
-        <script src="/src/js/navbar.js"></script>
+      <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
+      <nav>
+        <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
+        <a href="/src/pages/Foto.html">Foto's</a>
+        <a href="/src/pages/About.html">Over ADB</a>
+        <a href="/src/pages/Watna.html">Wat na 5ADB</a>
+        <a href="/src/pages/formulier.html">Formulier</a>
+      </nav>
+      <script src="/src/js/navbar.js"></script>
+    </div>
+
+      
+
+    <!-- AI implementation -->
+  
+    <div class="ai">
+      <!-- Tooltip for AI assistant -->
+      <div id="aiTooltip" class="tooltip">
+        <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
+        <button class="tooltip-close" onclick="hideTooltip()">×</button>
       </div>
 
-      <!-- AI implementation -->
-    
-      <div class="ai">
-        <!-- Tooltip for AI assistant -->
-        <div id="aiTooltip" class="tooltip">
-          <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
-          <button class="tooltip-close" onclick="hideTooltip()">×</button>
-        </div>
-  
-        <!-- Button to open the chatbot modal -->
-        <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
-          <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
-        </button>
-  
-        <!-- Background overlay (covers the page) -->
-        <div id="overlay" class="overlay" onclick="closeModal()"></div>
-  
-        <!-- The Modal -->
-        <div id="chatModal" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img
-              src="/src/images/ai/LOGO white.png"
-              alt="Mistral AI"
-              class="chatbot-image"
+      <!-- Button to open the chatbot modal -->
+      <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
+        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
+      </button>
+
+      <!-- Background overlay (covers the page) -->
+      <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+      <!-- The Modal -->
+      <div id="chatModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img
+            src="/src/images/ai/LOGO white.png"
+            alt="Mistral AI"
+            class="chatbot-image"
+          />
+          <h2 class="title">Chatbot</h2>
+          <div class="aiScroll">
+            <div id="chatHistory" class="chat-history"></div>
+          </div>
+          <hr />
+          <div class="flex">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Ask something..."
+              onkeydown="handleKeyPress(event)"
+              class="user-input"
             />
-            <h2 class="title">Chatbot</h2>
-            <div class="aiScroll">
-              <div id="chatHistory" class="chat-history"></div>
-            </div>
-            <hr />
-            <div class="flex">
-              <input
-                type="text"
-                id="userInput"
-                placeholder="Ask something..."
-                onkeydown="handleKeyPress(event)"
-                class="user-input"
-              />
-              <button
-                id="send-button"
-                onclick="sendClicked(document.getElementById('userInput').value)"
-                class="send-button"
-              >
-                Send
-              </button>
-            </div>
+            <button
+              id="send-button"
+              onclick="sendClicked(document.getElementById('userInput').value)"
+              class="send-button"
+            >
+              Send
+            </button>
           </div>
         </div>
-  
-        <script src="/src/js/ai.js"></script>
-        <!-- Link to external JavaScript file -->
       </div>
+
+      <script src="/src/js/ai.js"></script>
+      <!-- Link to external JavaScript file -->
+    </div>
 
       <div class="pagina">
         <main>
