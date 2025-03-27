@@ -577,7 +577,6 @@ HEAD .ai .modal .aiScroll {
 }
 
 .navbar .blue {
-  background-color: #6f8ab7;
   border: none;
   border-radius: 0.25rem;
   color: white;
@@ -587,7 +586,6 @@ HEAD .ai .modal .aiScroll {
   transition: 400ms;
 }
 .navbar .blue:hover {
-  background-color: #567ab8;
   cursor: pointer;
   text-decoration: underline;
   font-size: 1.2rem;
@@ -597,7 +595,6 @@ HEAD .ai .modal .aiScroll {
   transition: 100ms;
 }
 .navbar .blue:active {
-  background-color: #567ab8;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
@@ -640,19 +637,31 @@ HEAD .ai .modal .aiScroll {
 }
 
 /* achtergrond scroll */
+.achtergrond-scroll {
+  position: relative;
+}
+
 .achtergrond-scroll iframe {
+  position: relative;
+  top: 0;
   height: 60vh;
   width: 100vw;
+}
+
+.Title {
+  margin-top: 30px !important;
+}
+
+.fixHeader {
+  position: absolute;
+  margin-bottom: 30px;
+  top: 0;
 }
 
 .achtergrond-scroll .parallax {
   position: relative;
   background-color: black;
   height: 60vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 5%;
 }
 
 .achtergrond-scroll .content {

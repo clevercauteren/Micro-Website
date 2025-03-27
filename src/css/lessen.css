@@ -116,8 +116,6 @@ h2 {
   float: right;
 }
 
-
-
 /* Responsiviteit */
 @media screen and (max-width: 768px) {
   .banner {
@@ -137,8 +135,8 @@ h2 {
     padding: 15px;
   }
 }
-.teeekst{
-    color: black;
+.teeekst {
+  color: black;
 }
 
 .explanation {
@@ -161,4 +159,46 @@ h2 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
+}
+
+/* Opmaak van de pop-ups divs */
+span {
+  display: block;
+}
+
+span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 500;
+  color: #0a369d;
+}
+
+/* Zorg ervoor dat de overlay de volledige pagina bedekt en een semi-transparante donkere achtergrond heeft */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Zwarte achtergrond met 50% doorzichtigheid */
+  display: none; /* Zorg ervoor dat de overlay standaard niet zichtbaar is */
+  z-index: 999; /* Zorg ervoor dat de overlay boven andere elementen komt */
+}
+
+/* Zorg ervoor dat de explanation div boven de overlay wordt weergegeven */
+#explanation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* Helder achtergrondkleur */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Schaduw voor een beetje diepte */
+  z-index: 1000; /* Zorg ervoor dat de explanation div boven de overlay wordt weergegeven */
 }
