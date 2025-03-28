@@ -50,6 +50,7 @@ main .grid-container div h2 {
 }
 
 main .grid-container div p {
+  font-weight: 200;
   padding: 20px;
 }
 
