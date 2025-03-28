@@ -10,76 +10,77 @@
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 </head>
 <body>
-    <div id="navbar" class="navbar">
-        <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
-        <nav>
-          <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
-          <a href="/src/pages/Foto.html">Foto's</a>
-          <a href="/src/pages/About.html">Over ADB</a>
-          <a href="/src/pages/Watna.html">Wat na 5ADB</a>
-          <a href="/src/pages/formulier.html">Formulier</a>
-        </nav>
-        <script src="/src/js/navbar.js"></script>
-      </div>
+  <div id="navbar" class="navbar">
+    <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
+    <nav>
+      <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
+      <a href="/src/pages/Foto.html">Foto's</a>
+      <a href="/src/pages/About.html">Over ADB</a>
+      <a href="/src/pages/Watna.html">Wat na 5ADB</a>
+      <a href="/src/pages/overAI.html">Over AI</a>
+      <a href="footer.html">Formulier</a>
+    </nav>
+    <script src="/src/js/navbar.js"></script>
+  </div>
 
       <div class="banner-container">
         
     </div>
     
 
-      <!-- AI implementation -->
-    
-      <div class="ai">
-        <!-- Tooltip for AI assistant -->
-        <div id="aiTooltip" class="tooltip">
-          <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
-          <button class="tooltip-close" onclick="hideTooltip()">×</button>
-        </div>
+    <!-- AI implementation -->
   
-        <!-- Button to open the chatbot modal -->
-        <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
-          <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
-        </button>
-  
-        <!-- Background overlay (covers the page) -->
-        <div id="overlay" class="overlay" onclick="closeModal()"></div>
-  
-        <!-- The Modal -->
-        <div id="chatModal" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img
-              src="/src/images/ai/LOGO white.png"
-              alt="Mistral AI"
-              class="chatbot-image"
+    <div class="ai">
+      <!-- Tooltip for AI assistant -->
+      <div id="aiTooltip" class="tooltip">
+        <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
+        <button class="tooltip-close" onclick="hideTooltip()">×</button>
+      </div>
+
+      <!-- Button to open the chatbot modal -->
+      <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
+        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
+      </button>
+
+      <!-- Background overlay (covers the page) -->
+      <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+      <!-- The Modal -->
+      <div id="chatModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img
+            src="/src/images/ai/LOGO white.png"
+            alt="Mistral AI"
+            class="chatbot-image"
+          />
+          <h2 class="title">Chatbot</h2>
+          <div class="aiScroll">
+            <div id="chatHistory" class="chat-history"></div>
+          </div>
+          <hr />
+          <div class="flex">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Ask something..."
+              onkeydown="handleKeyPress(event)"
+              class="user-input"
             />
-            <h2 class="title">Chatbot</h2>
-            <div class="aiScroll">
-              <div id="chatHistory" class="chat-history"></div>
-            </div>
-            <hr />
-            <div class="flex">
-              <input
-                type="text"
-                id="userInput"
-                placeholder="Ask something..."
-                onkeydown="handleKeyPress(event)"
-                class="user-input"
-              />
-              <button
-                id="send-button"
-                onclick="sendClicked(document.getElementById('userInput').value)"
-                class="send-button"
-              >
-                Send
-              </button>
-            </div>
+            <button
+              id="send-button"
+              onclick="sendClicked(document.getElementById('userInput').value)"
+              class="send-button"
+            >
+              Send
+            </button>
           </div>
         </div>
-  
-        <script src="/src/js/ai.js"></script>
-        <!-- Link to external JavaScript file -->
       </div>
+
+      <script src="/src/js/ai.js"></script>
+      <!-- Link to external JavaScript file -->
+    </div>
 
       <div class="pagina">
         <main>
@@ -88,6 +89,7 @@
                     Welkom in onze nieuwe richting hier op school! Wij vragen u dit formulier in te vullen over waarom je deze richting zou willen volgen.
                     Gelieve al onze vragen juist te beantwoorden!
                 </h2>
+
                 <hr><br><hr>
                 <!-- <form action="/src/php/phpmailer.php" method="post"> -->
                   <h3>Persoonlijke gegevens</h3>
@@ -167,24 +169,71 @@
                   <br>
                   <button type="submit" id="Verzendbutton">Verzenden</button>
               </form>
+
+                <form action="/src/php/verwerk_formulier.php" method="post">
+                    
+                    <h3>Persoonlijke gegevens</h3>
+                    
+                    <input type="text" name="voornaam" placeholder="Voornaam" id="voornaam" required>
+                    
+                    <input type="text" name="naam" id="naam" placeholder="Naam" required>
+                    
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    
+                    <input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer" required>
+                    <h3>Adresgegevens</h3>
+                    <!-- Plaats met invoerveld en suggesties -->
+                    
+                    <input type="text" id="plaats" name="plaats" list="plaatsenlijst" placeholder="Typ een plaats..." required>
+                    <datalist id="plaatsenlijst"></datalist>
+                    <div id="plaatsError"></div> <!-- Foutmelding voor plaats -->
+                    
+                
+                    <!-- Straat met invoerveld en suggesties -->
+                    
+                    <input type="text" id="straat" name="straat" list="stratenlijst" placeholder="Typ een straat..." required>
+                    <datalist id="stratenlijst"></datalist>
+                    <div id="straatError"></div> <!-- Foutmelding voor straat -->
+                    
+                    
+                    <input type="number" name="huisnr" placeholder="Huisnummer" required id="huisnr">
+                    <h3>Schoolinformatie</h3>
+                    
+                    <input type="text" name="school" placeholder="Naar welke school ging je hiervoor?" required id="school">
+                    
+                    <input type="text" name="richting" id="richting" placeholder="Welke richting deed je daar?" required>
+                    
+                    <select id="menu" name="reden" class="dropdown-richting" required>
+                        <option value="">Maak hier een selectie</option>
+                        <option value="applicaties_ontwikkelen">Ik wil applicaties ontwikkelen</option>
+                        <option value="systeembeheer">Ik ben geïnteresseerd in systeembeheer</option>
+                        <option value="data_analyse">Ik wil werken met data-analyse</option>
+                        <option value="cloud_computing">Ik wil werken met cloud computing</option>
+                        <option value="technische_ondersteuning">Ik wil technische ondersteuning bieden</option>
+                        <option value="webontwikkeling">Ik wil websites en webapplicaties ontwikkelen</option>
+                        <option value="databeveiliging">Ik ben geïnteresseerd in databeveiliging</option>
+                        <option value="netwerkbeheer">Ik wil netwerken beheren en optimaliseren</option>
+                        <option value="software_ontwikkeling">Ik wil software ontwikkelen voor bedrijven</option>
+                        <option value="automatisering">Ik wil processen automatiseren met software</option>
+                        <option value="it_infrastructuur">Ik ben geïnteresseerd in IT-infrastructuur en netwerken</option>
+                        <option value="database_beheer">Ik wil databases beheren en optimaliseren</option>
+                        <option value="business_intelligence">Ik wil werken met business intelligence en rapportages</option>
+                        <option value="digital_transformation">Ik wil bedrijven helpen met digitale transformatie</option>
+    
+                    </select>
+                
+                    <br><br>
+                    <button type="submit" id="Verzendbutton">Verzenden</button>
+                </form>
+
                 
             </div>
         </main>
         <script src="/src/js/csv_check.js"></script>
         
-        <div class="footer">
-          <footer>
-              <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
-              <p>
-                  5ADB -
-                  <abbr
-                    title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
-                    >B groep</abbr
-                  >
-                </p>
-              <p><a class="GTI" href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut">GTI Beveren</a></p>
-          </footer>
-      </div>
+        <footer>
+            Microsite ADB - Clément Vercauteren - 2025
+        </footer>
       </div>
 
     

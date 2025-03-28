@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #001F3F, #0056b3, #008cdd, #000000);
+    background: linear-gradient(to bottom, #001F3F, #000000, #ffffff, #000000);
     background-size: 100% 400%;
     animation: gradientFade 50s ease infinite;
     min-height: 100vh;
@@ -21,6 +21,10 @@ body {
 
 main{
     display: flex;
+    height: 1000px;
+}
+iframe{
+    display: block;
 }
 @keyframes gradientFade {
     0% { background-position: 0% 0%; }
@@ -65,7 +69,7 @@ h2 {
 }
 
 h2:hover {
-    color: yellow;
+    color: rgb(0, 0, 0);
 }
 
 p {
@@ -141,16 +145,16 @@ p {
 .info-secties {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Zet alles in het midden */
+    align-items: center; 
     margin-top: 20px;
     width: 100%;
 }
 
 .sectie {
-    background-color: #f4f7fc; /* Lichtgrijze achtergrond */
+    background-color: #f4f7fc; 
     padding: 15px;
     margin: 10px;
-    width: 60%; /* Past de breedte aan */
+    width: 60%; 
     border-radius: 8px;
     text-align: center;
 }
