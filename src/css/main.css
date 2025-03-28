@@ -35,7 +35,6 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: black;
-  background-image: linear-gradient(to bottom, black, gray);
   color: white;
   padding: 20px;
   border-radius: 5px;
@@ -138,7 +137,6 @@ HEAD .ai .modal .aiScroll {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-image: linear-gradient(to bottom, black, gray);
   background-color: #000000;
   background-repeat: none;
   background-size: cover;
@@ -464,7 +462,6 @@ HEAD .ai .modal .aiScroll {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-image: linear-gradient(to bottom, black, gray);
   background-color: #000000;
   background-repeat: none;
   background-size: cover;
