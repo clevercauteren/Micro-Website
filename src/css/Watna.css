@@ -25,6 +25,7 @@ main{
 }
 iframe{
     display: block;
+    margin-bottom: 200px;
 }
 @keyframes gradientFade {
     0% { background-position: 0% 0%; }
@@ -76,6 +77,7 @@ p {
     font-size: 18px;
     color: white;
 }
+
 
 .meerinfo {
     width: 120px;
@@ -175,7 +177,6 @@ p {
 .sectie a:hover {
     text-decoration: underline;
 }
-
 .info-btn {
     background-color: #003366;
     color: white;
