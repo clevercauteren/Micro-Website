@@ -22,7 +22,10 @@
         <script src="/src/js/navbar.js"></script>
       </div>
 
-      
+      <div class="banner-container">
+        
+    </div>
+    
 
       <!-- AI implementation -->
     
@@ -85,7 +88,8 @@
                     Welkom in onze nieuwe richting hier op school! Wij vragen u dit formulier in te vullen over waarom je deze richting zou willen volgen.
                     Gelieve al onze vragen juist te beantwoorden!
                 </h2>
-                <form action="/src/php/phpmailer.php" method="post">
+                <hr><br><hr>
+                <!-- <form action="/src/php/phpmailer.php" method="post"> -->
                   <h3>Persoonlijke gegevens</h3>
                   <table>
                       <tr>
@@ -101,25 +105,29 @@
                           <td><input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer"></td>
                       </tr>
                   </table>
-                  
+                  <hr>
                   <h3>Adresgegevens</h3>
                   <table>
-                      <tr>
+                    <tr>
+                      <td><label for="plaats">Plaats:</label></td>
+                      <td><input type="text" id="plaats" name="plaats" list="plaatsenlijst" placeholder="Plaats">
+                          <datalist id="plaatsenlijst"></datalist>
+                          <div id="plaatsError"></div> <!-- Foutmelding voor plaats -->
+                      </td>
+                  </tr>  
+                    <tr>
                           <td><label for="straat">Straat:</label></td>
                           <td><input type="text" id="straat" name="straat" list="stratenlijst" placeholder="Straat">
                               <datalist id="stratenlijst"></datalist>
+                              <div id="straatError"></div> <!-- Foutmelding voor straat -->
+
                           </td>
                           <td><label for="huisnr">Huisnummer:</label></td>
-                          <td><input type="number" name="huisnr" id="huisnr" placeholder="Huisnummer"></td>
+                          <td><input type="text" name="huisnr" id="huisnr" placeholder="Huisnummer"></td>
                       </tr>
-                      <tr>
-                          <td><label for="plaats">Plaats:</label></td>
-                          <td><input type="text" id="plaats" name="plaats" list="plaatsenlijst" placeholder="Plaats">
-                              <datalist id="plaatsenlijst"></datalist>
-                          </td>
-                      </tr>
+                     
                   </table>
-                  
+                  <hr>
                   <h3>Schoolinformatie</h3>
                   <table>
                       <tr>
@@ -129,7 +137,7 @@
                           <td><input type="text" name="richting" id="richting" placeholder="Welke richting deed je daar?"></td>
                       </tr>
                   </table>
-                  
+                  <hr>
                   <h3>Studierichting</h3>
                   <table>
                       <tr>
