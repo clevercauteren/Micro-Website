@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head><meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Start webpagina over applicatie- en databeheer in GTI Beveren."
+    />
+    <meta name="author" content="Groep B" />
+    <meta
+      name="keywords"
+      content="5ADB, GTI Beveren, Applicatie- en Databeheer, Informatica, ICT, Onderwijs, School, Home"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="icon"
+      href="/src/images/favicon_Beveren.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/src/css/overAI.css"/>
+    <link rel="stylesheet" href="/src/css/main.css"/>
+    <title>Over AI</title>
+</head>
+<body>
+    <header>
+        <!-- navbar implementatie -->   
+    <div id="navbar" class="navbar">
+      <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
+      <nav>
+        <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
+        <a href="/src/pages/Foto.html">Foto's</a>
+        <a href="/src/pages/About.html">Over ADB</a>
+        <a href="/src/pages/Watna.html">Wat na 5ADB</a>
+        <a href="/src/pages/overAI.html">Over AI</a>
+        <a href="/src/pages/formulier.html">Formulier</a>
+      </nav>
+      <script src="/src/js/navbar.js"></script>
+    </div>
+    </header>
+    <!-- AI implementatie -->
+    <div class="ai">
+      <!-- Tooltip for AI assistant -->
+      <div id="aiTooltip" class="tooltip">
+        <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
+        <button class="tooltip-close" onclick="hideTooltip()">×</button>
+      </div>
+
+      <!-- Button to open the chatbot modal -->
+      <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
+        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
+      </button>
+
+      <!-- Background overlay (covers the page) -->
+      <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+      <!-- The Modal -->
+      <div id="chatModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img
+            src="/src/images/ai/LOGO white.png"
+            alt="Mistral AI"
+            class="chatbot-image"
+          />
+          <h2 class="title">Chatbot</h2>
+          <div class="aiScroll">
+            <div id="chatHistory" class="chat-history"></div>
+          </div>
+          <hr />
+          <div class="flex">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Ask something..."
+              onkeydown="handleKeyPress(event)"
+              class="user-input"
+            />
+            <button
+              id="send-button"
+              onclick="sendClicked(document.getElementById('userInput').value)"
+              class="send-button"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <script src="/src/js/ai.js"></script>
+      <!-- Link to external JavaScript file -->
+    </div>
+    <main>
+      <h1>Artifciele Intilligentie</h1>
+      <div class="grid-container">
+        <div class="item1">
+          <h2>Uitleg over AI</h2>
+          <p>
+            AI is een vorm van Intilligentie die door machines wordt nagebootst.
+            Het is een tak van de informatica die zich bezighoudt met het creëren van slimme machines die kunnen denken en handelen als mensen
+            Een AI gebruikt een neuraal netwerk wat toevallig ook het brein van de mens bevat.
+            Het is een systeem dat bestaat uit een groot aantal neuronen die met elkaar verbonden zijn.
+            deze neuronen kunnen informatie verwerken door een serie van berekeningen die uitijndelijk resulteert in een antwoord of specifieke invoer/uitvoer.
+          </p>
+          <fieldset>
+            <p>AI, oftewel kunstmatige intelligentie, is een technologie die machines in staat stelt om taken uit te voeren die normaal menselijk denkvermogen vereisen. Dit omvat het herkennen van patronen, het nemen van beslissingen, het begrijpen van taal en het oplossen van complexe problemen. AI wordt vaak gebruikt in chatbots, spraakassistenten, automatische vertalingen, gezichtsherkenning en zelfrijdende auto's. Ook speelt AI een grote rol in gepersonaliseerde aanbevelingen op streamingdiensten en webshops. Door het analyseren van grote hoeveelheden data kan AI voorspellingen doen en processen efficiënter maken.</p>
+            <legend>ChatGPT</legend>
+          </fieldset>
+        </div>
+        <div class="foto1">
+          <img src="../images/NeuralNetwork.jpg" alt="Neural Network">
+        </div>
+        <div class="item2">
+          <h2>Waar gebruiken we AI voor ADB</h2>
+          <p>
+            AI word voornamelijk gebruikt in Webdesign voor een manier te hebben om JavaScript te schrijven omdat wij dit niet genoeg zien voor dat zelf eigenlijk te kunnen.
+            Ook word dit tijdens de uren veel gebruikt voor het opzoek werk toch een beetje makkelijker te maken.
+            Tijdens Computer-Systemen word AI vooral gebruikt om de bapaalde errors op te lossen en ook om foute downloads te voorkomen.
+            Bij taken zoals het maken van een taak zoals de installatie van een Windows 95 is een foute download heel waarschijnlijk, ai weet de juiste download te vinden.
+          </p>
+        </div>
+        <div class="foto2">
+          <img src="../images/Fotos fotosite/IMG_6982.jpg" alt="leerlingen">
+        </div>
+        <div class="item3">
+          <h2>Waarom AI</h2>
+          <p>
+            AI is een heel sterk stuk technologie.
+            De "makers" van AI heeft zels al kunnen vertellen dat de mens niet meer het slimste op de wereld is, AI heeft die rol al overgenomen.
+            maar toch staan wij boven de AI op basis van macht.
+            AI word nu vooral gebruikt voor het oplossen van problemen die wij niet kunnen oplossen.
+            AI is ook een stuk sneller dan de mens, een mens kan 1 taak per keer doen terwijl AI er 1000 per seconde kan doen.
+            AI is ook een stuk nauwkeuriger dan de mens, maar tegelijkertijd ook een stuk onnauwkeuriger.
+          </p>
+        </div>
+        <div class="foto3">
+          <img src="../images/WaaromAI.jpg" alt="Brain">
+        </div>
+        <div class="item4">
+          <h2>Welke AI gebruikt de website</h2>
+          <p>
+            Deze website gebruikt de AI Mistral AI.
+            Mistral AI is een AI die is genomen vanwege de vele mogelijke modellen en dan nog eens gratis is.
+            Mistral AI is een AI die vooral word gebruikt voor het maken van chatbots en het maken van een website.
+            Mistral AI is een AI die ook heel makkelijk te gebruiken is en ook heel makkelijk te begrijpen is.
+            Mistral AI is een AI die ook heel snel is en ook heel nauwkeurig is.
+            Deze AI heeft natuurlijk ook kleine oplosbare probleempjes.
+            De AI had geen idee wat 5ADB was dus heeft deze AI system role data gekregen (eigenlijk een heleboel text die alle informatie bevat over 5ADB en die bij elke vraag word uitgelezen voor een goed antwoord te generen).
+            Deze AI kon ook geen Bericht geschiedenis zien, dit word op dezelfde manier opgelost als de 5ADB vraag.
+            Deze AI vind je aan de rechter- onder-kant van de pagina.
+          </p>
+        </div>
+        <div class="foto4">
+          <img src="../images/MistralAI.jpg" alt="Mistral AI">
+        </div>
+        <div class="item5">
+          <h2>Hoe komt deze AI aan alle informatie</h2>
+          <p>
+            Een AI komt aan zijn informatie door: datasets, training en het toegang tot het interner.
+            AI heeft een grote hoeveelheid data nodig om te kunnen werken.
+            AI heeft ook een training nodig om te kunnen werken.
+            De AI op deze website geeft antwoorden gebaseerd op de informatie die hij heeft gekregen van de makers van de website.
+            Deze informatie is niet meegegeven door een dataset maar door een grote hoeveelheid System Data.
+          </p>
+        </div>
+        <div class="foto5">
+          <img src="../images/HoeAIInfo.jpg" alt="Dataset">
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+      <footer>
+        <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
+        <p>
+          5ADB -
+          <abbr
+            title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Tommy Banasiak, Matisse De Keersmaeker, Clément Vercautere en Jorne Duym">B groep</abbr>
+        </p>
+        <p>
+          <a class="GTI" href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut">GTI Beveren</a>
+        </p>
+      </footer>
+    </div>
+</body>
+</html>

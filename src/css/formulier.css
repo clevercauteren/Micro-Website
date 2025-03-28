@@ -1,50 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+html {
+    font-family: "Raleway";
+}
+
 body {
-    font-family: "Michroma";
-    background-image: url('/images/background-form.png');
-    background-size:cover;
-    background-size: 80%;
-    animation: gradientScroll 10s ease-in-out infinite alternate;
-    
+    background-color: black;
     margin: 0;
     padding: 0;
 }
 
-@keyframes gradientScroll {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 0% 100%;
-    }
-}
-
-.pagina .box h2{
-    text-align: center;
-    padding-left: 50px;
-    padding-bottom: 45px;
-    font-size: 18px;
-    font-family: "Red Hat Display";
-    color: white;
-}
-h3{
-    text-align: center;
-    color:white;
-    font-family: "Orbitron";
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-label{
-    text-align: left;
-    padding: 50px;
-    font-size: 18px;
-    font-family: "Michroma";
-    color: white;
-}
+/* Navigatiebalk */
 .navigatiebalk {
     background-color: rgba(24, 30, 80, 0.356);
     width: 100%;
@@ -56,22 +22,68 @@ label{
     text-align: center;
     line-height: 80px;
     font-size: 24px;
+    z-index: 1000;
 }
-footer{
+
+/* Banner-afbeelding direct onder de navbar */
+.banner-container {
+    width: 100%;
+    height: 500px; /* Pas aan zoals gewenst */
+    background-image: url('/images/formbanner.jpg'); /* Pas de juiste URL aan */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    user-select: none; /* Voorkomt selecteren */
+    pointer-events: none;
+}
+
+.banner-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Voorkomt vervorming */
+}
+
+/* Algemene stijlen */
+.pagina .box h2 {
+    text-align: center;
+    padding-left: 50px;
+    padding-bottom: 45px;
+    font-size: 18px;
+    font-family: "Raleway";
+    color: white;
+}
+
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+label {
+    text-align: left;
+    padding: 50px;
+    font-size: 18px;
+    color: white;
+}
+
+footer {
     text-align: center;
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1em 0 1em 0;
 }
-  footer a {
+
+footer a {
     color: #6f8ab7;
     text-decoration: wavy;
-  }
-
-
+}
 
 .box {
-    background-color: rgba(24, 30, 80, 0.356);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 70%);
     width: 90%;
     max-width: 1200px;
     margin: 100px auto;
@@ -85,41 +97,19 @@ header {
     margin-bottom: 20px;
 }
 
-.pagina main .box form input{
-    height: 40px;
-    width: 100%;
-    font-size: 18px;
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
-    margin: 20px 0;
-    background-color: rgba(255, 255, 255, 0.758);
-    border: none;
-    box-sizing: border-box;
-}
-.pagina main .box form select{
-    height: 40px;
-    width: 100%;
-    font-size: 18px;
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
-    margin: 20px 0;
-    background-color: rgba(255, 255, 255, 0.758);
-    border: none;
-    box-sizing: border-box;
-}
+.pagina main .box form input,
+.pagina main .box form select,
 .pagina main .box form button {
     height: 40px;
     width: 100%;
     font-size: 18px;
     border-radius: 10px;
-    border: none;
+    border: solid white 0.5px;
     padding: 10px;
     margin: 20px 0;
-    background-color: rgba(255, 255, 255, 0.758);
-    border: none;
+    background-color: rgb(0, 0, 0);
     box-sizing: border-box;
+    color:white;
 }
 
 button {
@@ -127,7 +117,7 @@ button {
     color: white;
     cursor: pointer;
     padding: 10px 20px;
-    border:solid white 1px;
+    border: solid white 1px;
 }
 
 button:hover {
@@ -164,7 +154,6 @@ button:hover {
     display: block;
     text-decoration: none;
     color: black;
-    
 }
 
 .dropdown-content a:hover {
@@ -189,7 +178,6 @@ button:hover {
 
 .choices__dropdown .choices__item {
     color: black !important;
-    
 }
 
 .choices__inner {
@@ -207,6 +195,11 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.758);
 }
 
+option {
+    background-color: black;
+    color: white;
+}
+
 #plaats {
     margin-bottom: 10px;
 }
@@ -215,14 +208,16 @@ button:hover {
 #straatError {
     color: rgb(255, 64, 0);
     font-size: 20px;
-    font-weight: bold;
-    font-family: "Phudu";
-}
-#Verzendbutton:disabled {
-    cursor: not-allowed;
-    
+    font-family: "Raleway";
 }
 
+#Verzendbutton:disabled {
+    cursor: not-allowed;
+}
+
+input:focus {
+    box-shadow: 3px 3px 15px rgb(255, 255, 255);
+}
 
 datalist {
     width: 100%;
@@ -238,6 +233,16 @@ datalist option {
 datalist option:hover {
     background-color: #f0f0f0;
 }
+select:focus {
+    outline: none;
+    border-color: #6f8ab7;
+    box-shadow: 0 0 5px #6f8ab7;
+}
+option:checked, option:focus {
+    background-color: #0800ffab !important;
+    color: white !important;
+}
+
 
 .suggestions {
     border: 1px solid #ccc;
@@ -260,16 +265,18 @@ datalist option:hover {
 }
 
 .blue {
-  background-color: #37339dab;
-  color: white;
-  cursor: pointer;
-  padding: 10px 20px;
-  border: solid white 1px;
-}
-.blue:hover {
-  background-color: #201e55ab;
+    background-color: #37339dab;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: solid white 1px;
 }
 
+.blue:hover {
+    background-color: #201e55ab;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
     .navigatiebalk {
         height: 80px;
@@ -280,7 +287,6 @@ datalist option:hover {
     .box {
         width: 95%;
         margin: 120px auto;
-        background-size: 400px;
     }
 
     header {
@@ -290,9 +296,10 @@ datalist option:hover {
     input, select {
         font-size: 16px;
     }
-    .box button{
+
+    .box button {
         font-size: 16px;
-        border:solid white 1px;
+        border: solid white 1px;
     }
 
     .dropdown, #search {
@@ -326,7 +333,6 @@ datalist option:hover {
     .box {
         width: 95%;
         margin: 100px auto;
-        background-size: 300px;
     }
 
     input, select {
@@ -336,9 +342,9 @@ datalist option:hover {
     .dropdown, #search {
         width: 100%;
     }
-    .box button{
+
+    .box button {
         font-size: 14px;
         border: solid white 1px;
     }
 }
-
