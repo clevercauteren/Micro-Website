@@ -17,6 +17,7 @@
     <link
       rel="icon"
       href="/src/images/favicon_Beveren.png"
+      
       type="image/x-icon"
     />
     <link rel="stylesheet" href="/src/css/About.css" />
@@ -28,8 +29,11 @@
     <title>5ADB About</title>
   </head>
   <body>
+    <!-- Achtergrond afbeelding bovenaan -->
+    <div class="parallax" style="position: absolute; top: 0; left: 0; width: 100%; height: 50vh; background-image: url(/src/images/fotos/FotoManMetScherm_5_11zon.jpeg); background-position: center; background-repeat: no-repeat; background-size: cover; z-index: 1;"></div>
+    
     <!-- navbar -->
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar" style="position: relative; z-index: 2;">
       <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
       <nav>
         <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
@@ -42,14 +46,8 @@
       <script src="/src/js/navbar.js"></script>
     </div>
 
-    <div class="achtergrond-scroll">
-      <div class="parallax"></div>
-
-      <script src="/src/js/achtergrond-scroll-about.js"></script>
-    </div>
-
     <!-- about pagina -->
-    <div class="about">
+    <div class="about" style="position: relative; margin-top: 50vh; z-index: 2; background-color: white;">
       <header>
         <h1>Applicatie- en Databeheer (ADB) - GTI Beveren</h1>
         <br />
@@ -68,7 +66,8 @@
         </section>
          <section class="item">
           <div class="Photo-Item">
-            <img src="/images/AdobeStock_934140515.jpeg" alt="" />
+            <img src="/images/AdobeStock_934140515.jpeg" alt=""
+             />
           </div>
         </section>
         <section class="item">
