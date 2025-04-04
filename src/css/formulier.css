@@ -81,25 +81,31 @@ footer a {
     color: #6f8ab7;
     text-decoration: wavy;
 }
-
-.box {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 70%);
-    width: 90%;
-    max-width: 1200px;
-    margin: 100px auto;
-    padding: 53px;
-    border-radius: 10px;
+.pagina:hover:not(:has(.box:hover)){
+    box-shadow: lightgrey 0px 0px 100px 5px;
 }
 
+.pagina{
+  padding: 30px;
+  color: white;
+  font-family: "montserrat";
+  font-size: 1.2rem;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 200px;
+  margin-top: 100px;
+  box-shadow: grey 0px 0px 100px 5px;
+  transition: 0.2s all;
+}
 header {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.pagina main .box form input,
-.pagina main .box form select,
-.pagina main .box form button {
+.pagina main  form input,
+.pagina main  form select,
+.pagina main  form button {
     height: 40px;
     width: 100%;
     font-size: 18px;
@@ -284,10 +290,7 @@ option:checked, option:focus {
         font-size: 18px;
     }
 
-    .box {
-        width: 95%;
-        margin: 120px auto;
-    }
+    
 
     header {
         font-size: 30px;
@@ -297,7 +300,7 @@ option:checked, option:focus {
         font-size: 16px;
     }
 
-    .box button {
+    .pagina button {
         font-size: 16px;
         border: solid white 1px;
     }
@@ -330,10 +333,7 @@ option:checked, option:focus {
         font-size: 24px;
     }
 
-    .box {
-        width: 95%;
-        margin: 100px auto;
-    }
+    
 
     input, select {
         font-size: 14px;
@@ -343,7 +343,7 @@ option:checked, option:focus {
         width: 100%;
     }
 
-    .box button {
+    .pagina button {
         font-size: 14px;
         border: solid white 1px;
     }
