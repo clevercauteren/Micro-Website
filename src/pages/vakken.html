@@ -33,149 +33,331 @@
       href="/src/css/components/achtergrond-scroll-about.css"
     />
     <title>Vakken</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+
+      .subject-section {
+        padding: 40px 0;
+        margin-bottom: 60px;
+        scroll-margin-top: 120px;
+      }
+
+      .section-container {
+        display: flex;
+        transform: translateX(-100px);
+        width: 100%;
+        margin-bottom: 80px;
+      }
+    </style>
   </head>
   <body>
-        <div id="navbar" class="navbar">
-          <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
-          <nav>
-            <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
-            <a href="/src/pages/Foto.html">Foto's</a>
-            <a href="/src/pages/About.html">Over ADB</a>
-            <a href="/src/pages/Watna.html">Wat na 5ADB</a>
-            <a href="/src/pages/overAI.html">Over AI</a>
-            <a href="/src/pages/formulier.html">Formulier</a>
-          </nav>
-          <script src="/src/js/navbar.js"></script>
-        </div>
-    
-        <!-- ai implementation -->
-        
-        <div class="ai">
-          <!-- Tooltip for AI assistant -->
-          <div id="aiTooltip" class="tooltip">
-            <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
-            <button class="tooltip-close" onclick="hideTooltip()">×</button>
+    <div id="navbar" class="navbar">
+      <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
+      <nav>
+        <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
+        <a href="/src/pages/Foto.html">Foto's</a>
+        <a href="/src/pages/About.html">Over ADB</a>
+        <a href="/src/pages/Watna.html">Wat na 5ADB</a>
+        <a href="/src/pages/overAI.html">Over AI</a>
+        <a href="/src/pages/formulier.html">Formulier</a>
+      </nav>
+      <script src="/src/js/navbar.js"></script>
+    </div>
+
+    <!-- ai implementation -->
+
+    <div class="ai">
+      <!-- Tooltip for AI assistant -->
+      <div id="aiTooltip" class="tooltip">
+        <span class="tooltip-text"
+          >Er is een AI-assistent beschikbaar! Klik hier om te starten.</span
+        >
+        <button class="tooltip-close" onclick="hideTooltip()">×</button>
+      </div>
+
+      <!-- Button to open the chatbot modal -->
+      <button
+        onclick="openModal()"
+        class="open-button"
+        title="Chat with Mistral AI!"
+      >
+        <img
+          src="/src/images/ai/comment-02-stroke-rounded.svg"
+          alt="Chat Icon"
+        />
+      </button>
+
+      <!-- Background overlay (covers the page) -->
+      <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+      <!-- The Modal -->
+      <div id="chatModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img
+            src="/src/images/ai/LOGO white.png"
+            alt="Mistral AI"
+            class="chatbot-image"
+          />
+          <h2 class="title">Chatbot</h2>
+          <div class="aiScroll">
+            <div id="chatHistory" class="chat-history"></div>
           </div>
-    
-          <!-- Button to open the chatbot modal -->
-          <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
-            <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
-          </button>
-    
-          <!-- Background overlay (covers the page) -->
-          <div id="overlay" class="overlay" onclick="closeModal()"></div>
-    
-          <!-- The Modal -->
-          <div id="chatModal" class="modal">
-            <div class="modal-content">
-              <span class="close" onclick="closeModal()">&times;</span>
-              <img
-                src="/src/images/ai/LOGO white.png"
-                alt="Mistral AI"
-                class="chatbot-image"
-              />
-              <h2 class="title">Chatbot</h2>
-              <div class="aiScroll">
-                <div id="chatHistory" class="chat-history"></div>
-              </div>
-              <hr />
-              <div class="flex">
-                <input
-                  type="text"
-                  id="userInput"
-                  placeholder="Ask something..."
-                  onkeydown="handleKeyPress(event)"
-                  class="user-input"
-                />
-                <button
-                  id="send-button"
-                  onclick="sendClicked(document.getElementById('userInput').value)"
-                  class="send-button"
-                >
-                  Send
-                </button>
-              </div>
-            </div>
+          <hr />
+          <div class="flex">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Ask something..."
+              onkeydown="handleKeyPress(event)"
+              class="user-input"
+            />
+            <button
+              id="send-button"
+              onclick="sendClicked(document.getElementById('userInput').value)"
+              class="send-button"
+            >
+              Send
+            </button>
           </div>
-    
-          <script src="/src/js/ai.js"></script>
-          <!-- Link to external JavaScript file -->
         </div>
-        <!-- pagina -->
-    
-        <header>
-          <div class="BlackBarNav"></div>
-          <div class="achtergrond-scroll">
-            <div class="parallax">
-              <!-- Achtergrond Film -->
-              <iframe
-                src="/src/images/backgrounds/BackgroundMainPage/Index.html"
-                frameborder="0"
-                style="overflow: hidden"
-              ></iframe>
-              <div class="Title">
-                <h1>Computernetwerken</h1>
-                <p>Het Fundament voor een Digitale Toekomst</p>
-              </div>
-            </div>
-        </header>
-        <br><br><br><br><br>
-        <main>
-          <div style="display: flex; transform: translateX(-100px); width: 100%">
-            <div class="column column-1">
-              <div class="scroll-field">
-                <div class="scroll-container">
-                  <div class="content" style="text-align: left">
-                    <h2>Computernetwerken</h2>
-                    <br /><br />
-                    <p>
-                      Dit vak behandelt de basis en geavanceerde concepten van
-                      computersystemen en netwerktechnologieën. Je leert hoe
-                      computers communiceren binnen een netwerk en welke
-                      protocollen gebruikt worden om data veilig en efficiënt te
-                      versturen. Er wordt gewerkt met netwerkconfiguratie,
-                      beveiligingsmaatregelen zoals firewalls en encryptie, en
-                      troubleshooting van netwerkproblemen. Praktische oefeningen
-                      met routers, switches en servers helpen je om hands-on
-                      ervaring op te doen.
-                    </p>
-                    <br />
-                  </div>
+      </div>
+
+      <script src="/src/js/ai.js"></script>
+      <!-- Link to external JavaScript file -->
+    </div>
+    <!-- pagina -->
+
+    <header>
+      <div class="BlackBarNav"></div>
+      <div class="achtergrond-scroll">
+        <div class="parallax">
+          <!-- Achtergrond Film -->
+          <iframe
+            src="/src/images/backgrounds/BackgroundMainPage/Index.html"
+            frameborder="0"
+            style="overflow: hidden"
+          ></iframe>
+          <div class="Title">
+            <h1>Vakken in 5ADB</h1>
+            <p>Het Fundament voor een Digitale Toekomst</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Programmeren Section -->
+      <section id="Programmeren" class="subject-section">
+        <div class="section-container">
+          <div class="column column-1">
+            <div class="scroll-field">
+              <div class="scroll-container">
+                <div class="content" style="text-align: left">
+                  <h2>Programmeren</h2>
+                  <br /><br />
+                  <p>
+                    In dit vak leer je de basisprincipes van programmeren en
+                    werken met verschillende programmeertalen zoals Python, C#,
+                    en JavaScript. Je leert algoritmisch denken, problemen
+                    opdelen in stappen, en je eigen applicaties bouwen. Je maakt
+                    kennis met objectgeoriënteerd programmeren,
+                    gegevensstructuren en werkt aan diverse projecten om
+                    praktische programmeervaardigheden te ontwikkelen.
+                  </p>
+                  <br />
                 </div>
               </div>
             </div>
-            <div class="column column-2">
-              <img
-                src="/src/images/fotos/Applicatiebeheer.jpeg"
-                alt="Coding"
-                loading="lazy"
-              />
+          </div>
+          <div class="column column-2">
+            <img
+              src="/src/images/fotos/Fotocoding1_1_11zon.jpeg"
+              alt="Programmeren"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Applicatiebeheer Section -->
+      <section id="Applicatiebeheer" class="subject-section">
+        <div class="section-container">
+          <div class="column column-1">
+            <div class="scroll-field">
+              <div class="scroll-container">
+                <div class="content" style="text-align: left">
+                  <h2>Applicatiebeheer</h2>
+                  <br /><br />
+                  <p>
+                    Je leert software installeren, configureren en onderhouden,
+                    met aandacht voor gebruikersbeheer en beveiliging. Daarnaast
+                    ga je dieper in op Word, Excel en andere
+                    kantoortoepassingen, waarbij je geavanceerde functies zoals
+                    macro's, formules en databewerkingen gebruikt. Je leert hoe
+                    deze programma's efficiënt ingezet kunnen worden in een
+                    professionele omgeving.
+                  </p>
+                  <br />
+                </div>
+              </div>
             </div>
           </div>
-          <script src="/src/js/achtergrond-scroll.js"></script>
+          <div class="column column-2">
+            <img
+              src="/src/images/fotos/COmputernetwerken.jpeg"
+              alt="Applicatiebeheer"
+              loading="lazy"
+            />
+          </div>
         </div>
-        </main>
-          <footer>
-            <p>
-              &copy; <span id="CurrentYear">2025</span> Gti Beveren. All rights
-              reserved.
-            </p>
-            <p>
-              5ADB -
-              <abbr
-                title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
-                >B groep</abbr
-              >
-            </p>
-            <p>
-              <a
-                class="GTI"
-                href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut"
-                target="_blank"
-                >GTI Beveren</a
-              >
-            </p>
-          </footer>
-        <script src="/src/js/home.js"></script>
+      </section>
+
+      <!-- Computersystemen Section -->
+      <section id="Computersystemen" class="subject-section">
+        <div class="section-container">
+          <div class="column column-1">
+            <div class="scroll-field">
+              <div class="scroll-container">
+                <div class="content" style="text-align: left">
+                  <h2>Computersystemen</h2>
+                  <br /><br />
+                  <p>
+                    In dit vak maak je kennis met de hardware en
+                    systeemarchitectuur van computers. Je leert over
+                    processorarchitectuur, geheugenmanagement,
+                    besturingssystemen en hoe computerhardware met software
+                    communiceert. Je gaat aan de slag met verschillende
+                    besturingssystemen, leert over virtualisatie en krijgt
+                    inzicht in systeemprestaties en optimalisatie.
+                  </p>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column column-2">
+            <img
+              src="/src/images/fotos/Computersystemen.jpeg"
+              alt="Computersystemen"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Webdesign Section -->
+      <section id="Webdesign" class="subject-section">
+        <div class="section-container">
+          <div class="column column-1">
+            <div class="scroll-field">
+              <div class="scroll-container">
+                <div class="content" style="text-align: left">
+                  <h2>Webdesign</h2>
+                  <br /><br />
+                  <p>
+                    In dit vak leer je hoe je dynamische en functionele websites
+                    ontwerpt en bouwt met HTML, CSS en MySQL. Je leert hoe
+                    databases geïntegreerd kunnen worden om gegevens te beheren
+                    en op te halen, bijvoorbeeld bij een webshop of
+                    login-systeem. Er wordt aandacht besteed aan het
+                    structureren van webpagina's, responsief design en de
+                    gebruiksvriendelijkheid van interfaces. Je werkt met
+                    software zoals PHPMyAdmin om databanken op te zetten en
+                    SQL-query's te schrijven.
+                  </p>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column column-2">
+            <img
+              src="/src/images/fotos/Webdesign.jpeg"
+              alt="Webdesign"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Computernetwerken Section -->
+      <section id="Computernetwerken" class="subject-section">
+        <div class="section-container">
+          <div class="column column-1">
+            <div class="scroll-field">
+              <div class="scroll-container">
+                <div class="content" style="text-align: left">
+                  <h2>Computernetwerken</h2>
+                  <br /><br />
+                  <p>
+                    Dit vak behandelt de basis en geavanceerde concepten van
+                    computersystemen en netwerktechnologieën. Je leert hoe
+                    computers communiceren binnen een netwerk en welke
+                    protocollen gebruikt worden om data veilig en efficiënt te
+                    versturen. Er wordt gewerkt met netwerkconfiguratie,
+                    beveiligingsmaatregelen zoals firewalls en encryptie, en
+                    troubleshooting van netwerkproblemen. Praktische oefeningen
+                    met routers, switches en servers helpen je om hands-on
+                    ervaring op te doen.
+                  </p>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column column-2">
+            <img
+              src="/src/images/fotos/Applicatiebeheer.jpeg"
+              alt="Computernetwerken"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <script src="/src/js/achtergrond-scroll.js"></script>
+    </main>
+    <footer>
+      <p>
+        &copy; <span id="CurrentYear">2025</span> Gti Beveren. All rights
+        reserved.
+      </p>
+      <p>
+        5ADB -
+        <abbr
+          title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
+          >B groep</abbr
+        >
+      </p>
+      <p>
+        <a
+          class="GTI"
+          href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut"
+          target="_blank"
+          >GTI Beveren</a
+        >
+      </p>
+    </footer>
+    <script>
+      // Check if there's a hash in the URL and scroll to that section after page loads
+      window.addEventListener("load", function () {
+        if (window.location.hash) {
+          const targetSection = document.querySelector(window.location.hash);
+          if (targetSection) {
+            setTimeout(function () {
+              targetSection.scrollIntoView();
+            }, 100);
+          }
+        }
+      });
+
+      document.getElementById("CurrentYear").innerText =
+        new Date().getFullYear();
+    </script>
+    <script src="/src/js/home.js"></script>
   </body>
 </html>
