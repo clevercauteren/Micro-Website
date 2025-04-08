@@ -17,6 +17,7 @@
     <link
       rel="icon"
       href="/src/images/favicon_Beveren.png"
+      
       type="image/x-icon"
     />
     <link rel="stylesheet" href="/src/css/About.css" />
@@ -28,8 +29,11 @@
     <title>5ADB About</title>
   </head>
   <body>
+    <!-- Achtergrond afbeelding bovenaan -->
+    <div class="parallax" style="position: absolute; top: 0; left: 0; width: 100%; height: 50vh; background-image: url(/src/images/fotos/FotoManMetScherm_5_11zon.jpeg); background-position: center; background-repeat: no-repeat; background-size: cover; z-index: 1;"></div>
+    
     <!-- navbar -->
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar" style="position: relative; z-index: 2;">
       <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
       <nav>
         <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
@@ -42,14 +46,8 @@
       <script src="/src/js/navbar.js"></script>
     </div>
 
-    <div class="achtergrond-scroll">
-      <div class="parallax"></div>
-
-      <script src="/src/js/achtergrond-scroll-about.js"></script>
-    </div>
-
     <!-- about pagina -->
-    <div class="about">
+    <div class="about" style="position: relative; margin-top: 50vh; z-index: 2; background-color: white;">
       <header>
         <h1>Applicatie- en Databeheer (ADB) - GTI Beveren</h1>
         <br />
@@ -66,10 +64,11 @@
             waardoor leerlingen een grondig inzicht krijgen in de IT-wereld.
           </p>
         </section>
-        <!-- <section class="item">
+         <section class="item">
           <div class="Photo-Item">
-            <img src="/images/AdobeStock_934140515.jpeg" alt="" />
-          </div> -->
+            <img src="/images/AdobeStock_934140515.jpeg" alt=""
+             />
+          </div>
         </section>
         <section class="item">
           <h2>Leerinhoud</h2>
@@ -110,6 +109,11 @@
           </ul>
         </section>
         <section class="item">
+          <div class="Photo-Item">
+            <img src="/images/AdobeStock_960799808.jpeg" alt=""/>
+          </div>
+        </section>
+        <section class="item">
           <h2>Leerlingenprofiel</h2>
           <p>Deze richting is geschikt voor leerlingen die:</p>
           <ul>
@@ -128,6 +132,11 @@
               leerkracht-coach, een geïntegreerd eindproject te ontwikkelen.
             </li>
           </ul>
+        </section>
+        <section class="item">
+          <div class="Photo-Item">
+            <img src="/images/AdobeStock_744441417.jpeg " alt="" />
+          </div>
         </section>
         <section class="item">
           <h2>Lessentabel</h2>
@@ -150,6 +159,12 @@
               weken georganiseerd in de tweede helft van het schooljaar.
             </li>
           </ul>
+          
+        </section>
+        <section class="item">
+          <div class="Photo-Item">
+            <img src="/images/image.png" alt="" />
+          </div>
         </section>
         <section class="item">
           <h2>Na het 6de jaar</h2>
@@ -175,6 +190,11 @@
             Elk pad leidt naar een toekomst waarin digitale vaardigheden
             essentieel zijn.
           </p>
+        </section>
+        <section class="item">
+          <div class="Photo-Item">
+            <img src="/images/AdobeStock_482833820.jpeg" alt="" />
+          </div>
         </section>
       </div>
       <div>
@@ -254,22 +274,22 @@
     </div>
 
     <!-- footer -->
-      <footer>
-        <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
-        <p>
-          5ADB -
-          <abbr
-            title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
-            >B groep</abbr
-          >
-        </p>
-        <p>
-          <a
-            class="GTI"
-            href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut"
-            >GTI Beveren</a
-          >
-        </p>
-      </footer>
+    <footer>
+      <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
+      <p>
+        5ADB -
+        <abbr
+          title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
+          >B groep</abbr
+        >
+      </p>
+      <p>
+        <a
+          class="GTI"
+          href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut"
+          >GTI Beveren</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
