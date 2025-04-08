@@ -11,6 +11,21 @@ body {
   background-color: #414141;
 }
 
+.achtergrond-scroll .parallax {
+  position: relative;
+  background-image: url(/src/images/backgrounds/lessen.jpeg); /* Zet hier de afbeelding die je wilt als achtergrond */
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.achtergrond-scroll .content {
+  height: 2500px; /* Maak de inhoud lang genoeg om te kunnen scrollen */
+  padding: 20px;
+  text-align: center;
+}
+
 /* Hoofdheader */
 .banner {
   display: flex;
@@ -113,6 +128,11 @@ h2 {
 
 .tabeltwee {
   float: right;
+}
+
+.tekst-stage{
+  padding-top: 820px;
+  padding-left: 10px;
 }
 
 /* Responsiviteit */

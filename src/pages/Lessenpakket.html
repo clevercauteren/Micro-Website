@@ -3,27 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Lessenpakket webpagina over applicatie- en databeheer in GTI Beveren"
-    />
-    <!-- Nog te vullen -->
+    <meta name="description" content="Lessenpakket webpagina over applicatie- en databeheer in GTI Beveren"/>
     <meta name="author" content="Groep B" />
-    <meta
-      name="keywords"
-      content="5ADB, GTI Beveren, Applicatie- en Databeheer, Informatica, ICT, Onderwijs, School, Lessen, Lessenpakket"
-    />
-    <!-- Nog te vullen -->
+    <meta name="keywords" content="5ADB, GTI Beveren, Applicatie- en Databeheer, Informatica, ICT, Onderwijs, School, Lessen, Lessenpakket"/>
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="icon"
-      href="/src/images/favicon_Beveren.png"
-      type="image/x-icon"
-/>
+    <link rel="icon" href="/src/images/favicon_Beveren.png" type="image/x-icon"/>
     <link rel="stylesheet" href="/src/css/Lessen.css" />
     <link rel="stylesheet" href="/src/css/main.css" />
-    <link rel="stylesheet" href="/src/css/components/achtergrond-scroll.css" />
     <title>5ADB Lessenpakket</title>
   </head>
   <body>
@@ -96,8 +83,13 @@
 
     <div class="achtergrond-scroll">
       <div class="parallax"></div>
-
-      <script src="/src/js/achtergrond-scroll.js"></script>
+      <script>
+        window.addEventListener('scroll', function() {
+        const parallax = document.querySelector('.achtergrond-scroll .parallax');
+        let scrollPosition = window.pageYOffset; // Verkrijgt de huidige scrollpositie
+        parallax.style.backgroundPosition = `center ${(scrollPosition * (1 / 3)) - 31}px`; // Verander de achtergrondpositie, maar trager dan scrollen
+        });
+      </script>
     </div>
 
     <main>
@@ -616,7 +608,7 @@
       
       <script src="/src/js/lessenpakt-divs.js"></script>
       <!-- Link to external JavaScript file voor pop-up div -->
-      <p>
+      <p class="tekst-stage">
         Bij stages staat het cijfer voor het aantal weken dat de lessen worden
         opgeschort omwille van een voltijds project i.s.m. het bedrijfsleven.
       </p>
