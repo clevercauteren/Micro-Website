@@ -23,7 +23,7 @@
     width: auto;
     min-width: 40%;
     margin: auto;
-    box-shadow: 0px 4px 8px rgb(0, 0, 0);
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
     font-family: "Roboto";
   }
   
@@ -65,6 +65,7 @@
   .ai .close:hover,
   .ai .close:focus {
     color: rgb(255, 255, 255);
+    background-color: transparent;
     text-decoration: none;
     cursor: pointer;
   }
@@ -133,7 +134,7 @@
     position: fixed;
     right: 10px;
     bottom: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.8), 0 0 20px rgba(0, 0, 255, 0.6);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
     animation: pulse 2s infinite;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transition: 300ms;
@@ -145,7 +146,7 @@
     width: 70px;
     border-radius: 10%;
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 255, 1), 0 0 30px rgba(0, 0, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
   }
   
   .ai .flex {
@@ -313,13 +314,13 @@
 
   @keyframes pulse {
     0% {
-      box-shadow: 0 0 10px rgba(0, 0, 255, 0.8), 0 0 20px rgba(0, 0, 255, 0.6);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
     }
     50% {
-      box-shadow: 0 0 20px rgba(0, 0, 255, 1), 0 0 40px rgba(0, 0, 255, 0.8);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8);
     }
     100% {
-      box-shadow: 0 0 10px rgba(0, 0, 255, 0.8), 0 0 20px rgba(0, 0, 255, 0.6);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
     }
   }
 
