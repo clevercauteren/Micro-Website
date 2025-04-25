@@ -50,3 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.key === "ArrowRight") showNextImage();
   });
 });
+
+// Animation on scroll
+const fotosDivs = document.querySelectorAll(".Fotos div");
+
+// Voeg een dynamische vertraging toe aan elk element
+fotosDivs.forEach((div, index) => {
+  div.style.animationDelay = `${index * 0.3}s`; // 0.3s vertraging per element
+});
