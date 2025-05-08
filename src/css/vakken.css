@@ -9,15 +9,19 @@ html {
 }
 
 .subject-section {
+  gap: 0 !important;
+  justify-content: space-around !important;
   padding: 40px 0;
   margin-bottom: 60px;
   scroll-margin-top: 120px;
 }
 
-.column {
+.section-containerZZ {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  width: 100% !important;
+  margin: 50px 0;
 }
 
 .column-1 {
@@ -27,12 +31,13 @@ html {
 .column-F img {
   max-width: 780px;
   width: auto;
-  height: 480px;
+  min-height: 480px;
   object-fit: cover;
   border-radius: 5px;
 }
 
 .column-F {
+  width: 40%;
   float: right;
 }
 
