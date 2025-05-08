@@ -51,7 +51,6 @@ document.getElementById("CurrentYear").innerText = new Date().getFullYear();
 //   });
 // });
 
-function GoTO(page) {
-  window.location.replace("/src/pages/" + page + ".html");
-  window.location.href = "/src/pages/" + page + ".html";
+function GoTO(subject) {
+  window.location.href = "../pages/vakken.html#" + subject;
 }

@@ -13,7 +13,7 @@ body {
 
 .achtergrond-scroll .parallax {
   position: relative;
-  background-image: url(/src/images/backgrounds/lessen.jpeg); /* Zet hier de afbeelding die je wilt als achtergrond */
+  background-image: url(../images/backgrounds/lessen.jpeg); /* Zet hier de afbeelding die je wilt als achtergrond */
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
