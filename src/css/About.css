@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
 body {
   background-color: black;
   min-height: 100vh;
@@ -235,13 +237,21 @@ body {
 .scroll-field h2 {
   color: #fff;
   margin-bottom: 1rem;
+  font-family: "Raleway";
+  font-weight: 180;
+  letter-spacing: 2px;
+  word-spacing: 3px;
   font-size: 1.8rem;
 }
 
 .scroll-field p, .scroll-field ul {
-  color: #ccc;
-  line-height: 1.3;
-  font-size: 1.2rem;
+  color: white;
+  font-family: "Raleway";
+  font-weight: 50;
+  line-height: 27px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
   margin-bottom: 0.8rem;
 }
 
@@ -311,4 +321,29 @@ body {
   .scroll-field p, .scroll-field ul {
     font-size: 1.1rem;
   }
+}
+
+.scroll-field .scroll-container .content h2 {
+  font-family: "Raleway";
+  font-weight: 180;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+
+.scroll-field .scroll-container .content p {
+  font-family: "Raleway";
+  font-weight: 50;
+  line-height: 1.9;
+  font-size: 14px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+}
+
+.scroll-field .scroll-container .content ul {
+  font-family: "Raleway";
+  font-weight: 50;
+  line-height: 1.9;
+  font-size: 14px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
 }
