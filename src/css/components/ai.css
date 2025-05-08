@@ -373,3 +373,25 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .ai .modal {
+        width: 90%;
+        min-width: 90%;
+    }
+    .ai .open-button {
+        height: 50px;
+        width: 50px;
+    }
+    .ai .send-button {
+        width: 100%;
+    }
+    .ai .user-input {
+        width: 100%;
+    }
+    .ai .flex {
+        flex-direction: column;
+    }
+    
+  
+}

@@ -52,5 +52,5 @@ document.getElementById("CurrentYear").innerText = new Date().getFullYear();
 // });
 
 function GoTO(subject) {
-  window.location.href = "/src/pages/vakken.html#" + subject;
+  window.location.href = "../pages/vakken.html#" + subject;
 }
