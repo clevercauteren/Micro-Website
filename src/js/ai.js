@@ -70,6 +70,7 @@ async function askMistral(userMessage) {
                     { role: "system", content: "Antwoord altijd in het Nederlands." }, // Ensure Dutch responses
                     { role: "system", content: "Chat-History:\n" + chatMessages },
                     { role: "user", content: userMessage }
+
                 ],
             })
         });
