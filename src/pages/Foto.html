@@ -78,6 +78,7 @@
       <!-- Link to external JavaScript file -->
     </div>
 
+
     <!-- Navigation -->
     <div id="navbar" class="navbar">
       <a href="../pages/home.html"><h2 class="titel">5ADB</h2></a>
@@ -91,12 +92,26 @@
       </nav>
       <script src="../js/navbar.js"></script>
     </div>
+
+    <div class="achtergrond-scroll">
+      <div class="parallax" style="overflow: hidden;  width: 100%; height: 40vh;  top: 0; left: 0; z-index: 1;"></div>
+      <script>
+        window.addEventListener('scroll', function() {
+        const parallax = document.querySelector('.achtergrond-scroll .parallax');
+        let scrollPosition = window.pageYOffset; // Verkrijgt de huidige scrollpositie
+        parallax.style.backgroundPosition = `center ${(scrollPosition * (1 / 3)) - 31}px`; // Verander de achtergrondpositie, maar trager dan scrollen
+        });
+      </script>
+    </div>
+    <div class="div-zwart"><br></div>
+    <div class="gradient"><br><br><br><br><br><br><br></div>
+
       <!-- Foto's -->
       <div class="Fotos">
         <div class="FotosContent">
           <section>
             <img
-              src="../images/Fotos fotosite/IMG_6769 2.jpg"
+              src="../images/Fotos fotosite/IMG_6983.jpg"
               alt="Foto"
               loading="lazy"
             />
