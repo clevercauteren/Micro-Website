@@ -1,64 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Explanation</title>
-    <style>
-        .explanation {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: white;
-            border: 1px solid black;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop-up bij laden</title>
+  <style>
+    /* Stijlen voor de pop-up achtergrond (overlay) */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparant zwarte achtergrond */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      visibility: hidden; /* Verborgen standaard */
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s ease-in-out;
+    }
+
+    /* Toon de pop-up wanneer de class 'active' is */
+    .popup-overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Stijlen voor de pop-up zelf */
+    .popup {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Stijlen voor de video */
+    video {
+      width: 800px;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 10px;
+    }
+
+    /* Sluitknop */
+    .popup button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'word'.">word</span> to see the explanation.</p>
-    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'example'.">example</span> to see the explanation.</p>
-    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'click'.">click</span> to see the explanation.</p>
-    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'another'.">another</span> to see the explanation.</p>
-    <p>Click on the <span class="word" data-explanation="This is the explanation for the word 'more'.">more</span> to see the explanation.</p>
-    
-    <div id="overlay" class="overlay"></div>
-    <div id="explanation" class="explanation">
-        <h3 id="word-title"></h3>
-        <p id="word-explanation"></p>
+  <!-- Pop-up overlay -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+      <h2>Hoe gebruik je deze pagina?</h2>
+      <p>
+        Deze pagina biedt een overzicht van de vakken en hun inhoud binnen de
+        richting Applicatie en Databeheer. Klik op de woorden in de tabel om
+        meer te leren over elk vak. De uitleg verschijnt in een pop-upvenster.
+      </p>
+      <p>
+        Als je vragen hebt, kun je altijd onze AI-assistent raadplegen door op
+        het chat-icoon rechtsonder te klikken.
+      </p>
+      <video src="/src/videos/Tutorial.mov" autoplay muted loop></video>
+      <br>
+      <button onclick="closePopup()">Sluiten</button>
     </div>
+  </div>
 
-    <script>
-        document.querySelectorAll('.word').forEach(word => {
-            word.addEventListener('click', function() {
-                const wordText = this.innerText;
-                const explanationText = this.getAttribute('data-explanation');
-                const explanationDiv = document.getElementById('explanation');
-                const overlay = document.getElementById('overlay');
-                
-                document.getElementById('word-title').innerText = wordText;
-                document.getElementById('word-explanation').innerText = explanationText;
-                explanationDiv.style.display = 'block';
-                overlay.style.display = 'block';
-            });
-        });
+  <script>
+    // Zorg dat de pop-up verschijnt bij het laden van de pagina
+    window.addEventListener('load', function() {
+      const popup = document.getElementById('popup');
+      popup.classList.add('active'); // Voeg de 'active' class toe om de pop-up te tonen
+    });
 
-        document.getElementById('overlay').addEventListener('click', function() {
-            this.style.display = 'none';
-            document.getElementById('explanation').style.display = 'none';
-        });
-    </script>
+    // Functie om de pop-up te sluiten
+    function closePopup() {
+      const popup = document.getElementById('popup');
+      popup.classList.remove('active'); // Verwijder de 'active' class om de pop-up te verbergen
+    }
+  </script>
 </body>
 </html>

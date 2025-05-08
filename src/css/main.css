@@ -345,7 +345,7 @@ body {
 
 /* Tooltip container */
 .tooltip {
-  position: absolute;
+  position: fixed;
   top: 80%; /* Adjust to position near the open button */
   right: 80px; /* Adjust to position near the open button */
   background-color: #333;

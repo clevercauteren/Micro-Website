@@ -26,28 +26,6 @@ body {
   text-align: center;
 }
 
-/* Hoofdheader */
-.banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1d1d1d;
-  height: 60px;
-  color: white;
-  gap: 30px;
-}
-
-.banner a {
-  color: #f1f1f1;
-  font-size: 18px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.banner a:hover {
-  color: #1dbf73;
-  text-decoration: underline;
-}
 
 /* Hoofdsectie van de pagina */
 main {
@@ -60,19 +38,15 @@ main {
   color: #333;
 }
 
-main .titel {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #333;
+.tip{
+  display: flex;
+  border: 5px solid #afcbff;
+  border-radius: 2rem;
+  width: 22%;
+  padding: 30px;
 }
-
-.tussentitel {
-  text-align: center;
-  background-color: #f2f2f2;
-  padding: 10px;
-  border: 1px solid #ddd;
-  margin: 20px 0;
+.tip svg{
+  margin-right: 10px;
 }
 
 /* Tabellen */
@@ -220,4 +194,62 @@ span:hover {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Schaduw voor een beetje diepte */
   z-index: 1000; /* Zorg ervoor dat de explanation div boven de overlay wordt weergegeven */
+}
+
+
+
+/* Tutorial pop-up */
+/* Stijlen voor de pop-up achtergrond (overlay) */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparant zwarte achtergrond */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  visibility: hidden; /* Verborgen standaard */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+/* Toon de pop-up wanneer de class 'active' is */
+.popup-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Stijlen voor de pop-up zelf */
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Stijlen voor de video */
+video {
+  width: 800px;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+/* Sluitknop */
+.popup button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
 }
