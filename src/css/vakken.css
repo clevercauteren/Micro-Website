@@ -29,11 +29,9 @@ html {
 }
 
 .column-F img {
-  max-width: 780px;
-  width: auto;
-  min-height: 480px;
+  width: 100%;
+  height: 400px;
   object-fit: cover;
-  border-radius: 5px;
 }
 
 .column-F {
