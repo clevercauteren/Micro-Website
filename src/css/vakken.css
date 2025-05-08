@@ -3,21 +3,43 @@
   background-color: black !important;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+.subject-section {
+  padding: 40px 0;
+  margin-bottom: 60px;
+  scroll-margin-top: 120px;
+}
+
 .column {
-  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@media screen and (max-width: 1200px) {
-  .column-2 {
-    transform: translateX(-200px) !important;
-  }
+.column-1 {
+  float: right;
 }
 
-@media screen and (max-width: 600px) {
-  .column-2 {
-    transform: translateX(200px) !important;
-  }
+.column-F img {
+  max-width: 780px;
+  width: auto;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.column-F {
+  float: right;
+}
+
+.section-container {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
