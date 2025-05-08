@@ -435,9 +435,10 @@ body {
   color: white;
   box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
   padding: 1em 1em auto 1em;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 50;
+  z-index: 1000;
   height: 6rem;
   transition: 400ms;
   justify-content: space-between;
@@ -448,7 +449,7 @@ body {
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1em 1em auto 1em;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   height: 6rem;
