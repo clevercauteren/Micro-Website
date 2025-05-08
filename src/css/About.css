@@ -18,13 +18,9 @@ body {
   border-radius: 10px;
   margin: 200px;
   margin-top: 100px;
-  box-shadow: grey 0px 0px 100px 5px;
   transition: 0.2s all;
 }
 
-.about:hover {
-  box-shadow: lightgrey 0px 0px 100px 5px;
-}
 
 .about header {
   font-size: 2rem;
@@ -41,7 +37,7 @@ body {
 
 .about aside {
   width: 300px;
-  background-color: #f4f4f4;
+  background-color: black;
   padding: 20px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -214,5 +210,105 @@ body {
   .footer {
     font-size: 0.9rem;
     padding-top: 5px;
+  }
+}
+
+/* Scroll field styling */
+.scroll-field {
+  margin-bottom: 0.5rem;
+}
+
+.scroll-field .scroll-container {
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+.scroll-field .content {
+  padding-right: 0.5rem;
+}
+
+.scroll-field h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.scroll-field p, .scroll-field ul {
+  color: #ccc;
+  line-height: 1.3;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.scroll-field ul {
+  padding-left: 1.2rem;
+}
+
+.scroll-field li {
+  margin-bottom: 0.6rem;
+}
+
+/* Intro section styling */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+}
+
+.intro .column {
+  flex: 1;
+  margin: 0 0.5rem;
+}
+
+.intro .column-1 {
+  max-width: 45%;
+}
+
+.intro .column-2 {
+  max-width: 55%;
+}
+
+.intro .column-2 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    padding: 0 0.5rem;
+  }
+
+  .intro .column-1,
+  .intro .column-2 {
+    max-width: 100%;
+    margin: 0.3rem 0;
+  }
+
+  .scroll-field .scroll-container {
+    height: 350px;
+  }
+
+  .intro .column-2 img {
+    height: 350px;
+  }
+
+  .scroll-field h2 {
+    font-size: 1.5rem;
+  }
+
+  .scroll-field p, .scroll-field ul {
+    font-size: 1.1rem;
   }
 }
