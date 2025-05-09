@@ -3,41 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Lessenpakket webpagina over applicatie- en databeheer in GTI Beveren"
-    />
-    <!-- Nog te vullen -->
+    <meta name="description" content="Lessenpakket webpagina over applicatie- en databeheer in GTI Beveren"/>
     <meta name="author" content="Groep B" />
-    <meta
-      name="keywords"
-      content="5ADB, GTI Beveren, Applicatie- en Databeheer, Informatica, ICT, Onderwijs, School, Lessen, Lessenpakket"
-    />
-    <!-- Nog te vullen -->
+    <meta name="keywords" content="5ADB, GTI Beveren, Applicatie- en Databeheer, Informatica, ICT, Onderwijs, School, Lessen, Lessenpakket"/>
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="icon"
-      href="/src/images/favicon_Beveren.png"
-      type="image/x-icon"
-/>
-    <link rel="stylesheet" href="/src/css/Lessen.css" />
-    <link rel="stylesheet" href="/src/css/main.css" />
-    <link rel="stylesheet" href="/src/css/components/achtergrond-scroll.css" />
+    <link rel="icon" href="../images/favicon_Beveren.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/lessen.css" />
+    <link rel="stylesheet" href="../css/main.css">
     <title>5ADB Lessenpakket</title>
   </head>
   <body>
     <div id="navbar" class="navbar">
-      <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
+      <a href="../pages/home.html"><h2 class="titel">5ADB</h2></a>
       <nav>
-        <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
-        <a href="/src/pages/Foto.html">Foto's</a>
-        <a href="/src/pages/About.html">Over ADB</a>
-        <a href="/src/pages/Watna.html">Wat na 5ADB</a>
-        <a href="/src/pages/overAI.html">Over AI</a>
-        <a href="/src/pages/formulier.html">Formulier</a>
+        <a href="../pages/Lessenpakket.html">Lessenpakket</a>
+        <a href="../pages/Foto.html">Foto's</a>
+        <a href="../pages/About.html">Over ADB</a>
+        <a href="../pages/Watna.html">Wat na 5ADB</a>
+        <a href="../pages/overAI.html">Over AI</a>
+        <a href="../pages/formulier.html">Formulier</a>
       </nav>
-      <script src="/src/js/navbar.js"></script>
+      <script src="../js/navbar.js"></script>
     </div>
 
     <!-- AI Implementation -->
@@ -51,7 +38,7 @@
 
       <!-- Button to open the chatbot modal -->
       <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
-        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
+        <img src="../images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
       </button>
 
       <!-- Background overlay (covers the page) -->
@@ -62,7 +49,7 @@
         <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <img
-            src="/src/images/ai/LOGO white.png"
+            src="../images/ai/LOGO white.png"
             alt="Mistral AI"
             class="chatbot-image"
           />
@@ -90,14 +77,19 @@
         </div>
       </div>
 
-      <script src="/src/js/ai.js"></script>
+      <script src="../js/ai.js"></script>
       <!-- Link to external JavaScript file -->
     </div>
 
     <div class="achtergrond-scroll">
       <div class="parallax"></div>
-
-      <script src="/src/js/achtergrond-scroll.js"></script>
+      <script>
+        window.addEventListener('scroll', function() {
+        const parallax = document.querySelector('.achtergrond-scroll .parallax');
+        let scrollPosition = window.pageYOffset; // Verkrijgt de huidige scrollpositie
+        parallax.style.backgroundPosition = `center ${(scrollPosition * (1 / 3)) - 31}px`; // Verander de achtergrondpositie, maar trager dan scrollen
+        });
+      </script>
     </div>
 
     <main>
@@ -110,7 +102,12 @@
         applicaties werken binnen een bedrijf, met focus op het efficiënt
         beheren van data en het bouwen van softwareoplossingen.
       </p>
-      <br />
+      <br/>
+      <br>
+      <div class="tip">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <p>Druk op de vakken voor meer info.</p>
+      </div>
       <h2>Lessenpakket ADB(Applicatie en DataBeheer)</h2>
       <table class="tabeleen">
         <!--Tabel voor de les uren-->
@@ -124,7 +121,7 @@
               <span
                 class="word"
                 data-explanation="In Aardrijkskunde leer je over het universum, de aarde en hoe alles in de natuur werkt.
-              Je ontdekt hoe de planeet zich heeft gevormd, hoe het klimaat in elkaar zit, en welke krachten de wereld om ons heen beïnvloeden."
+                Je ontdekt hoe de planeet zich heeft gevormd, hoe het klimaat in elkaar zit, en welke krachten de wereld om ons heen beïnvloeden."
                 >Aardrijkskunde</span
               >
             </p>
@@ -614,22 +611,57 @@
         <p id="word-explanation"></p>
       </div>
       
-      <script src="/src/js/lessenpakt-divs.js"></script>
+      <script src="../js/lessenpakt-divs.js"></script>
+      <script src="../js/achtergrond-scroll.js"></script>
       <!-- Link to external JavaScript file voor pop-up div -->
-      <p>
+      <p class="tekst-stage">
         Bij stages staat het cijfer voor het aantal weken dat de lessen worden
         opgeschort omwille van een voltijds project i.s.m. het bedrijfsleven.
       </p>
       
       <br />
       <br />
+
+
+        <!-- Pop-up overlay -->
+      <div class="popup-overlay" id="popup">
+        <div class="popup">
+          <h2>Hoe gebruik je deze pagina?</h2>
+          <p>
+            Deze pagina biedt een overzicht van de vakken en hun inhoud binnen de
+            richting Applicatie en Databeheer. Klik op de woorden in de tabel om
+            meer te leren over elk vak. De uitleg verschijnt in een pop-upvenster.
+          </p>
+          <p>
+            Als je vragen hebt, kun je altijd onze AI-assistent raadplegen door op
+            het chat-icoon rechtsonder te klikken.
+          </p>
+          <video src="/src/videos/Tutorial.mov" autoplay muted loop></video>
+          <br>
+          <button onclick="closePopup()">Sluiten</button>
+        </div>
+      </div>
+
+      <script>
+        // Zorg dat de pop-up verschijnt bij het laden van de pagina
+        window.addEventListener('load', function() {
+          const popup = document.getElementById('popup');
+          popup.classList.add('active'); // Voeg de 'active' class toe om de pop-up te tonen
+        });
+
+        // Functie om de pop-up te sluiten
+        function closePopup() {
+          const popup = document.getElementById('popup');
+          popup.classList.remove('active'); // Verwijder de 'active' class om de pop-up te verbergen
+        }
+      </script>
     </main>
     <footer>
       <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
       <p>
         5ADB -
         <abbr
-          title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
+          title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Banasiak"
           >B groep</abbr
         >
       </p>
