@@ -29,7 +29,8 @@ body {
 }
 
 .about header h1 {
-  text-align: left;
+  text-align: center;
+  font-size: 50px;
 }
 
 .about h2 {
