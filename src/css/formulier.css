@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 html {
@@ -7,28 +6,10 @@ html {
 
 body {
     background-color: black;
-=======
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-body {
-    font-family: "Michroma";
-    background: linear-gradient(to bottom, #414141, #112c48, #414141, #000000);
-    background-size: 100% 400%;
-    animation: gradientFade 50s ease infinite;
->>>>>>> Stashed changes
     margin: 0;
     padding: 0;
 }
 
-<<<<<<< Updated upstream
 .navigatiebalk {
     background-color: rgba(24, 30, 80, 0.356);
     width: 100%;
@@ -54,48 +35,6 @@ body {
     user-select: none;
     pointer-events: none;
 }
-=======
-@keyframes gradientFade {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 0% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-}
-input, select{
-    font-family: "Red Hat Display";
-}
-
-.h2-form{
-    text-align: center;
-    padding-left: 50px;
-    padding-bottom: 45px;
-    font-size: 18px;
-    font-family: "Red Hat Display";
-    color: white;
-}
-.h3-form{
-    text-align: center;
-    color:white;
-    font-family: "Orbitron";
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-label{
-    text-align: left;
-    padding: 50px;
-    font-size: 18px;
-    font-family: "Michroma";
-    color: white;
-}
-
-
->>>>>>> Stashed changes
 
 .banner-container img {
     width: 100%;
@@ -170,7 +109,6 @@ header {
     text-align: center;
 }
 
-<<<<<<< Updated upstream
 .pagina main form {
     display: flex;
     flex-direction: column;
@@ -182,9 +120,6 @@ header {
 .pagina main form button,
 #plaats,
 #straat {
-=======
-input, select, .button-form {
->>>>>>> Stashed changes
     height: 40px;
     width: 100%;
     font-size: 18px;
@@ -203,7 +138,7 @@ select:focus {
     outline: none;
 }
 
-.button-form {
+button {
     background-color: #37339dab;
     color: white;
     cursor: pointer;
@@ -212,7 +147,6 @@ select:focus {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-<<<<<<< Updated upstream
 button:hover {
     background-color: #0f0e3dab;
     transform: scale(1.02);
@@ -222,10 +156,6 @@ button:hover {
     cursor: not-allowed;
     opacity: 0.6;
     transition: opacity 0.3s ease;
-=======
-.button-form:hover {
-    background-color: #201e55ab;
->>>>>>> Stashed changes
 }
 
 .dropdown {
@@ -304,37 +234,7 @@ option:focus {
     color: rgb(255, 0, 0);
     font-size: 12px;
     font-weight: bold;
-<<<<<<< Updated upstream
     font-family: "Raleway";
-=======
-    font-family: "Phudu";
-}
-#Verzendbutton:disabled {
-    cursor: not-allowed;
-    
-}
-
-.titel {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #ffffff;
-  }
-  
-datalist {
-    width: 100%;
-}
-
-datalist option {
-    padding: 10px;
-    font-size: 14px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-}
-
-datalist option:hover {
-    background-color: #f0f0f0;
->>>>>>> Stashed changes
 }
 
 .suggestions {
@@ -389,17 +289,11 @@ datalist option:hover {
     button {
         font-size: 16px;
     }
-<<<<<<< Updated upstream
 
     .pagina {
         margin: 80px auto;
         width: 95%;
         padding: 20px;
-=======
-    .button-form{
-        font-size: 16px;
-        border:solid white 1px;
->>>>>>> Stashed changes
     }
 
     .pagina main form {
@@ -435,119 +329,8 @@ datalist option:hover {
         font-size: 14px;
     }
 
-<<<<<<< Updated upstream
     .pagina main form {
         flex-direction: column;
         gap: 10px;
     }
 }
-=======
-    .dropdown, #search {
-        width: 100%;
-    }
-    .button-form{
-        font-size: 14px;
-        border: solid white 1px;
-    }
-}
-
-/* NavBar */
-.navbar-form {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    background-color: hsla(0, 0%, 0%, 0.2);
-    color: white;
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-    padding: 1em 0 auto 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 6rem;
-    transition: 400ms;
-  }
-  .navbar-form:hover {
-    display: flex;
-    align-items: center;
-    background-color: #12375b;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1em 0 auto 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 6rem;
-  }
-  
-  .navbar-form nav {
-    margin-left: auto;
-    padding-right: 4rem;
-  }
-  
-  .navbar-form h2 {
-    font-size: 2em;
-    letter-spacing: 0.09em;
-  }
-  
-  .navbar-form a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem 0 1rem;
-    transition: 400ms;
-  }
-  .navbar-form:visited {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .navbar-form a:hover {
-    text-decoration: underline;
-    transition: 100ms;
-  }
-  
-  .navbar-form .blue {
-    background-color: #6f8ab7;
-    border: none;
-    border-radius: 0.25rem;
-    color: white;
-    padding: 0.5rem;
-    cursor: pointer;
-    margin: 0 0.5rem 0 0.5rem;
-    transition: 400ms;
-  }
-  .navbar-form .blue:hover {
-    background-color: #567ab8;
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 1.2rem;
-    padding: 0.4rem;
-    margin: 0 0.4rem 0 0.4rem;
-    border-radius: 0.5rem;
-    transition: 100ms;
-  }
-  .navbar-form .blue:active {
-    background-color: #567ab8;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0.4rem;
-    margin: 0 0.4rem 0 0.4rem;
-    transition: 100ms;
-  }
-  .navbar-form{
-    font-family: "Roboto Flex";
-  }
-  /* footer */
-
-.footer {
-    text-align: center;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1em 0 1em 0;
-    font-family: "Roboto Flex";
-  }
-  .footer a {
-    color: #6f8ab7;
-    text-decoration: wavy;
-  }
-  
->>>>>>> Stashed changes
