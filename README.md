@@ -6,7 +6,7 @@ Startpagina - Jason
 
 Overzicht van lessenpakket 5de en 6de jaar - Alexander/Tommy
 
-ContactFormulier - Clemeant
+ContactFormulier - Clement
 
 ChatBot - Alexander
 

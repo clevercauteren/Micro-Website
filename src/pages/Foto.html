@@ -17,11 +17,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link
       rel="icon"
-      href="/src/images/favicon_Beveren.png"
+      href="../images/favicon_Beveren.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="/src/css/main.css" />
-    <link rel="stylesheet" href="/src/css/Foto.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/Foto.css" />
     <title>5ADB Fotos</title>
   </head>
   <body>
@@ -35,7 +35,7 @@
 
       <!-- Button to open the chatbot modal -->
       <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
-        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
+        <img src="../images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
       </button>
 
       <!-- Background overlay (covers the page) -->
@@ -46,7 +46,7 @@
         <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <img
-            src="/src/images/ai/LOGO white.png"
+            src="../images/ai/LOGO white.png"
             alt="Mistral AI"
             class="chatbot-image"
           />
@@ -74,29 +74,44 @@
         </div>
       </div>
 
-      <script src="/src/js/ai.js"></script>
+      <script src="../js/ai.js"></script>
       <!-- Link to external JavaScript file -->
     </div>
 
+
     <!-- Navigation -->
     <div id="navbar" class="navbar">
-      <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
+      <a href="../pages/home.html"><h2 class="titel">5ADB</h2></a>
       <nav>
-        <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
-        <a href="/src/pages/Foto.html">Foto's</a>
-        <a href="/src/pages/About.html">Over ADB</a>
-        <a href="/src/pages/Watna.html">Wat na 5ADB</a>
-        <a href="/src/pages/overAI.html">Over AI</a>
-        <a href="/src/pages/formulier.html">Formulier</a>
+        <a href="../pages/Lessenpakket.html">Lessenpakket</a>
+        <a href="../pages/Foto.html">Foto's</a>
+        <a href="../pages/About.html">Over ADB</a>
+        <a href="../pages/Watna.html">Wat na 5ADB</a>
+        <a href="../pages/overAI.html">Over AI</a>
+        <a href="../pages/formulier.html">Formulier</a>
       </nav>
-      <script src="/src/js/navbar.js"></script>
+      <script src="../js/navbar.js"></script>
     </div>
+
+    <div class="achtergrond-scroll">
+      <div class="parallax" style="overflow: hidden;  width: 100%; height: 50vh;  top: 0; left: 0; z-index: 1;"></div>
+      <script>
+        window.addEventListener('scroll', function() {
+        const parallax = document.querySelector('.achtergrond-scroll .parallax');
+        let scrollPosition = window.pageYOffset; // Verkrijgt de huidige scrollpositie
+        parallax.style.backgroundPosition = `center ${(scrollPosition * (1 / 3)) - 31}px`; // Verander de achtergrondpositie, maar trager dan scrollen
+        });
+      </script>
+    </div>
+    <div class="div-zwart"><h1>Fotopagina over ADB in de klas</h1></div>
+    <div class="gradient"><br><br><br><br><br><br><br></div>
+
       <!-- Foto's -->
       <div class="Fotos">
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_6769 2.jpg"
+              src="../images/Fotos fotosite/IMG_6983.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -105,7 +120,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_6771.jpg"
+              src="../images/Fotos fotosite/IMG_6771.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -114,7 +129,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_6984.jpg"
+              src="../images/Fotos fotosite/IMG_6984.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -123,7 +138,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_6986.jpg"
+              src="../images/Fotos fotosite/IMG_6986.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -132,7 +147,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_6989.jpg"
+              src="../images/Fotos fotosite/IMG_6989.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -141,7 +156,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_6990.jpg"
+              src="../images/Fotos fotosite/IMG_6990.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -150,7 +165,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_6993.jpg"
+              src="../images/Fotos fotosite/IMG_6993.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -159,7 +174,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_6994.jpg"
+              src="../images/Fotos fotosite/IMG_6994.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -168,7 +183,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_7002.jpg"
+              src="../images/Fotos fotosite/IMG_7002.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -177,7 +192,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_7004.jpg"
+              src="../images/Fotos fotosite/IMG_7004.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -186,7 +201,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_7045.jpg"
+              src="../images/Fotos fotosite/IMG_7045.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -195,7 +210,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_7053.jpg"
+              src="../images/Fotos fotosite/IMG_7053.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -204,7 +219,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_7054.jpg"
+              src="../images/Fotos fotosite/IMG_7054.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -213,7 +228,7 @@
         <div class="FotosContent">
           <section>
             <img
-              src="/src/images/Fotos fotosite/IMG_7055.jpg"
+              src="../images/Fotos fotosite/IMG_7055.jpg"
               alt="Foto"
               loading="lazy"
             />
@@ -244,7 +259,7 @@
       <p>
         5ADB -
         <abbr
-          title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
+          title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Banasiak"
           >B groep</abbr
         >
       </p>
@@ -257,6 +272,6 @@
         >
       </p>
     </footer>
-    <script src="/src/js/Foto.js"></script>
+    <script src="../js/Foto.js"></script>
   </body>
 </html>
