@@ -19,7 +19,7 @@ async function askMistral(userMessage) {
 
     // ⏳ Disable input and update the button
     inputBox.readOnly = true;
-    sendButton.innerText = "Generating...";
+    sendButton.innerText = "Genereren...";
     sendButton.disabled = true;
 
     // Append user message to chat history
