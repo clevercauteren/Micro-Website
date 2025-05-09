@@ -1,6 +1,6 @@
 /* Achtergrond met een stijlvolle neon-glow */
 body {
-  background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
+  background-color: white;
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
@@ -15,7 +15,52 @@ body {
     background-position: 0% 0%;
   }
 }
-
+.navbar, .navbar:hover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.navbar {
+  background: rgba(0,0,0,0.5);
+}
+.navbar:hover {
+  background: #fff;
+}
+.achtergrond-scroll .parallax {
+  position: relative;
+  z-index: 1;
+  background-image: url(/images/compress\ galaxy.jpeg);
+  height: 40vh;
+  overflow: hidden;
+  top: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.gradient {
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255));
+}
+.div-zwart {
+  background-color: black;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  box-shadow: grey 0px 0px 100px 5px;
+  transition: 0.2s all;
+}
+.achtergrond-scroll .content {
+  height: 2500px; /* Maak de inhoud lang genoeg om te kunnen scrollen */
+  padding: 20px;
+  text-align: center;
+}
 /* Responsieve media queries */
 @media (max-width: 1200px) {
   .Fotos {
@@ -92,7 +137,7 @@ footer {
   border-radius: 12px;
   padding: 12px;
   width: 95%;
-  height: 95%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;

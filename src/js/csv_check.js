@@ -11,6 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let stratenData = [];
     let huidigeStraten = []; // Opslag voor straten van de geselecteerde plaats
 
+    // Geef inputs een zwarte achtergrond
+    plaatsInput.style.border = "solid white 0.5px";
+    straatInput.style.border = "solid white 0.5px";
+    plaatsInput.style.backgroundColor = "black";
+    straatInput.style.backgroundColor = "black";
+    plaatsInput.style.color = "white"; // Voor leesbaarheid
+    straatInput.style.color = "white";
+
     // CSV inladen en converteren naar JSON
     async function loadCSV(url) {
         try {
@@ -72,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .map(entry => entry.street_nl);
 
         if (huidigeStraten.length === 0) {
-            plaatsError.textContent = "Onjuiste plaats!";
+            plaatsError.textContent = "Onjuiste plaats";
         } else {
             huidigeStraten.forEach(straat => {
                 let option = document.createElement("option");
@@ -91,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const geselecteerdeStraat = straatInput.value.trim();
 
         if (huidigeStraten.length > 0 && !huidigeStraten.includes(geselecteerdeStraat)) {
-            straatError.textContent = "Onjuiste straat!";
+            straatError.textContent = "Onjuiste straat";
         }
 
         validateForm();

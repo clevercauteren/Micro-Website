@@ -73,3 +73,12 @@ fieldset
   border: #333 solid 1px;
   border-radius: 20px;
 }
+
+.banner
+{
+  background-image: url(../images/ai/Banner\ Image.png);
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
