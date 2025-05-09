@@ -1,6 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Tektur:wght@400..900&display=swap");
 
+/* Global scrollbar styling for all browsers */
+/* For Webkit browsers (Chrome, Safari, newer Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #000;
+}
+
+/* For IE and Edge (legacy) */
+* {
+  -ms-overflow-style: none;
+}
+
+/* For Opera */
+::-o-scrollbar {
+  width: 8px;
+}
+
+::-o-scrollbar-track {
+  background: #000;
+}
+
+::-o-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 4px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -645,7 +689,6 @@ body {
 }
 
 /* Scrollfield */
-
 .scroll-field .scroll-container {
   width: 350px;
   height: 400px;
@@ -665,18 +708,17 @@ body {
 }
 
 .scroll-field .scroll-container::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 4px;
 }
 
 /* Firefox */
 .scroll-field .scroll-container {
   scrollbar-width: thin;
-  scrollbar-color: white black;
+  scrollbar-color: #ffffff black;
 }
 
 /* Reset content to normal direction */
-
 .scroll-field .scroll-container .content {
   direction: ltr;
 }
