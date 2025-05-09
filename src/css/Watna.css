@@ -1,28 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Algemene opmaak */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background: linear-gradient(to bottom, #001F3F, #000000, #ffffff, #000000);
+     background: linear-gradient(to bottom, #000000, #000000, #000000, #000000);
     background-size: 100% 400%;
     animation: gradientFade 50s ease infinite;
+    background-color: #000000;
     font-family: "montserrat";
-  font-size: 1.2rem;
+    font-size: 1.2rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
+     position: relative;   /* voeg dit toe */
+  z-index: 0;   
 }
 
 main{
     display: flex;
+    background: #000000;
     flex-direction: column;
     justify-content: center; /* Centraal op het scherm */
     align-items: center;
@@ -70,20 +74,13 @@ h2 {
     margin-bottom: 10px;
     transition: color 0.3s;
 }
-
 h2:hover {
     color: rgb(0, 0, 0);
 }
-
 p {
     font-size: 18px;
     color: white;
 }
-
-
-
-
-
 .footer {
     width: 100%;
     background: none;
@@ -110,7 +107,6 @@ p {
     color: white;
     margin: 5px 0;
 }
-
 /* Responsieve opmaak */
 @media screen and (max-width: 768px) {
     .container {
@@ -196,6 +192,7 @@ p {
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
+    
 }
 
 .vak.rechts-boven:hover{
@@ -240,7 +237,6 @@ p {
     justify-content: center;
     align-items: center;
 }
-
 .iframe-wrapper iframe {
     position: absolute;
     top: 0;
