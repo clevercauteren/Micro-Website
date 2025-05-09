@@ -102,7 +102,12 @@
         applicaties werken binnen een bedrijf, met focus op het efficiënt
         beheren van data en het bouwen van softwareoplossingen.
       </p>
-      <br />
+      <br/>
+      <br>
+      <div class="tip">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <p>Druk op de vakken voor meer info.</p>
+      </div>
       <h2>Lessenpakket ADB(Applicatie en DataBeheer)</h2>
       <table class="tabeleen">
         <!--Tabel voor de les uren-->
@@ -116,7 +121,7 @@
               <span
                 class="word"
                 data-explanation="In Aardrijkskunde leer je over het universum, de aarde en hoe alles in de natuur werkt.
-              Je ontdekt hoe de planeet zich heeft gevormd, hoe het klimaat in elkaar zit, en welke krachten de wereld om ons heen beïnvloeden."
+                Je ontdekt hoe de planeet zich heeft gevormd, hoe het klimaat in elkaar zit, en welke krachten de wereld om ons heen beïnvloeden."
                 >Aardrijkskunde</span
               >
             </p>
@@ -616,6 +621,40 @@
       
       <br />
       <br />
+
+
+        <!-- Pop-up overlay -->
+      <div class="popup-overlay" id="popup">
+        <div class="popup">
+          <h2>Hoe gebruik je deze pagina?</h2>
+          <p>
+            Deze pagina biedt een overzicht van de vakken en hun inhoud binnen de
+            richting Applicatie en Databeheer. Klik op de woorden in de tabel om
+            meer te leren over elk vak. De uitleg verschijnt in een pop-upvenster.
+          </p>
+          <p>
+            Als je vragen hebt, kun je altijd onze AI-assistent raadplegen door op
+            het chat-icoon rechtsonder te klikken.
+          </p>
+          <video src="/src/videos/Tutorial.mov" autoplay muted loop></video>
+          <br>
+          <button onclick="closePopup()">Sluiten</button>
+        </div>
+      </div>
+
+      <script>
+        // Zorg dat de pop-up verschijnt bij het laden van de pagina
+        window.addEventListener('load', function() {
+          const popup = document.getElementById('popup');
+          popup.classList.add('active'); // Voeg de 'active' class toe om de pop-up te tonen
+        });
+
+        // Functie om de pop-up te sluiten
+        function closePopup() {
+          const popup = document.getElementById('popup');
+          popup.classList.remove('active'); // Verwijder de 'active' class om de pop-up te verbergen
+        }
+      </script>
     </main>
     <footer>
       <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
