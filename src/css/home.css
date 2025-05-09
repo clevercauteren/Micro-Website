@@ -127,6 +127,7 @@ header img {
 
 .column-2 img {
   width: 100%;
+  max-width: 700px;
   height: 400px;
   object-fit: cover;
 }
