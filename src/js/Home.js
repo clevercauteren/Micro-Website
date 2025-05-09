@@ -51,6 +51,9 @@ document.getElementById("CurrentYear").innerText = new Date().getFullYear();
 //   });
 // });
 
+// Functie om naar een andere pagina te navigeren
 function GoTO(subject) {
+  history.pushState(null, "home.html", "./home.html");
   window.location.href = "../pages/vakken.html#" + subject;
+  window.location.replace("../pages/vakken.html#" + subject);
 }

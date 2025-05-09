@@ -10,7 +10,6 @@ body {
     padding: 0;
 }
 
-/* Navigatiebalk */
 .navigatiebalk {
     background-color: rgba(24, 30, 80, 0.356);
     width: 100%;
@@ -23,17 +22,17 @@ body {
     line-height: 80px;
     font-size: 24px;
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
-/* Banner-afbeelding direct onder de navbar */
 .banner-container {
     width: 100%;
-    height: 500px; /* Pas aan zoals gewenst */
-    background-image: url('/images/formbanner.jpg'); /* Pas de juiste URL aan */
+    height: 500px;
+    background-image: url('/images/formbanner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    user-select: none; /* Voorkomt selecteren */
+    user-select: none;
     pointer-events: none;
 }
 
@@ -41,10 +40,9 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover; /* Voorkomt vervorming */
+    object-fit: cover;
 }
 
-/* Algemene stijlen */
 .pagina .box h2 {
     text-align: center;
     padding-left: 50px;
@@ -54,68 +52,90 @@ body {
     color: white;
 }
 
-
 h3 {
     text-align: center;
     color: white;
     font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
 label {
-    text-align: left;
-    padding: 50px;
+    display: block;
+    padding: 10px 0 5px 0;
     font-size: 18px;
     color: white;
+    transition: color 0.3s ease;
 }
 
 footer {
     text-align: center;
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1em 0 1em 0;
+    padding: 1em 0;
 }
 
 footer a {
     color: #6f8ab7;
     text-decoration: wavy;
-}
-.pagina:hover:not(:has(.box:hover)){
-    box-shadow: lightgrey 0px 0px 100px 5px;
+    transition: color 0.3s ease;
 }
 
-.pagina{
-  padding: 30px;
-  color: white;
-  font-family: "montserrat";
-  font-size: 1.2rem;
-  background-color: rgb(0, 0, 0, 0.5);
-  border-radius: 10px;
-  margin: 200px;
-  margin-top: 100px;
-  box-shadow: grey 0px 0px 100px 5px;
-  transition: 0.2s all;
+.pagina {
+    padding: 30px;
+    color: white;
+    font-family: "Montserrat";
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 120px auto;
+    max-width: 800px;
+    box-shadow: grey 0px 0px 5px 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
 }
+
+.pagina:hover {
+    transform: scale(1.01);
+    box-shadow: lightgrey 0px 0px 8px 8px;
+}
+
 header {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
+    transition: color 0.3s ease;
+    text-align: center;
 }
 
-.pagina main  form input,
-.pagina main  form select,
-.pagina main  form button {
+.pagina main form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pagina main form input,
+.pagina main form select,
+.pagina main form button,
+#plaats,
+#straat {
     height: 40px;
     width: 100%;
     font-size: 18px;
     border-radius: 10px;
     border: solid white 0.5px;
     padding: 10px;
-    margin: 20px 0;
     background-color: rgb(0, 0, 0);
     box-sizing: border-box;
-    color:white;
+    color: white;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    box-shadow: 3px 3px 15px rgb(255, 255, 255);
+    outline: none;
 }
 
 button {
@@ -124,24 +144,31 @@ button {
     cursor: pointer;
     padding: 10px 20px;
     border: solid white 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #201e55ab;
+    background-color: #0f0e3dab;
+    transform: scale(1.02);
+}
+
+#Verzendbutton:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
 }
 
 .dropdown {
     position: relative;
-    display: inline-block;
     width: 100%;
 }
 
 #search {
     width: 100%;
-    margin-left: -9px;
     padding: 8px;
     border: 10px solid #ffffff;
     border-radius: 10px;
+    transition: box-shadow 0.3s ease;
 }
 
 .dropdown-content {
@@ -153,6 +180,7 @@ button:hover {
     overflow-y: auto;
     width: 100%;
     z-index: 1;
+    transition: opacity 0.3s ease;
 }
 
 .dropdown-content a {
@@ -160,30 +188,22 @@ button:hover {
     display: block;
     text-decoration: none;
     color: black;
+    transition: background-color 0.2s ease;
 }
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-.choices__item {
-    color: black !important;
-}
-
-.choices__input {
-    color: black !important;
-}
-
-.choices__list--multiple .choices__item {
-    background-color: transparent;
-}
-
-.choices__list--single .choices__item {
-    background-color: transparent;
-}
-
+.choices__item,
+.choices__input,
 .choices__dropdown .choices__item {
     color: black !important;
+}
+
+.choices__list--multiple .choices__item,
+.choices__list--single .choices__item {
+    background-color: transparent;
 }
 
 .choices__inner {
@@ -192,63 +212,30 @@ button:hover {
     border-radius: 10px;
 }
 
-#plaats, #straat {
-    width: 100%;
-    padding: 8px;
-    margin-left: 0;
-    border-radius: 10px;
-    border: none;
+#plaats,
+#straat {
     background-color: rgba(255, 255, 255, 0.758);
 }
 
 option {
     background-color: black;
     color: white;
+    transition: background-color 0.3s ease;
 }
 
-#plaats {
-    margin-bottom: 10px;
-}
-
-#plaatsError,
-#straatError {
-    color: rgb(255, 64, 0);
-    font-size: 20px;
-    font-family: "Raleway";
-}
-
-#Verzendbutton:disabled {
-    cursor: not-allowed;
-}
-
-input:focus {
-    box-shadow: 3px 3px 15px rgb(255, 255, 255);
-}
-
-datalist {
-    width: 100%;
-}
-
-datalist option {
-    padding: 10px;
-    font-size: 14px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-}
-
-datalist option:hover {
-    background-color: #f0f0f0;
-}
-select:focus {
-    outline: none;
-    border-color: #6f8ab7;
-    box-shadow: 0 0 5px #6f8ab7;
-}
-option:checked, option:focus {
+option:checked,
+option:focus {
     background-color: #0800ffab !important;
     color: white !important;
 }
 
+#plaatsError,
+#straatError {
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Raleway";
+}
 
 .suggestions {
     border: 1px solid #ccc;
@@ -259,11 +246,13 @@ option:checked, option:focus {
     position: absolute;
     width: 100%;
     z-index: 10;
+    transition: box-shadow 0.3s ease;
 }
 
 .suggestions div {
     padding: 8px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .suggestions div:hover {
@@ -276,13 +265,14 @@ option:checked, option:focus {
     cursor: pointer;
     padding: 10px 20px;
     border: solid white 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .blue:hover {
     background-color: #201e55ab;
+    transform: scale(1.02);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .navigatiebalk {
         height: 80px;
@@ -290,31 +280,25 @@ option:checked, option:focus {
         font-size: 18px;
     }
 
-    
-
     header {
         font-size: 30px;
     }
 
-    input, select {
+    input,
+    select,
+    button {
         font-size: 16px;
     }
 
-    .pagina button {
-        font-size: 16px;
-        border: solid white 1px;
+    .pagina {
+        margin: 80px auto;
+        width: 95%;
+        padding: 20px;
     }
 
-    .dropdown, #search {
-        width: 100%;
-    }
-
-    .choices__inner {
-        width: 100% !important;
-    }
-
-    #plaats, #straat {
-        width: 100%;
+    .pagina main form {
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
@@ -333,18 +317,20 @@ option:checked, option:focus {
         font-size: 24px;
     }
 
-    
+    .pagina {
+        margin: 60px auto;
+        width: 95%;
+        padding: 15px;
+    }
 
-    input, select {
+    input,
+    select,
+    button {
         font-size: 14px;
     }
 
-    .dropdown, #search {
-        width: 100%;
-    }
-
-    .pagina button {
-        font-size: 14px;
-        border: solid white 1px;
+    .pagina main form {
+        flex-direction: column;
+        gap: 10px;
     }
 }

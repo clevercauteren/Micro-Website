@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 </head>
 <body>
+
   <div id="navbar" class="navbar">
     <a href="../pages/home.html"><h2 class="titel">5ADB</h2></a>
     <nav>
@@ -39,7 +40,7 @@
 
       <!-- Button to open the chatbot modal -->
       <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
-        <img src="../images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
+        <img src="../images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon"/>
       </button>
 
       <!-- Background overlay (covers the page) -->
@@ -63,7 +64,7 @@
             <input
               type="text"
               id="userInput"
-              placeholder="Ask something..."
+              placeholder="Stel een vraag"
               onkeydown="handleKeyPress(event)"
               class="user-input"
             />
@@ -72,7 +73,7 @@
               onclick="sendClicked(document.getElementById('userInput').value)"
               class="send-button"
             >
-              Send
+              Verstuur
             </button>
           </div>
         </div>
@@ -85,24 +86,24 @@
       <div class="pagina">
         <main>
             <!-- <div class="box"> -->
-                <h2>
+                <h2 align="center">
                     Welkom in onze nieuwe richting hier op school! Wij vragen u dit formulier in te vullen over waarom je deze richting zou willen volgen.
                     Gelieve al onze vragen juist te beantwoorden!
                 </h2>
 
                 <br><hr>
-                <form>
+                <form action="https://formsubmit.co/adbgtimail@gmail.com" method="POST">
                   <h3>Persoonlijke gegevens</h3>
                   <table>
                       <tr>
                           <td><label for="voornaam">Voornaam:</label></td>
-                          <td><input type="text" name="voornaam" id="voornaam" placeholder="Voornaam (verplicht)" required></td>
+                          <td><input type="text" name="voornaam" id="voornaam" placeholder="Voornaam *" required></td>
                           <td><label for="naam">Naam:</label></td>
-                          <td><input type="text" name="naam" id="naam" placeholder="Naam (verplicht)" required></td>
+                          <td><input type="text" name="naam" id="naam" placeholder="Naam *" required></td>
                       </tr>
                       <tr>
                           <td><label for="email">E-mail:</label></td>
-                          <td><input type="email" name="email" id="email" placeholder="E-mail (verplicht)" required></td>
+                          <td><input type="email" name="email" id="email" placeholder="E-mail *" required></td>
                           <td><label for="telefoonnummer">Telefoonnummer:</label></td>
                           <td><input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer"></td>
                       </tr>
@@ -134,9 +135,9 @@
                   <table>
                       <tr>
                           <td><label for="school">Vorige school:</label></td>
-                          <td><input type="text" name="school" id="school" placeholder="Naar welke school ging je hiervoor?"></td>
+                          <td><input type="text" name="school" id="school" placeholder="School"></td>
                           <td><label for="richting">Richting:</label></td>
-                          <td><input type="text" name="richting" id="richting" placeholder="Welke richting deed je daar?"></td>
+                          <td><input type="text" name="richting" id="richting" placeholder="Richting"></td>
                       </tr>
                   </table>
                   <hr>
@@ -146,7 +147,7 @@
                           <td><label for="menu">Reden van interesse:</label></td>
                           <td>
                               <select id="menu" name="reden" class="dropdown-richting" required>
-                                  <option value="">Maak hier een selectie (verplicht)</option>
+                                  <option value="">Maak hier een selectie *</option>
                                   <option value="applicaties_ontwikkelen">Ik wil applicaties ontwikkelen</option>
                                   <option value="systeembeheer">Ik ben geïnteresseerd in systeembeheer</option>
                                   <option value="data_analyse">Ik wil werken met data-analyse</option>
@@ -169,7 +170,7 @@
                   <br>
                   <button type="submit" id="Verzendbutton">Verzenden</button>
               </form>
-
+              <script src="../js/csv_check.js"></script>
                
 
                 
@@ -196,6 +197,6 @@
   </p>
 </footer>
     
-    
+
 </body>
 </html>
