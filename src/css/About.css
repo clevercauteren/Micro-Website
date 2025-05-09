@@ -87,7 +87,12 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
-
+.footer1{
+  color: white;
+  font-size: 1.3em;
+  margin-top: 20px;
+  text-align: center;
+}
 .about .item {
   background: #000000;
   padding: 20px;
