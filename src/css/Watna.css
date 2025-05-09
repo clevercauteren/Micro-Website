@@ -11,6 +11,8 @@ body {
     background: linear-gradient(to bottom, #001F3F, #000000, #ffffff, #000000);
     background-size: 100% 400%;
     animation: gradientFade 50s ease infinite;
+    font-family: "montserrat";
+  font-size: 1.2rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,18 +23,16 @@ body {
 
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Centraal op het scherm */
+    align-items: center;
     padding: 100px 20px 50px;
 }
 iframe{
     display: block;
     margin-bottom: 200px;
 }
-@keyframes gradientFade {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 0% 100%; }
-    100% { background-position: 0% 0%; }
-}
+
 
 .navbar {
     position: fixed;
@@ -47,6 +47,7 @@ iframe{
 }
 
 .container {
+    margin-top: 300px;
     width: 70%;
     max-width: 800px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -54,7 +55,6 @@ iframe{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
-    margin-top: 70px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -81,25 +81,8 @@ p {
 }
 
 
-.meerinfo {
-    width: 120px;
-    height: 40px;
-    background-color: #008cdd;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
 
-.meerinfo:hover {
-    background-color: #0056b3;
-}
+
 
 .footer {
     width: 100%;
@@ -148,7 +131,8 @@ p {
 
 .info-secties {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center; 
     margin-top: 20px;
     width: 100%;
@@ -161,16 +145,18 @@ p {
     width: 60%; 
     border-radius: 8px;
     text-align: center;
+    height: 170px;
 }
 
 .sectie h3 {
     color: #003366;
     margin-bottom: 10px;
 }
-
+.supersigma{
+    color: #003366;
+}
 .sectie a {
     display: block;
-    color: #003366;
     text-decoration: none;
     font-weight: bold;
     margin: 5px 0;
@@ -203,7 +189,6 @@ p {
 /* Standaard styling voor de vakken */
 .vak {
     height: 300px; /* Statische hoogte voor de vakken */
-    border: 2px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,11 +198,16 @@ p {
     border-radius: 8px;
 }
 
+.vak.rechts-boven:hover{
+    transform: scale(1.01);
+}
+.vak.links-boven:hover{
+    transform: scale(1.01);
+}
 /* Breedte div (iframe) krijgt de volledige breedte van de container */
 .vak.onderaan {
     grid-column: span 2;  /* Span over beide kolommen */
     height: auto;          /* Flexibele hoogte */
-    border: 2px solid red; /* Rode rand */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,6 +217,17 @@ p {
     position: relative;
     overflow: hidden;
 }
+.vak.rechts-boven {
+    background-image: url(/images/c58a4281-6e46-4448-a689-d3fc2913e13e.png);
+    background-size: cover; /* Zorgt ervoor dat de afbeelding de hele div vult */
+    background-position: center; /* Centreert de afbeelding in de div */
+    background-repeat: no-repeat; /* Voorkomt herhaling van de afbeelding */
+}
+.froto {
+    height: 80px;
+    width: 100%;
+  }
+  
 
 /* Styling voor de iframe binnen de breedte div */
 .iframe-wrapper {

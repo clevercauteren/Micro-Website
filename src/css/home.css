@@ -126,11 +126,10 @@ header img {
 }
 
 .column-2 img {
-  max-width: 380px;
-  width: auto;
-  height: 380px;
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
   object-fit: cover;
-  border-radius: 5px;
 }
 
 .photo-section {
@@ -257,8 +256,7 @@ header img {
     display: none;
   }
 
-  .anim
-  {
+  .anim {
     display: none;
   }
 
