@@ -23,7 +23,6 @@ body {
   transition: 0.2s all;
 }
 
-
 .about header {
   font-size: 2rem;
   color: white;
@@ -34,7 +33,19 @@ body {
 }
 
 .about h2 {
-  font-size: 20pt;
+  font-family: "Raleway";
+  font-weight: 180;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
 }
 
 .about aside {
@@ -244,7 +255,8 @@ body {
   font-size: 1.8rem;
 }
 
-.scroll-field p, .scroll-field ul {
+.scroll-field p,
+.scroll-field ul {
   color: white;
   font-family: "Raleway";
   font-weight: 50;
@@ -318,7 +330,8 @@ body {
     font-size: 1.5rem;
   }
 
-  .scroll-field p, .scroll-field ul {
+  .scroll-field p,
+  .scroll-field ul {
     font-size: 1.1rem;
   }
 }
