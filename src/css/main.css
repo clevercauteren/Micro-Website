@@ -652,10 +652,27 @@ body {
   overflow-y: auto;
   padding-left: 20px;
   direction: rtl; /* Moves scrollbar to the left */
-  scrollbar-width: thin;
-  scrollbar-color: rgb(255, 255, 255) black;
-  scrollbar-arrow-color: rgba(245, 222, 179, 0);
   border-left: 1px solid white;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.scroll-field .scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-field .scroll-container::-webkit-scrollbar-track {
+  background: black;
+}
+
+.scroll-field .scroll-container::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* Firefox */
+.scroll-field .scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: white black;
 }
 
 /* Reset content to normal direction */
