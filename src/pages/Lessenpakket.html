@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Lessenpakket webpagina over applicatie- en databeheer in GTI Beveren"/>
@@ -9,26 +9,411 @@
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" href="../images/favicon_Beveren.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="../css/lessen.css" />
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/lessen.css">
     <title>5ADB Lessenpakket</title>
-  </head>
-  <body>
-    <div id="navbar" class="navbar">
-      <a href="../pages/home.html"><h2 class="titel">5ADB</h2></a>
-      <nav>
-        <a href="../pages/Lessenpakket.html">Lessenpakket</a>
-        <a href="../pages/Foto.html">Foto's</a>
-        <a href="../pages/About.html">Over ADB</a>
-        <a href="../pages/Watna.html">Wat na 5ADB</a>
-        <a href="../pages/overAI.html">Over AI</a>
-        <a href="../pages/formulier.html">Formulier</a>
-      </nav>
-      <script src="../js/navbar.js"></script>
-    </div>
+</head>
+<body>
+    <header>
+        <div id="navbar" class="navbar">
+            <a href="/src/pages/home.html"><h2 class="titel">5ADB</h2></a>
+            <!-- The hamburger menu will be added via JavaScript -->
+            <nav>
+                <a href="/src/pages/Lessenpakket.html">Lessenpakket</a>
+                <a href="/src/pages/Foto.html">Foto's</a>
+                <a href="/src/pages/About.html">Over ADB</a>
+                <a href="/src/pages/Watna.html">Wat na 5ADB</a>
+                <a href="/src/pages/overAI.html">Over AI</a>
+                <a href="/src/pages/formulier.html">Formulier</a>
+            </nav>
+            <script src="/src/js/navbar.js"></script>
+        </div>
+        <div class="intro">
+            <h1>Lessenpakket van 5ADB & 6ADB</h1>
+        <p>
+            Deze pagina biedt een overzicht van de vakken en hun inhoud binnen de
+            richting Applicatie en Databeheer. Klik op de woorden in de tabel om
+            meer te leren over elk vak. De uitleg verschijnt in een pop-upvenster.
+        </p>
+        <p>
+            Als je vragen hebt, kun je altijd onze AI-assistent raadplegen door op
+            het chat-icoon rechtsonder te klikken.
+        </p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="table-container-1">
+                <h2>5ADB</h2>
+                <table id="vakken-tabel">
+                    <thead>
+                        <tr>
+                            <th>Basisvorming</th>
+                            <th>Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="vak">
+                                <p>Aardrijkskunde</p>
+                                <svg class="info-icon" data-vak="aardrijkskunde1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Engels</p>
+                                <svg class="info-icon" data-vak="engels1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Frans</p>
+                                <svg class="info-icon" data-vak="frans1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Geschiedenis</p>
+                                <svg class="info-icon" data-vak="geschiedenis1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Levensbeschouwelijk vak</p>
+                                <svg class="info-icon" data-vak="levensbeschouwelijk1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Lichamelijke opvoeding</p>
+                                <svg class="info-icon" data-vak="lo1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Nederlands</p>
+                                <svg class="info-icon" data-vak="nederlands1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Wiskunde</p>
+                                <svg class="info-icon" data-vak="wiskunde1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Natuurwetenschappen</p>
+                                <svg class="info-icon" data-vak="natuurwetenschappen1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Economie</p>
+                                <svg class="info-icon" data-vak="economie1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table id="vakken-tabel">
+                    <thead>
+                        <tr>
+                            <th>Specifiek gedeelte</th>
+                            <th>uren</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="vak">
+                                <p>Webdesign</p>
+                                <svg class="info-icon" data-vak="webdesign1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>4</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Computersystemen en netwerken</p>
+                                <svg class="info-icon" data-vak="computersystemen1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>4</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Applicatiebeheer</p>
+                                <svg class="info-icon" data-vak="applicatiebeheer1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Programmeren en databeheer</p>
+                                <svg class="info-icon" data-vak="programmeren1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>8</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table id="vakken-tabel">
+                    <thead>
+                        <tr>
+                            <th>Stage</th>
+                            <th>Weken</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="vak">
+                                <p>Stage</p>
+                                <svg class="info-icon" data-vak="stage1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" >
+                                <p> Bij stage staat het cijfer voor het aantal weken dat de lessen worden opgeschort omwille van een voltijds project i.s.m. het bedrijfsleven. </p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        
+            <div class="table-container-2">
+                <h2>6ADB</h2>
+                <table id="vakken-tabel">
+                    <thead>
+                        <tr>
+                            <th>Basisvorming</th>
+                            <th>Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="vak">
+                                <p>Aardrijkskunde</p>
+                                <svg class="info-icon" data-vak="aardrijkskunde2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Engels</p>
+                                <svg class="info-icon" data-vak="engels2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Frans</p>
+                                <svg class="info-icon" data-vak="frans2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>3</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Geschiedenis</p>
+                                <svg class="info-icon" data-vak="geschiedenis2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Levensbeschouwelijk vak</p>
+                                <svg class="info-icon" data-vak="levensbeschouwelijk2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Lichamelijke opvoeding</p>
+                                <svg class="info-icon" data-vak="lo2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Nederlands</p>
+                                <svg class="info-icon" data-vak="nederlands2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Wiskunde</p>
+                                <svg class="info-icon" data-vak="wiskunde2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Natuurwetenschappen</p>
+                                <svg class="info-icon" data-vak="natuurwetenschappen2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Economie</p>
+                                <svg class="info-icon" data-vak="economie2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>1</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table id="vakken-tabel">
+                    <thead>
+                        <tr>
+                            <th>Specifiek gedeelte</th>
+                            <th>uren</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="vak">
+                                <p>Webdesign</p>
+                                <svg class="info-icon" data-vak="webdesign2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>4</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Computersystemen en netwerken</p>
+                                <svg class="info-icon" data-vak="computersystemen2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>4</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Applicatiebeheer</p>
+                                <svg class="info-icon" data-vak="applicatiebeheer2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vak">
+                                <p>Programmeren en databeheer</p>
+                                <svg class="info-icon" data-vak="programmeren2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>8</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table id="vakken-tabel">
+                    <thead>
+                        <tr>
+                            <th>Stage</th>
+                            <th>Weken</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="vak">
+                                <p>Stage</p>
+                                <svg class="info-icon" data-vak="stage2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <p> Bij stage staat het cijfer voor het aantal weken dat de lessen worden opgeschort omwille van een voltijds project i.s.m. het bedrijfsleven./p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
 
-    <!-- AI Implementation -->
-    
+        </div>
+    </main>
+
+    <!-- popup div met uitleg over de vakken -->
+     <div id="popup" class="hidden">
+      <div class="popup-header">
+        <h2 id="popup-title">Vak Titel</h2>
+        <button id="close-btn" class="close-btn">&times;</button>
+      </div>
+      <div class="popup-body">
+        <p id="popup-description">Beschrijving van het vak.</p>
+      </div>
+    </div>
+    <script src="../js/lessenpakt-divs.js"></script>
+
     <div class="ai">
       <!-- Tooltip for AI assistant -->
       <div id="aiTooltip" class="tooltip">
@@ -38,7 +423,7 @@
 
       <!-- Button to open the chatbot modal -->
       <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
-        <img src="../images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
+        <img src="/src/images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
       </button>
 
       <!-- Background overlay (covers the page) -->
@@ -49,7 +434,7 @@
         <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <img
-            src="../images/ai/LOGO white.png"
+            src="/src/images/ai/LOGO white.png"
             alt="Mistral AI"
             class="chatbot-image"
           />
@@ -77,598 +462,20 @@
         </div>
       </div>
 
-      <script src="../js/ai.js"></script>
+      <script src="/src/js/ai.js"></script>
       <!-- Link to external JavaScript file -->
     </div>
 
-    <div class="achtergrond-scroll">
-      <div class="parallax"></div>
-      <script>
-        window.addEventListener('scroll', function() {
-        const parallax = document.querySelector('.achtergrond-scroll .parallax');
-        let scrollPosition = window.pageYOffset; // Verkrijgt de huidige scrollpositie
-        parallax.style.backgroundPosition = `center ${(scrollPosition * (1 / 3)) - 31}px`; // Verander de achtergrondpositie, maar trager dan scrollen
-        });
-      </script>
-    </div>
-
-    <main>
-      <h2>Wat is Applicatie en Databeheer</h2>
-      <!--Wat is Applicatie en databeheer-->
-      <p>
-        De richting <strong>Applicatie en Databeheer</strong> richt zich op het
-        ontwikkelen, beheren en optimaliseren van applicaties en databanken.
-        Studenten leren onder andere programmeren, databasebeheer en hoe
-        applicaties werken binnen een bedrijf, met focus op het efficiënt
-        beheren van data en het bouwen van softwareoplossingen.
-      </p>
-      <br/>
-      <br>
-      <div class="tip">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-        <p>Druk op de vakken voor meer info.</p>
-      </div>
-      <h2>Lessenpakket ADB(Applicatie en DataBeheer)</h2>
-      <table class="tabeleen">
-        <!--Tabel voor de les uren-->
-        <tr>
-          <th>Basisvorming</th>
-          <th>5de jaar</th>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In Aardrijkskunde leer je over het universum, de aarde en hoe alles in de natuur werkt.
-                Je ontdekt hoe de planeet zich heeft gevormd, hoe het klimaat in elkaar zit, en welke krachten de wereld om ons heen beïnvloeden."
-                >Aardrijkskunde</span
-              >
-            </p>
-          </td>
-          <td>1</td>
-          <!--1-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In het vak Engels leer je hoe je jezelf goed kunt uitdrukken in het Engels ,zowel in spreken
-              als schrijven. Je oefent met gesprekken, begrijpend lezen en het schrijven van teksten.
-               Dit helpt je niet alleen om de taal beter te begrijpen, maar ook om te communiceren in een steeds meer internationale wereld."
-                >Engels</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In het vak Frans leer je de grammatica, uitbreid je je vocabulaire, en verbeter je je uitspraak.
-              Je oefent met luisteren en begrijpen, zodat je je goed kunt uitdrukken en communiceren in het Frans."
-                >Frans</span
-              >
-            </p>
-          </td>
-          <td>3</td>
-          <!--3-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In het vak Geschiedenis leer je over de vroegmoderne tijd.
-              Je ontdekt belangrijke gebeurtenissen, personen en veranderingen die de wereld vormden, zoals de Renaissance, de ontdekkingsreizen en de opkomst van nieuwe ideeën."
-                >Geschiedenis</span
-              >
-            </p>
-          </td>
-          <td>1</td>
-          <!--1-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Bij de levensbeschouwelijke vakken kunnen leerlingen kiezen uit drie richtingen. 
-              De eerste optie is Islam, waarbij ze leren over de islam, de Koran en de belangrijkste principes van het geloof. Een andere mogelijkheid is Godsdienst, waarin de focus ligt op het christendom,
-              de Bijbel en de tradities binnen dit geloof. Ten slotte is er Niet-confessionele zedenleer, een vak dat zich richt op de mens, de wereld en morele vraagstukken, zonder een specifiek geloof als uitgangspunt."
-                >Levensbeschouwelijk vak</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In lichamelijke opvoeding doe je verschillende sporten en werk je aan het verbeteren 
-              van je conditie. Je leert samenwerken met anderen, maar ook hoe belangrijk discipline is om je doelen te bereiken en gezond te blijven."
-                >Lichamelijke opvoeding</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In Nederlands leer je meer over de taal door boeken te lezen, boekbesprekingen te doen en zelf 
-              teksten te schrijven. Je verbetert je lees- en schrijfvaardigheden en leert beter communiceren in het Nederlands."
-                >Nederlands</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In Wiskunde leer je meer over functies en bouw je verder op wat je in het 4de jaar hebt geleerd. Je verdiept je in wiskundige concepten en past ze toe in verschillende situaties."
-                >Wiskunde</span
-              >
-            </p>
-          </td>
-          <td>3</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In Natuurwetenschappen leer je over het menselijk lichaam, verschillende soorten golven en 
-              duurzaamheid. Je ontdekt hoe ons lichaam werkt, wat golven zijn en hoe we duurzamer kunnen omgaan met onze wereld."
-                >Natuurwetenschappen</span
-              >
-            </p>
-          </td>
-          <td>1</td>
-          <!--1-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In het 5de jaar ADB krijg je geen economie."
-                >Economie</span
-              >
-            </p>
-          </td>
-          <td>0</td>
-          <!--1-->
-        </tr>
-        <tr>
-          <th>Specifieke Gedeelte</th>
-        </tr>
-        <!--Hier begint de hoofdvakken en de <a> tag-->
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In deze richting leer je hoe je je eigen websites maakt met behulp van twee belangrijke talen. De
-              eerste is HTML, de basis van elke webpagina. Hiermee bepaal je wat er op de pagina komt, zoals
-              tekst, afbeeldingen, knoppen en links. Daarnaast gebruik je CSS om je website een mooi uiterlijk te
-              geven. Met CSS kies je kleuren, lettertypes en bepaal je de indeling van de pagina.
-              
-              Door HTML en CSS samen te gebruiken, kun je niet alleen functionele, maar ook visueel
-              aantrekkelijke en gebruiksvriendelijke websites ontwerpen. Stap voor stap leer je hoe je een
-              website maakt die er goed uitziet en goed werkt."
-                >Webdesign</span
-              >
-            </p>
-          </td>
-          <td>4</td>
-          <!--4-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In het vak Computersystemen leer je hoe een computer is opgebouwd, hoe de verschillende
-              onderdelen samenwerken en hoe je ermee werkt. Dit gebeurt op een praktijkgerichte manier,
-              waarbij je zelf computers bouwt, test en fouten opspoort zoals een echte IT-specialist. Daarnaast
-              maak je kennis met netwerken en leer je hoe je computers veilig met elkaar verbindt. Ook wordt er
-              aandacht besteed aan het efficiënt en correct werken met digitale systemen.
-
-              Dit vak is belangrijk omdat computers een onmisbaar onderdeel zijn van het dagelijks leven. Door
-              niet alleen te leren hoe je ze gebruikt, maar ook hoe ze werken, krijg je een sterke basis in de
-              digitale wereld. Dit helpt je zowel op school als in je toekomstige job, zeker als je later in de IT-
-              sector aan de slag wilt."
-                >Computersystemen en netwerken</span
-              >
-            </p>
-          </td>
-          <td>4</td>
-          <!--4-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In Applicatiebeheer leer je werken met belangrijke programma’s zoals Word, Excel en Canva.
-              Je ontdekt hoe je documenten, rapporten en presentaties snel, gemakkelijk en op een visueel 
-              aantrekkelijke manier kunt maken. Het vak richt zich op het efficiënt gebruiken van deze tools om je werk beter en professioneler te presenteren, zodat je zowel tijd bespaart als de kwaliteit van je documenten verbetert."
-                >Applicatiebeheer</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In Programmeren en Databeheer leer je de programmeertaal C#. Hiermee kun je zelf programma’s
-              maken en leer je computers opdrachten te geven. Daarnaast werk je met Google Forms, een tool
-              waarmee je gegevens kunt verzamelen, organiseren en beheren. Je leert hoe je informatie vastlegt
-              en verwerkt om alles efficiënt en overzichtelijk te houden. Dit vak helpt je niet alleen om technische
-              vaardigheden te ontwikkelen, maar ook om probleemoplossend te denken. Je leert hoe je problemen aanpakt en creatieve oplossingen bedenkt, zowel in programmeren als bij het werken
-              met gegevens.."
-                >Programmeren en databeheer</span
-              >
-            </p>
-          </td>
-          <td>8</td>
-          <!--8-->
-        </tr>
-        <tr>
-          <th>Stages</th>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In het 5de jaar ADB heb je geen stage."
-                >Stage</span
-              >
-            </p>
-          </td>
-          <td>0</td>
-        </tr>
-      </table>
-      <table class="tabeltwee">
-        <tr>
-          <th>Basisvorming</th>
-          <th>6de jaar</th>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Je bestudeert hoe de mens en de natuur met elkaar in wisselwerking
-              staan en analyseert thema's zoals klimaatverandering, bevolkingsgroei
-              en ruimtelijke ordening. Er wordt ook aandacht besteed aan mondiale
-              economische relaties en de impact van globalisering op verschillende
-              regio's.."
-                >Aardrijkskunde</span
-              >
-            </p>
-          </td>
-          <td>1</td>
-          <!--1-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation=" Je leert moeilijke grammatica en nieuwe woorden om beter te
-              communiceren. Je leest ook boeken en kranten om teksten
-              te begrijpen en oefent met spreken en schrijven in verschillende situaties.."
-                >Engels</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Dit vak focust op het perfectioneren van je taalvaardigheid door
-              middel van conversaties, schrijfopdrachten en luisteroefeningen.
-              Je maakt kennis met Franse literatuur, cultuur en actualiteit om een
-              bredere kijk op de taal en haar gebruik te krijgen.."
-                >Frans</span
-              >
-            </p>
-          </td>
-          <td>3</td>
-          <!--3-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Je bestudeert de belangrijkste gebeurtenissen en evoluties van de 20e
-              en 21e eeuw, zoals de wereldoorlogen, de Koude Oorlog en de
-              dekolonisatie. Daarnaast analyseer je de invloed van historische
-              ontwikkelingen op de hedendaagse samenleving en politiek."
-                >Geschiedenis</span
-              >
-            </p>
-          </td>
-          <td>1</td>
-          <!--1-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Je kiest tussen Katholieke godsdienst, Islamitische godsdienst of
-              Niet-Confessionele Zedenleer. Je praat over belangrijke thema’s en
-              leert kritisch nadenken over verschillende opvattingen over het leven."
-                >Levensbeschouwelijke vak</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Dit vak draait om het bevorderen van fysieke fitheid en teamwork door
-              middel van verschillende sportdisciplines. Er wordt aandacht besteed
-              aan coördinatie, kracht, uithoudingsvermogen en het belang van een
-              gezonde levensstijl."
-                >Lichamelijke opvoeding</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Je leest boeken en oefent met het schrijven van verschillende soorten
-              teksten. Ook verbeter je je spreken en luisteren door debatten,
-              presentaties en het analyseren van teksten.."
-                >Nederlands</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Je verdiept je in complexe wiskundige concepten zoals statistiek,
-              functies en differentiaalrekenen. Er wordt ook gewerkt met
-              probleemoplossend denken en analytische vaardigheden die
-              toepasbaarzijn in diverse wetenschappelijke en technische domeinen.."
-                >Wiskunde</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-          <!--2-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Je krijgt inzicht in de basisprincipes van fysica, chemie en biologie
-              en past deze toe in experimenten en casestudies. Er wordt gewerkt met
-              wetenschappelijke methodes om natuurverschijnselen en technologische
-              toepassingen beter te begrijpen.."
-                >Natuurwetenschappen</span
-              >
-            </p>
-          </td>
-          <td>1</td>
-          <!--1-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Je bestudeert macro- en micro-economische principes zoals
-              marktwerking, inflatie en overheidsbeleid. Er wordt ook aandacht
-              besteed aan financiële geletterdheid, internationale handel en de rol
-              van ondernemingen in de economie."
-                >Economie</span
-              >
-            </p>
-          </td>
-          <td>1</td>
-          <!--1-->
-        </tr>
-        <tr>
-          <th>Specifieke Gedeelte</th>
-        </tr>
-        <!--Hier begint de hoofdvakken en de <a> tag-->
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="In dit vak leer je hoe je dynamische en functionele websites ontwerpt
-              en bouwt met HTML, CSS en MySQL. Je leert hoe databases geïntegreerd
-              kunnen worden om gegevens te beheren en op te halen, bijvoorbeeld bij
-              een webshop of login-systeem. Er wordt aandacht besteed aan het
-              structureren van webpagina’s, responsief design en de
-              gebruiksvriendelijkheid van interfaces. Je werkt met software zoals
-              PHPMyAdmin om databanken op te zetten en SQL-query’s te schrijven."
-                >Webdesign</span
-              >
-            </p>
-          </td>
-          <td>4</td>
-          <!--4-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Dit vak behandelt de basis en geavanceerde concepten van
-              computersystemen en netwerktechnologieën. Je leert hoe computers
-              communiceren binnen een netwerk en welke protocollen gebruikt worden
-              om data veilig en efficiënt te versturen. Er wordt gewerkt met
-              netwerkconfiguratie, beveiligingsmaatregelen zoals firewalls en
-              encryptie, en troubleshooting van netwerkproblemen. Praktische
-              oefeningen met routers, switches en servers helpen je om hands-on
-              ervaring op te doen."
-                >Computersystemen en netwerken</span
-              >
-            </p>
-          </td>
-          <td>4</td>
-          <!--4-->
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="Je leert software installeren, configureren en onderhouden, met
-              aandacht voor gebruikersbeheer en beveiliging. Daarnaast ga je dieper
-              in op Word, Excel en andere kantoortoepassingen, waarbij je
-              geavanceerde functies zoals macro’s, formules en databewerkingen
-              gebruikt. Je leert hoe deze programma’s efficiënt ingezet kunnen
-              worden in een professionele omgeving.."
-                >Applicatiebeheer</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="This is the explanation for the word 'word'."
-                >Programmeren en databeheer</span
-              >
-            </p>
-          </td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <th>Stages</th>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <span
-                class="word"
-                data-explanation="This is the explanation for the word 'word'."
-                >Stage</span
-              >
-            </p>
-          </td>
-          <td>2</td>
-        </tr>
-      </table>
-
-      <div id="overlay" class="overlay"></div>
-      <div id="explanation" class="explanation">
-        <h3 id="word-title"></h3>
-        <br>
-        <p id="word-explanation"></p>
-      </div>
-      
-      <script src="../js/lessenpakt-divs.js"></script>
-      <script src="../js/achtergrond-scroll.js"></script>
-      <!-- Link to external JavaScript file voor pop-up div -->
-      <p class="tekst-stage">
-        Bij stages staat het cijfer voor het aantal weken dat de lessen worden
-        opgeschort omwille van een voltijds project i.s.m. het bedrijfsleven.
-      </p>
-      
-      <br>
-      <br>
-
-        <!-- Pop-up overlay -->
-      <div class="popup-overlay" id="popup">
-        <div class="popup">
-          <h2>Hoe gebruik je deze pagina?</h2>
-          <p>
-            Deze pagina biedt een overzicht van de vakken en hun inhoud binnen de
-            richting Applicatie en Databeheer. Klik op de woorden in de tabel om
-            meer te leren over elk vak. De uitleg verschijnt in een pop-upvenster.
-          </p>
-          <p>
-            Als je vragen hebt, kun je altijd onze AI-assistent raadplegen door op
-            het chat-icoon rechtsonder te klikken.
-          </p>
-          <video src="/src/videos/Tutorial.mov" autoplay muted loop></video>
-          <br>
-          <button onclick="closePopup()">Sluiten</button>
-        </div>
-      </div>
-
-      <script>
-        // Zorg dat de pop-up verschijnt bij het laden van de pagina
-        window.addEventListener('load', function() {
-          const popup = document.getElementById('popup');
-          popup.classList.add('active'); // Voeg de 'active' class toe om de pop-up te tonen
-        });
-
-        // Functie om de pop-up te sluiten
-        function closePopup() {
-          const popup = document.getElementById('popup');
-          popup.classList.remove('active'); // Verwijder de 'active' class om de pop-up te verbergen
-        }
-      </script>
-    </main>
     <footer>
-      <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
-      <p>
-        5ADB -
-        <abbr
-          title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Banasiak"
-          >B groep</abbr
-        >
-      </p>
-      <p>
-        <a
-          class="GTI"
-          href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut"
-          >GTI Beveren</a
-        >
-      </p>
-    </footer>
-  </body>
+        <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
+        <p>
+          5ADB -
+          <abbr
+            title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Tommy Banasiak, Matisse De Keersmaeker, Clément Vercautere en Jorne Duym">B groep</abbr>
+        </p>
+        <p>
+          <a class="GTI" href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut">GTI Beveren</a>
+        </p>
+      </footer>
+</body>
 </html>

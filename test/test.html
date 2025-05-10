@@ -1,98 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pop-up bij laden</title>
-  <style>
-    /* Stijlen voor de pop-up achtergrond (overlay) */
-    .popup-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Semi-transparant zwarte achtergrond */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      visibility: hidden; /* Verborgen standaard */
-      opacity: 0;
-      transition: visibility 0s, opacity 0.3s ease-in-out;
-    }
-
-    /* Toon de pop-up wanneer de class 'active' is */
-    .popup-overlay.active {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    /* Stijlen voor de pop-up zelf */
-    .popup {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Stijlen voor de video */
-    video {
-      width: 800px;
-      height: auto;
-      margin-top: 15px;
-      border-radius: 10px;
-    }
-
-    /* Sluitknop */
-    .popup button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .popup button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabellen</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Pop-up overlay -->
-  <div class="popup-overlay" id="popup">
-    <div class="popup">
-      <h2>Hoe gebruik je deze pagina?</h2>
-      <p>
-        Deze pagina biedt een overzicht van de vakken en hun inhoud binnen de
-        richting Applicatie en Databeheer. Klik op de woorden in de tabel om
-        meer te leren over elk vak. De uitleg verschijnt in een pop-upvenster.
-      </p>
-      <p>
-        Als je vragen hebt, kun je altijd onze AI-assistent raadplegen door op
-        het chat-icoon rechtsonder te klikken.
-      </p>
-      <video src="/src/videos/Tutorial.mov" autoplay muted loop></video>
-      <br>
-      <button onclick="closePopup()">Sluiten</button>
+    <h1>Tabellen</h1>
+
+    <div class="table-container">
+        <h2>5ADB</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kolom 1</th>
+                    <th>Kolom 2</th>
+                    <th>Kolom 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Waarde 1</td>
+                    <td>Waarde 2</td>
+                    <td>Waarde 3</td>
+                </tr>
+                <tr>
+                    <td>Waarde 4</td>
+                    <td>Waarde 5</td>
+                    <td>Waarde 6</td>
+                </tr>
+                <tr>
+                    <td>Waarde 7</td>
+                    <td>Waarde 8</td>
+                    <td>Waarde 9</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-  </div>
 
-  <script>
-    // Zorg dat de pop-up verschijnt bij het laden van de pagina
-    window.addEventListener('load', function() {
-      const popup = document.getElementById('popup');
-      popup.classList.add('active'); // Voeg de 'active' class toe om de pop-up te tonen
-    });
-
-    // Functie om de pop-up te sluiten
-    function closePopup() {
-      const popup = document.getElementById('popup');
-      popup.classList.remove('active'); // Verwijder de 'active' class om de pop-up te verbergen
-    }
-  </script>
+    <div class="table-container">
+        <h2>6ADB</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kolom 1</th>
+                    <th>Kolom 2</th>
+                    <th>Kolom 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Waarde A</td>
+                    <td>Waarde B</td>
+                    <td>Waarde C</td>
+                </tr>
+                <tr>
+                    <td>Waarde D</td>
+                    <td>Waarde E</td>
+                    <td>Waarde F</td>
+                </tr>
+                <tr>
+                    <td>Waarde G</td>
+                    <td>Waarde H</td>
+                    <td>Waarde I</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

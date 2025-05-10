@@ -1,257 +1,134 @@
-/* Algemene instellingen */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+header{
+    background-image: url(/images/lessenpakkt\ banner.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body {
-  font-family: "Roboto Flex", sans-serif;
-  background-color: #414141;
-}
-
-
-.achtergrond-scroll .parallax {
-  position: relative;
-  background-image: url(../images/backgrounds/lessen.jpeg); /* Zet hier de afbeelding die je wilt als achtergrond */
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -200;
-}
-
-.achtergrond-scroll .content {
-  height: 2500px; /* Maak de inhoud lang genoeg om te kunnen scrollen */
-  padding: 20px;
-  text-align: center;
-}
-
-
-/* Hoofdsectie van de pagina */
-main {
-  width: 100%;
-
-  padding: 20px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  color: #333;
-}
-
-.tip{
-  display: flex;
-  border: 5px solid #afcbff;
-  border-radius: 2rem;
-  width: 22%;
-  padding: 30px;
-}
-.tip svg{
-  margin-right: 10px;
-}
-
-/* Tabellen */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 30px;
-}
-
-table,
-th,
-td {
-  border: 1px solid #dddddd6e;
-}
-
-th,
-td {
-  padding: 12px;
-  text-align: left;
-  font-size: 16px;
-}
-
-th {
-  background-color: #f2f2f26d;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f973;
-}
-
-tr:hover {
-  background-color: #f1f1f15f;
-}
-
-td a {
-  display: block;
-}
-
-h2 {
-  margin-top: 3%;
-}
-
-/* Kolommen */
-.tabeleen,
-.tabeltwee {
-  width: 48%;
-  margin: 10px;
-  float: left;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-  padding: 20px;
-}
-
-.tabeltwee {
-  float: right;
-}
-
-.tekst-stage{
-  padding-top: 820px;
-  padding-left: 10px;
-}
-
-/* Responsiviteit */
-@media screen and (max-width: 768px) {
-  .banner {
-    flex-direction: column;
+main{
+    background-image: url(/images/image-mesh-gradient-2.png);
+    background-size: cover;
+    background-position: center;
     height: auto;
-    padding: 15px 0;
-  }
-
-  .tabeleen,
-  .tabeltwee {
-    width: 100%;
-    float: none;
-    margin: 10px 0;
-  }
-
-  main {
-    padding: 15px;
-  }
-}
-.teeekst {
-  color: black;
+    color: white;
+    padding-bottom: 100px;
 }
 
-.explanation {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: white;
-  border: 1px solid black;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 20;
+.container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;;
 }
 
-/* Opmaak van de pop-ups divs */
-span {
-  display: block;
+.intro{
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.21);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.6px);
+-webkit-backdrop-filter: blur(5.6px);
+width: 70%;
+padding: 1rem;
+
 }
-
-span:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  font-weight: 500;
-  color: #0a369d;
-}
-
-/* Zorg ervoor dat de overlay de volledige pagina bedekt en een semi-transparante donkere achtergrond heeft */
-#overlay-main {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 999;
-}
-
-/* Zorg ervoor dat de explanation div boven de overlay wordt weergegeven */
-#explanation {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white; /* Helder achtergrondkleur */
-  padding: 20px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white; /* Helder achtergrondkleur */
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Schaduw voor een beetje diepte */
-  z-index: 1000; /* Zorg ervoor dat de explanation div boven de overlay wordt weergegeven */
-}
-
-
-
-/* Tutorial pop-up */
-/* Stijlen voor de pop-up achtergrond (overlay) */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparant zwarte achtergrond */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  visibility: hidden; /* Verborgen standaard */
-  opacity: 0;
-  transition: visibility 0s, opacity 0.3s ease-in-out;
-}
-
-/* Toon de pop-up wanneer de class 'active' is */
-.popup-overlay.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Stijlen voor de pop-up zelf */
-.popup {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+.intro h1{
+  font-size: 2rem;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  color: #FAF9F6;
 }
 
-/* Stijlen voor de video */
-video {
-  width: 800px;
-  height: auto;
-  margin-top: 15px;
-  border-radius: 10px;
+.intro p{
+  font-size: 1.1rem;
+  text-align: center;
+  color: #FAF9F6;
 }
 
-/* Sluitknop */
-.popup button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
+h2{
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.vak {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.vak p {
+  width: 2px;
+}
+
+th{
+  background-color: #6c596e;
+}
+
+.info-icon {
   cursor: pointer;
 }
 
-.popup button:hover {
-  background-color: #0056b3;
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 500px;
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.popup-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.popup-body {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
 }

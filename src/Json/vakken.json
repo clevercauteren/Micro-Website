@@ -1,0 +1,122 @@
+{
+  "aardrijkskunde1": {
+    "title": "Aardrijkskunde",
+    "description": "In Aardrijkskunde leer je over het universum, de aarde en hoe alles in de natuur werkt. Je ontdekt hoe de planeet zich heeft gevormd, hoe het klimaat in elkaar zit, en welke krachten de wereld om ons heen beïnvloeden."
+  },
+  "aardrijkskunde2": {
+    "title": "Aardrijkskunde",
+    "description": "Je bestudeert hoe de mens en de natuur met elkaar in wisselwerking staan en analyseert thema's zoals klimaatverandering, bevolkingsgroei en ruimtelijke ordening. Er wordt ook aandacht besteed aan mondiale economische relaties en de impact van globalisering op verschillende regio's."
+  },
+  "engels1": {
+    "title": "Engels",
+    "description": "In het vak Engels leer je hoe je jezelf goed kunt uitdrukken in het Engels, zowel in spreken als schrijven. Je oefent met gesprekken, begrijpend lezen en het schrijven van teksten. Dit helpt je niet alleen om de taal beter te begrijpen, maar ook om te communiceren in een steeds meer internationale wereld."
+  },
+  "engels2": {
+    "title": "Engels",
+    "description": "Je leert moeilijke grammatica en nieuwe woorden om beter te communiceren. Je leest ook boeken en kranten om teksten te begrijpen en oefent met spreken en schrijven in verschillende situaties."
+  },
+  "frans1": {
+    "title": "Frans",
+    "description": "In het vak Frans leer je de grammatica, uitbreid je je vocabulaire, en verbeter je je uitspraak. Je oefent met luisteren en begrijpen, zodat je je goed kunt uitdrukken en communiceren in het Frans."
+  },
+  "frans2": {
+    "title": "Frans",
+    "description": "Dit vak focust op het perfectioneren van je taalvaardigheid door middel van conversaties, schrijfopdrachten en luisteroefeningen. Je maakt kennis met Franse literatuur, cultuur en actualiteit om een bredere kijk op de taal en haar gebruik te krijgen."
+  },
+  "geschiedenis1": {
+    "title": "Geschiedenis",
+    "description": "In geschiedenis leer je over de vroegmoderne tijd. Je ontdekt belangrijke gebeurtenissen, personen en veranderingen die de wereld vormden, zoals de Renaissance, de ontdekkingsreizen en de opkomst van nieuwe ideeën."
+  },
+  "geschiedenis2": {
+    "title": "Geschiedenis",
+    "description": "Je bestudeert de belangrijkste gebeurtenissen en evoluties van de 20e en 21e eeuw, zoals de wereldoorlogen, de Koude Oorlog en de dekolonisatie. Daarnaast analyseer je de invloed van historische ontwikkelingen op de hedendaagse samenleving en politiek."
+  },
+  "levensbeschouwelijk1": {
+    "title": "Levensbeschouwelijk vak",
+    "description": "Bij de levensbeschouwelijke vakken kunnen leerlingen kiezen uit drie richtingen. De eerste optie is Islam, waarbij ze leren over de islam, de Koran en de belangrijkste principes van het geloof. Een andere mogelijkheid is Godsdienst, waarin de focus ligt op het christendom, de Bijbel en de tradities binnen dit geloof. Ten slotte is er Niet-confessionele zedenleer, een vak dat zich richt op de mens, de wereld en morele vraagstukken, zonder een specifiek geloof als uitgangspunt."
+  },
+  "levensbeschouwelijk2": {
+    "title": "Levensbeschouwelijk vak",
+    "description": "Je kiest tussen Katholieke godsdienst, Islamitische godsdienst of Niet-Confessionele Zedenleer. Je praat over belangrijke thema's en leert kritisch nadenken over verschillende opvattingen over het leven."
+  },
+  "lo1": {
+    "title": "Lichamelijke opvoeding",
+    "description": "In lichamelijke opvoeding doe je verschillende sporten en werk je aan het verbeteren van je conditie. Je leert samenwerken met anderen, maar ook hoe belangrijk discipline is om je doelen te bereiken en gezond te blijven."
+  },
+  "lo2": {
+    "title": "Lichamelijke opvoeding",
+    "description": "Dit vak draait om het bevorderen van fysieke fitheid en teamwork door middel van verschillende sportdisciplines. Er wordt aandacht besteed aan coördinatie, kracht, uithoudingsvermogen en het belang van een gezonde levensstijl."
+  },
+  "nederlands1": {
+    "title": "Nederlands",
+    "description": "In Nederlands leer je meer over de taal door boeken te lezen, boekbesprekingen te doen en zelf teksten te schrijven. Je verbetert je lees- en schrijfvaardigheden en leert beter communiceren in het Nederlands."
+  },
+  "nederlands2": {
+    "title": "Nederlands",
+    "description": "Je leest boeken en oefent met het schrijven van verschillende soorten teksten. Ook verbeter je je spreken en luisteren door debatten, presentaties en het analyseren van teksten."
+  },
+  "wiskunde1": {
+    "title": "Wiskunde",
+    "description": "In Wiskunde leer je meer over functies en bouw je verder op wat je in het 4de jaar hebt geleerd. Je verdiept je in wiskundige concepten en past ze toe in verschillende situaties."
+  },
+  "wiskunde2": {
+    "title": "Wiskunde",
+    "description": "Je verdiept je in complexe wiskundige concepten zoals statistiek, functies en differentiaalrekenen. Er wordt ook gewerkt met probleemoplossend denken en analytische vaardigheden die toepasbaar zijn in diverse wetenschappelijke en technische domeinen."
+  },
+  "natuurwetenschappen1": {
+    "title": "Natuurwetenschappen",
+    "description": "In Natuurwetenschappen leer je over het menselijk lichaam, verschillende soorten golven en duurzaamheid. Je ontdekt hoe ons lichaam werkt, wat golven zijn en hoe we duurzamer kunnen omgaan met onze wereld."
+  },
+  "natuurwetenschappen2": {
+    "title": "Natuurwetenschappen",
+    "description": "Je krijgt inzicht in de basisprincipes van fysica, chemie en biologie en past deze toe in experimenten en casestudies. Er wordt gewerkt met wetenschappelijke methodes om natuurverschijnselen en technologische toepassingen beter te begrijpen."
+  },
+  "economie1": {
+    "title": "Economie",
+    "description": "In het 5de jaar ADB krijg je geen economie."
+  },
+  "economie2": {
+    "title": "Economie",
+    "description": "Je bestudeert macro- en micro-economische principes zoals marktwerking, inflatie en overheidsbeleid. Er wordt ook aandacht besteed aan financiële geletterdheid, internationale handel en de rol van ondernemingen in de economie."
+  },
+  "webdesign1": {
+    "title": "Webdesign",
+    "description": "In deze richting leer je hoe je je eigen websites maakt met behulp van twee belangrijke talen. De eerste is HTML, de basis van elke webpagina. Hiermee bepaal je wat er op de pagina komt, zoals tekst, afbeeldingen, knoppen en links. Daarnaast gebruik je CSS om je website een mooi uiterlijk te geven. Met CSS kies je kleuren, lettertypes en bepaal je de indeling van de pagina. Door HTML en CSS samen te gebruiken, kun je niet alleen functionele, maar ook visueel aantrekkelijke en gebruiksvriendelijke websites ontwerpen. Stap voor stap leer je hoe je een website maakt die er goed uitziet en goed werkt."
+  },
+  "webdesign2": {
+    "title": "Webdesign",
+    "description": "In dit vak leer je hoe je dynamische en functionele websites ontwerpt en bouwt met HTML, CSS en MySQL. Je leert hoe databases geïntegreerd kunnen worden om gegevens te beheren en op te halen, bijvoorbeeld bij een webshop of login-systeem. Er wordt aandacht besteed aan het structureren van webpagina's, responsief design en de gebruiksvriendelijkheid van interfaces. Je werkt met software zoals PHPMyAdmin om databanken op te zetten en SQL-query's te schrijven."
+  },
+  "computersystemen1": {
+    "title": "Computersystemen en netwerken",
+    "description": "In het vak Computersystemen leer je hoe een computer is opgebouwd, hoe de verschillende onderdelen samenwerken en hoe je ermee werkt. Dit gebeurt op een praktijkgerichte manier, waarbij je zelf computers bouwt, test en fouten opspoort zoals een echte IT-specialist. Daarnaast maak je kennis met netwerken en leer je hoe je computers veilig met elkaar verbindt. Ook wordt er aandacht besteed aan het efficiënt en correct werken met digitale systemen. Dit vak is belangrijk omdat computers een onmisbaar onderdeel zijn van het dagelijks leven. Door niet alleen te leren hoe je ze gebruikt, maar ook hoe ze werken, krijg je een sterke basis in de digitale wereld. Dit helpt je zowel op school als in je toekomstige job, zeker als je later in de IT-sector aan de slag wilt."
+  },
+  "computersystemen2": {
+    "title": "Computersystemen en netwerken",
+    "description": "Dit vak behandelt de basis en geavanceerde concepten van computersystemen en netwerktechnologieën. Je leert hoe computers communiceren binnen een netwerk en welke protocollen gebruikt worden om data veilig en efficiënt te versturen. Er wordt gewerkt met netwerkconfiguratie, beveiligingsmaatregelen zoals firewalls en encryptie, en troubleshooting van netwerkproblemen. Praktische oefeningen met routers, switches en servers helpen je om hands-on ervaring op te doen."
+  },
+  "applicatiebeheer1": {
+    "title": "Applicatiebeheer",
+    "description": "In Applicatiebeheer leer je werken met belangrijke programma's zoals Word, Excel en Canva. Je ontdekt hoe je documenten, rapporten en presentaties snel, gemakkelijk en op een visueel aantrekkelijke manier kunt maken. Het vak richt zich op het efficiënt gebruiken van deze tools om je werk beter en professioneler te presenteren, zodat je zowel tijd bespaart als de kwaliteit van je documenten verbetert."
+  },
+  "applicatiebeheer2": {
+    "title": "Applicatiebeheer",
+    "description": "Je leert software installeren, configureren en onderhouden, met aandacht voor gebruikersbeheer en beveiliging. Daarnaast ga je dieper in op Word, Excel en andere kantoortoepassingen, waarbij je geavanceerde functies zoals macro's, formules en databewerkingen gebruikt. Je leert hoe deze programma's efficiënt ingezet kunnen worden in een professionele omgeving."
+  },
+  "programmeren1": {
+    "title": "Programmeren en databeheer",
+    "description": "In Programmeren en Databeheer leer je de programmeertaal C#. Hiermee kun je zelf programma's maken en leer je computers opdrachten te geven. Daarnaast werk je met Google Forms, een tool waarmee je gegevens kunt verzamelen, organiseren en beheren. Je leert hoe je informatie vastlegt en verwerkt om alles efficiënt en overzichtelijk te houden. Dit vak helpt je niet alleen om technische vaardigheden te ontwikkelen, maar ook om probleemoplossend te denken. Je leert hoe je problemen aanpakt en creatieve oplossingen bedenkt, zowel in programmeren als bij het werken met gegevens."
+  },
+  "programmeren2": {
+    "title": "Programmeren en databeheer",
+    "description": "This is the explanation for the word 'word'."
+  },
+  "stage1": {
+    "title": "Stage",
+    "description": "In het 5de jaar ADB heb je geen stage."
+  },
+  "stage2": {
+    "title": "Stage",
+    "description": "In het zesde jaar van Applicatie- en Databeheer (6ADB) aan GTI Beveren doe je een stage van twee weken in de tweede helft van het schooljaar. Tijdens deze stage werk je voltijds in een bedrijf, waar je je vaardigheden in de praktijk kunt toepassen. Dit betekent dat je gedurende twee weken geen les krijgt, maar in plaats daarvan echte projecten uitvoert in een werkelijke beroepsomgeving. Dit helpt je om je kennis en ervaring te vergroten en je voor te bereiden op een carrière in de IT-sector."
+  }
+}
