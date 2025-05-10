@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5ADB Formulier</title>
-  <link rel="stylesheet" href="../css/formulier.css">
-  <link rel="stylesheet" href="../css/main.css">
-  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5ADB Formulier</title>
+    <link rel="stylesheet" href="../css/formulier.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 </head>
 <body>
+
   <div id="navbar" class="navbar">
     <a href="../pages/home.html"><h2 class="titel">5ADB</h2></a>
     <nav>
@@ -22,101 +24,179 @@
     <script src="../js/navbar.js"></script>
   </div>
 
-  <div class="banner-container"></div>
-
-  <main class="main-form">
-    <div class="box">
-      <h2 class="h2-form" align="center">
-        Welkom in onze nieuwe richting hier op school! Wij vragen u dit formulier in te vullen over waarom je deze richting zou willen volgen. Gelieve al onze vragen juist te beantwoorden!
-      </h2>
-
-      <form action="https://formsubmit.co/e5f7423a9be1b7138aff12de3f4d52b2" method="POST">
-        <h3 class="h3-form">Persoonlijke gegevens</h3>
-        <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam *" required>
-        <input type="text" name="naam" id="naam" placeholder="Naam *" required>
-        <input type="email" name="email" id="email" placeholder="E-mail *" required>
-        <input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer">
-
-        <h3 class="h3-form">Adresgegevens</h3>
-        <input type="text" id="plaats" name="plaats" list="plaatsenlijst" placeholder="Plaats">
-        <datalist id="plaatsenlijst"></datalist>
-        <div id="plaatsError"></div>
-
-        <input type="text" id="straat" name="straat" list="stratenlijst" placeholder="Straat">
-        <datalist id="stratenlijst"></datalist>
-        <div id="straatError"></div>
-
-        <input type="text" name="huisnr" id="huisnr" placeholder="Huisnummer">
-
-        <h3 class="h3-form">Schoolinformatie</h3>
-        <input type="text" name="school" id="school" placeholder="Vorige school">
-        <input type="text" name="richting" id="richting" placeholder="Richting">
-
-        <h3 class="h3-form">Studierichting</h3>
-        <select id="menu" name="reden" class="dropdown-richting" required>
-          <option value="">Maak hier een selectie *</option>
-          <option value="applicaties_ontwikkelen">Ik wil applicaties ontwikkelen</option>
-          <option value="systeembeheer">Ik ben geïnteresseerd in systeembeheer</option>
-          <option value="data_analyse">Ik wil werken met data-analyse</option>
-          <option value="cloud_computing">Ik wil werken met cloud computing</option>
-          <option value="technische_ondersteuning">Ik wil technische ondersteuning bieden</option>
-          <option value="webontwikkeling">Ik wil websites en webapplicaties ontwikkelen</option>
-          <option value="databeveiliging">Ik ben geïnteresseerd in databeveiliging</option>
-          <option value="netwerkbeheer">Ik wil netwerken beheren en optimaliseren</option>
-          <option value="software_ontwikkeling">Ik wil software ontwikkelen voor bedrijven</option>
-          <option value="automatisering">Ik wil processen automatiseren met software</option>
-          <option value="it_infrastructuur">Ik ben geïnteresseerd in IT-infrastructuur en netwerken</option>
-          <option value="database_beheer">Ik wil databases beheren en optimaliseren</option>
-          <option value="business_intelligence">Ik wil werken met business intelligence en rapportages</option>
-          <option value="digital_transformation">Ik wil bedrijven helpen met digitale transformatie</option>
-        </select>
-
-        <br><br>
-        <button class="button-form" type="submit" id="Verzendbutton">Verzenden</button>
-      </form>
+      <div class="banner-container">
+        
     </div>
-  </main>
+    
 
-  <div class="ai">
-    <div id="aiTooltip" class="tooltip">
-      <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
-      <button class="tooltip-close" onclick="hideTooltip()">×</button>
-    </div>
+    <!-- AI implementation -->
+  
+    <div class="ai">
+      <!-- Tooltip for AI assistant -->
+      <div id="aiTooltip" class="tooltip">
+        <span class="tooltip-text">Er is een AI-assistent beschikbaar! Klik hier om te starten.</span>
+        <button class="tooltip-close" onclick="hideTooltip()">×</button>
+      </div>
 
-    <button onclick="openModal()" class="open-button" title="Chat met Mistral AI!">
-      <img src="../images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon" />
-    </button>
+      <!-- Button to open the chatbot modal -->
+      <button onclick="openModal()" class="open-button" title="Chat with Mistral AI!">
+        <img src="../images/ai/comment-02-stroke-rounded.svg" alt="Chat Icon"/>
+      </button>
 
-    <div id="overlay" class="overlay" onclick="closeModal()"></div>
+      <!-- Background overlay (covers the page) -->
+      <div id="overlay" class="overlay" onclick="closeModal()"></div>
 
-    <div id="chatModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img src="../images/ai/LOGO white.png" alt="Mistral AI" class="chatbot-image" />
-        <h2 class="title">Chatbot</h2>
-        <div class="aiScroll">
-          <div id="chatHistory" class="chat-history"></div>
-        </div>
-        <hr />
-        <div class="flex">
-          <input type="text" id="userInput" placeholder="Ask something..." onkeydown="handleKeyPress(event)" class="user-input" />
-          <button id="send-button" onclick="sendClicked(document.getElementById('userInput').value)" class="send-button">Send</button>
+      <!-- The Modal -->
+      <div id="chatModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img
+            src="../images/ai/LOGO white.png"
+            alt="Mistral AI"
+            class="chatbot-image"
+          />
+          <h2 class="title">Chatbot</h2>
+          <div class="aiScroll">
+            <div id="chatHistory" class="chat-history"></div>
+          </div>
+          <hr />
+          <div class="flex">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Stel een vraag"
+              onkeydown="handleKeyPress(event)"
+              class="user-input"
+            />
+            <button
+              id="send-button"
+              onclick="sendClicked(document.getElementById('userInput').value)"
+              class="send-button"
+            >
+              Verstuur
+            </button>
+          </div>
         </div>
       </div>
+
+      <script src="../js/ai.js"></script>
+      <!-- Link to external JavaScript file -->
     </div>
 
-    <script src="../js/ai.js"></script>
-  </div>
+      <div class="pagina">
+        <main>
+            <!-- <div class="box"> -->
+                <h2 align="center">
+                    Welkom in onze nieuwe richting hier op school! Wij vragen u dit formulier in te vullen over waarom je deze richting zou willen volgen.
+                    Gelieve al onze vragen juist te beantwoorden!
+                </h2>
 
-  <footer>
-    <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
-    <p>
-      5ADB -
-      <abbr title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Banasiak">B groep</abbr>
-    </p>
-    <p><a class="GTI" href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut">GTI Beveren</a></p>
-  </footer>
+                <br><hr>
+                <form action="https://formsubmit.co/00f12f6d09849503606115945cb04802" method="POST">
+                  <h3>Persoonlijke gegevens</h3>
+                  <table>
+                      <tr>
+                          <td><label for="voornaam">Voornaam:</label></td>
+                          <td><input type="text" name="voornaam" id="voornaam" placeholder="Voornaam *" required></td>
+                          <td><label for="naam">Naam:</label></td>
+                          <td><input type="text" name="naam" id="naam" placeholder="Naam *" required></td>
+                      </tr>
+                      <tr>
+                          <td><label for="email">E-mail:</label></td>
+                          <td><input type="email" name="email" id="email" placeholder="E-mail *" required></td>
+                          <td><label for="telefoonnummer">Telefoonnummer:</label></td>
+                          <td><input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer"></td>
+                      </tr>
+                  </table>
+                  <hr>
+                  <h3>Adresgegevens</h3>
+                  <table>
+                    <tr>
+                      <td><label for="plaats">Plaats:</label></td>
+                      <td><input type="text" id="plaats" name="plaats" list="plaatsenlijst" placeholder="Plaats">
+                          <datalist id="plaatsenlijst"></datalist>
+                          <div id="plaatsError"></div> <!-- Foutmelding voor plaats -->
+                      </td>
+                  </tr>  
+                    <tr>
+                          <td><label for="straat">Straat:</label></td>
+                          <td><input type="text" id="straat" name="straat" list="stratenlijst" placeholder="Straat">
+                              <datalist id="stratenlijst"></datalist>
+                              <div id="straatError"></div> <!-- Foutmelding voor straat -->
 
-  <script src="/src/js/csv_check.js"></script>
+                          </td>
+                          <td><label for="huisnr">Huisnummer:</label></td>
+                          <td><input type="text" name="huisnr" id="huisnr" placeholder="Huisnummer"></td>
+                      </tr>
+                     
+                  </table>
+                  <hr>
+                  <h3>Schoolinformatie</h3>
+                  <table>
+                      <tr>
+                          <td><label for="school">Vorige school:</label></td>
+                          <td><input type="text" name="school" id="school" placeholder="School"></td>
+                          <td><label for="richting">Richting:</label></td>
+                          <td><input type="text" name="richting" id="richting" placeholder="Richting"></td>
+                      </tr>
+                  </table>
+                  <hr>
+                  <h3>Studierichting</h3>
+                  <table>
+                      <tr>
+                          <td><label for="menu">Reden van interesse:</label></td>
+                          <td>
+                              <select id="menu" name="reden" class="dropdown-richting" required>
+                                  <option value="">Maak hier een selectie *</option>
+                                  <option value="applicaties_ontwikkelen">Ik wil applicaties ontwikkelen</option>
+                                  <option value="systeembeheer">Ik ben geïnteresseerd in systeembeheer</option>
+                                  <option value="data_analyse">Ik wil werken met data-analyse</option>
+                                  <option value="cloud_computing">Ik wil werken met cloud computing</option>
+                                  <option value="technische_ondersteuning">Ik wil technische ondersteuning bieden</option>
+                                  <option value="webontwikkeling">Ik wil websites en webapplicaties ontwikkelen</option>
+                                  <option value="databeveiliging">Ik ben geïnteresseerd in databeveiliging</option>
+                                  <option value="netwerkbeheer">Ik wil netwerken beheren en optimaliseren</option>
+                                  <option value="software_ontwikkeling">Ik wil software ontwikkelen voor bedrijven</option>
+                                  <option value="automatisering">Ik wil processen automatiseren met software</option>
+                                  <option value="it_infrastructuur">Ik ben geïnteresseerd in IT-infrastructuur en netwerken</option>
+                                  <option value="database_beheer">Ik wil databases beheren en optimaliseren</option>
+                                  <option value="business_intelligence">Ik wil werken met business intelligence en rapportages</option>
+                                  <option value="digital_transformation">Ik wil bedrijven helpen met digitale transformatie</option>
+                              </select>
+                          </td>
+                      </tr>
+                  </table>
+                  
+                  <br>
+                  <button type="submit" id="Verzendbutton">Verzenden</button>
+              </form>
+              <script src="../js/csv_check.js"></script>
+               
+
+                
+            <!-- </div> -->
+        </main>
+        
+      </div>
+<!-- footer -->
+<footer>
+  <p>&copy; 2025 Gti Beveren. All rights reserved.</p>
+  <p>
+    5ADB -
+    <abbr
+      title="Robbe Ghyssaert, Jason Van Landeghem, Alexander Brands, Matisse De Keersmaeker, Jorne Duym, Clément Vercautere en Tommy Bannanenkak"
+      >B groep</abbr
+    >
+  </p>
+  <p>
+    <a
+      class="GTI"
+      href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut"
+      >GTI Beveren</a
+    >
+  </p>
+</footer>
+    
+
 </body>
 </html>
