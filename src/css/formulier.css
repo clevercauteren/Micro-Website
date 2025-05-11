@@ -63,10 +63,10 @@ h3 {
 
 label {
     display: block;
-    padding: 10px 0 5px 0;
     font-size: 18px;
     color: white;
     transition: color 0.3s ease;
+    margin-bottom: 5px;
 }
 
 footer {
@@ -112,7 +112,22 @@ header {
 .pagina main form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+}
+
+/* Nieuwe grid-structuur */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Label + input samen */
+.form-grid .form-group {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
 }
 
 .pagina main form input,
@@ -273,6 +288,7 @@ option:focus {
     transform: scale(1.02);
 }
 
+/* Responsive styling */
 @media (max-width: 768px) {
     .navigatiebalk {
         height: 80px;
@@ -296,9 +312,9 @@ option:focus {
         padding: 20px;
     }
 
-    .pagina main form {
-        flex-direction: column;
-        gap: 15px;
+    /* Grid in 1 kolom voor mobiel */
+    .form-grid {
+        grid-template-columns: 1fr;
     }
 }
 
