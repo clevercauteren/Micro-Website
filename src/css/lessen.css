@@ -21,7 +21,24 @@ main{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(1, 1fr);
-  gap: 20px;;
+  gap: 20px;
+}
+
+.table-container-1,
+.table-container-2 {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.table-container-1.animate,
+.table-container-2.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.table-container-2 {
+  transition-delay: 0.4s;
 }
 
 .intro{

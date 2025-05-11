@@ -477,5 +477,20 @@
           <a class="GTI" href="https://www.gemeentebkz.be/gemeentelijk-technisch-instituut">GTI Beveren</a>
         </p>
       </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const table1 = document.querySelector('.table-container-1');
+            const table2 = document.querySelector('.table-container-2');
+            
+            // Add animation classes with a small delay
+            setTimeout(() => {
+                table1.classList.add('animate');
+            }, 100);
+            
+            setTimeout(() => {
+                table2.classList.add('animate');
+            }, 100);
+        });
+    </script>
 </body>
 </html>
