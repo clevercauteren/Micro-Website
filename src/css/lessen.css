@@ -132,3 +132,94 @@ th{
 .hidden {
   display: none;
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    header {
+        height: 40vh;
+    }
+
+    .intro {
+        width: 90%;
+        padding: 0.8rem;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+
+    table {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .vak {
+        grid-template-columns: 1fr auto;
+        gap: 5px;
+    }
+
+    .vak p {
+        width: auto;
+    }
+
+    #popup {
+        width: 90%;
+        max-width: none;
+        padding: 15px;
+    }
+
+    .popup-header h2 {
+        font-size: 16px;
+    }
+
+    .popup-body {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    header {
+        height: 30vh;
+    }
+
+    .intro h1 {
+        font-size: 1.2rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .info-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
