@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 /* Algemene opmaak */
 * {
@@ -12,7 +12,7 @@ body {
     background-size: 100% 400%;
     animation: gradientFade 50s ease infinite;
     background-color: #000000;
-    font-family: "montserrat";
+    font-family: "Raleway", sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -101,12 +101,6 @@ p {
     h2 {
         font-size: 20px;
     }
-
-    .meerinfo {
-        width: 100px;
-        height: 35px;
-        font-size: 14px;
-    }
 }
 
 .info-secties {
@@ -133,7 +127,11 @@ p {
     margin-bottom: 10px;
 }
 .supersigma{
-    color: #003366;
+  color: #003366;
+}
+.supersigma:hover{
+  color: #2976c4;
+  text-decoration: underline;
 }
 .sectie a {
     display: block;
@@ -226,7 +224,7 @@ p {
     border: none;
     border-radius: 8px;
 } 
-/* Zorg ervoor dat de container groot genoeg is */
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -234,7 +232,7 @@ p {
 .about {
   padding: 30px;
   color: white;
-  font-family: "montserrat";
+  font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   background-color: rgb(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -349,4 +347,79 @@ p {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Responsive styles - DRY (Don't Repeat Yourself) version */
+
+/* Max-width 1440px and below */
+@media screen and (max-width: 1440px) {
+  .parallax {
+    background-position: left !important;
+  }
+  .about,
+  .about section {
+    margin: 20px 10px;
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .about header {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about h2 {
+    font-size: 1.2rem;
+  }
+
+  .about aside {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    top: auto;
+    right: auto;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding-top: 5px;
+  }
+}
+
+/* Max-width 768px and below - additional tweaks */
+@media screen and (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    padding: 0 0.5rem;
+  }
+
+  .intro .column-1,
+  .intro .column-2 {
+    max-width: 100%;
+    margin: 0.3rem 0;
+  }
+
+  .scroll-field .scroll-container {
+    height: 350px;
+  }
+
+  .intro .column-2 img {
+    height: 350px;
+  }
+
+  .scroll-field h2 {
+    font-size: 1.5rem;
+  }
+
+  .scroll-field p,
+  .scroll-field ul {
+    font-size: 1.1rem;
+  }
+}
+
+/* Max-width 600px and below - only override if different */
+@media screen and (max-width: 600px) {
+  /* Als hier iets specifieks moet worden aangepast, voeg toe */
 }
